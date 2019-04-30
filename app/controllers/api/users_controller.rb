@@ -7,15 +7,15 @@ class Api::UsersController < ApplicationController
             login!(@user)
             render "api/users/show"
         else
-            flash[:errors] = @user.errors.full_messages, status: 422
+            render json: @user.errors.full_messages, status: 422
         end
     end
 
     def show
-        @user = User.find_by!(params[:id])
+        @user = User.find_by!(id: params[:id])
 
         if @user
-            render json: :show
+            render "api/users/show.json.jbuilder"
         end
 
     end
