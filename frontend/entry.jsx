@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from '../frontend/components/app.jsx';
+import Root from '../frontend/components/root.jsx';
 import configureStore from '../frontend/store/store';
 import {login, logout} from '../frontend/actions/session_action';
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     window.getState = store.getState;
     window.dispatch = store.dispatch; // just for testing!
-    
+
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
   });

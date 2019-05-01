@@ -18,7 +18,7 @@ const receiveSessionErrors = errors => ({
     errors
 })
 
-export const signup = user => dispatch (
+export const signup = user => dispatch => (
     SessionApiUtils.signup(user)
         .then(user => 
              (dispatch(receiveCurrentUser(user))),
@@ -26,7 +26,7 @@ export const signup = user => dispatch (
              (dispatch(receiveSessionErrors(err.responseJSON))))
 )
 
-export const login = user => dispatch (
+export const login = user => dispatch => (
     SessionApiUtils.login(user)
         .then(user => 
              (dispatch(receiveCurrentUser(user))),
@@ -34,7 +34,10 @@ export const login = user => dispatch (
              (dispatch(receiveSessionErrors(err.responseJSON))))
 )
 
-export const logout = () => dispatch (
+export const logout = () => dispatch => (
     SessionApiUtils.logout()
-        .then(user => dispatch(logoutCurrentUser()))
+        .then(() => dispatch(logoutCurrentUser()))
 )
+
+// these are not executed at the time that they are called
+// the second portion is executed based on the reponse that is received from rails
