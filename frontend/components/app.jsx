@@ -3,9 +3,11 @@ import { Route, Link } from 'react-router-dom';
 import LoginFormContainer from '../components/session_form/login_form_container';
 import SignupFormContainer from '../components/session_form/signup_form_container';
 import RightNavContainer from '../components/right_nav/right_nav_container';
+import Modal from '../components/modal/modal';
 
 const App = () => (
     <div>
+        <Modal />
         <div class="top-nav">
 
             
@@ -23,8 +25,8 @@ const App = () => (
             </div>
         </div>
 
-        <Route path="/signup" container={SignupFormContainer} />
-        <Route path="/login" container={LoginFormContainer} />
+        {/* <Route path="/signup" container={SignupFormContainer} />
+        <Route path="/login" container={LoginFormContainer} /> */}
     </div>
 );
 

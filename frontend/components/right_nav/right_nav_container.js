@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import RightNav from './right_nav';
 import { logout } from '../../actions/session_action';
+import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = state => {
     return {
@@ -10,7 +11,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        logout: () => dispatch(logout())
+        logout: () => dispatch(logout()),
+        openModal: modal => dispatch(openModal(modal))
     };
 };
 

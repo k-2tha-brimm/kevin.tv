@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { openModal } from '../../actions/modal_actions';
 // Greeting will eventually need to be an avatar with a dropdown menu
 
-const RightNav = ({ currentUser, logout }) => {
+const RightNav = ({ currentUser, logout, openModal }) => {
     const sessionLinks = () => (
         <nav className="right-nav-signed-out">
-            <li><Link to="/login">Log In</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
+            <button className="login-button" onClick={() => openModal('login')}>Log In</button>
+            <button className="signup-button" onClick={() => openModal('signup')}>Sign Up</button>
         </nav>
     );
 
@@ -16,7 +17,7 @@ const RightNav = ({ currentUser, logout }) => {
             <button className="nav-logout-button" onClick={logout}>Sign Out</button>
         </nav>
     );
-    return currentUser ? greeting() : sessionLinks();
+    return currentUser ? greeting(currentUser, logout) : sessionLinks();
 }
 
 export default RightNav;
