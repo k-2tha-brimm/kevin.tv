@@ -1,0 +1,40 @@
+.top-nav {
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    background: rgb(100, 65, 165);
+    height: 50px;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.top-nav li {
+    list-style: none;
+    display: inline-block;
+}
+
+.right-nav {
+    display: flex;
+}
+
+.right-nav ul {
+    display: flex;
+}
+
+.right-nav a {
+    align-content: center;
+    vertical-align: middle;
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+}
+
+.login-button {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}

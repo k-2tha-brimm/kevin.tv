@@ -1,15 +1,13 @@
 import { combineReducers } from 'redux';
 
 import sessionReducer from './session_reducer';
-import usersReducer from './users_reducer';
-// this will likely end up folded into entities reducer
+import entitiesReducer from './entities_reducer';
 import errorsReducer from './errors_reducer';
-
-// we will also need a ui reducer eventually for the modal
+import uiReducer from './ui_reducer';
 
 const rootReducer = combineReducers({
     session: sessionReducer,
-    // users: usersReducer,
+    entities: entitiesReducer,
     errors: errorsReducer
 });
 

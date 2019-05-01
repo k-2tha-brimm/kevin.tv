@@ -44,7 +44,7 @@ class SessionForm extends React.Component {
 
         <form onSubmit={this.handleSubmit} className="login-form-box">
 
-          <div class="modal-greeting">{this.props.greeting}</div>
+          <div className="modal-greeting">{this.props.greeting}</div>
           <br/>
           {this.props.formType} | {this.props.alternativeAction}
           {this.renderErrors()}
@@ -77,4 +77,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default withRouter(SessionForm);
+export default SessionForm;
