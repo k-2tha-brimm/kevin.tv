@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import { openModal, closeModal } from '../../actions/modal_actions';
+import { login } from '../../actions/session_action';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.updateModal = this.updateModal.bind(this);
+    // this.updateModal = this.updateModal.bind(this);
   }
 
   update(field) {
@@ -26,9 +27,9 @@ class SessionForm extends React.Component {
     this.props.action(user).then(this.props.closeModal);
   }
 
-  updateModal(modal) {
-      return this.setState({ui: {modal: modal}})
-  }
+//   updateModal(modal) {
+//       return this.setState({ui: {modal: modal}})
+//   }
 
   renderErrors() {
     return(
@@ -44,6 +45,7 @@ class SessionForm extends React.Component {
 
   render() {
 
+    // const demouser = {username: 'demo', password: 'hunter12'};
     return (
 
       <div className="login-form-container">

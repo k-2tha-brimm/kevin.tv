@@ -23,6 +23,9 @@ body {
 
 .right-nav {
     display: flex;
+    margin-right: 10px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .right-nav ul {
@@ -39,7 +42,7 @@ body {
 
 .login-button {
     margin-right: 5px;
-    font-size: 12px;
+    font-size: 13px;
     background: rgb(100, 65, 165);
     color: white;
     border: 1px solid white;
@@ -49,11 +52,35 @@ body {
 
 .signup-button {
     margin-left: 5px;
+    font-size: 12px;
     background: rgb(100, 65, 165);
     color: white;
     border-radius: 5px;
     border: none;
     padding: 6px;
+}
+
+.login-button:hover {
+    cursor: pointer;
+}
+
+.nav-left {
+    color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.nav-left ul {
+    display: flex;
+}
+
+.nav-left li {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+    margin-left: 10px;
 }
 
 .modal-background {
@@ -77,6 +104,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding-left: 2rem;
+    padding-left: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   /* modified from a codepen by Dave DeSandro using SVGs */
@@ -118,8 +149,6 @@ body {
 
   /* modal styling below */
 
-
-
   .modal-greeting {
       font-weight: bolder;
       font-size: 17px;
@@ -129,13 +158,35 @@ body {
   }
 
   .login-input {
-      width: 100%;
-      padding: 10px 5px;
+      width: 90%;
       margin: 10px;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+  }
+
+  label {
+      margin-left: 10px;
+      font-weight: bold;
+      line-height: 0;
   }
 
   #modal-logo {
       width: 40px;
       height: 40px;
       background-image: url(app/assets/images/twitchlogomodal.jpg);
+  }
+
+  .session-submit {
+      background-color: rgb(153, 153, 153);
+      display: flex;
+      color: white;
+      font-size: 14px;
+      text-align: center;
+      justify-content: center;
+      align-content: center;
+      border-radius: 5px;
+      width: 90%;
+      margin: 10px;
+      font-family: 'Roboto', sans-serif;
   }
