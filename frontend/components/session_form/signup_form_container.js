@@ -10,7 +10,6 @@ const mapStateToProps = state => {
         formType: 'Sign Up',
         greeting: 'Join kevin.tv today',
         errors: state.errors.session,
-        // alternativeAction: <Link to="/login">Log In</Link>
     };
 };
 
@@ -18,8 +17,8 @@ const mapDispatchToProps = dispatch => {
     return {
         action: user => dispatch(signup(user)),
         otherForm: (
-            <button onClick={() => dispatch(openModal('signup'))}>
-              Signup
+            <button onClick={() => dispatch(openModal('login'))}>
+              Log In
             </button>
           ),
           closeModal: () => dispatch(closeModal())

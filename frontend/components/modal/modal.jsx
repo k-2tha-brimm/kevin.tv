@@ -24,7 +24,13 @@ function Modal({modal, closeModal}) {
         <div className="modal-child" onClick={e => e.stopPropagation()}>
           { component }
         </div>
-      </div>
+
+        {/* <div className="box">
+          <svg viewBox="0 0 40 40">
+            <path className="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+          </svg>
+        </div> */}
+    </div>
     );
   }
   
