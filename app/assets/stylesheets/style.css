@@ -111,8 +111,9 @@ body {
     transform: translate(-50%, -50%);
     padding-left: 2rem;
     padding-left: 2rem; 
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 3rem;
+    border: 2px solid rgb(100, 65, 165);
   }
 
   /* modified from a codepen by Dave DeSandro using SVGs */
@@ -160,6 +161,7 @@ body {
       margin: 10px;
       padding: 10px;
       text-align: center;
+      font-family: 'Bungee Inline', cursive;
   }
 
   .login-input {
@@ -172,6 +174,7 @@ body {
       padding: 6px 10px;
       box-shadow: none;
       border: 1px solid #dfdfdf;
+      margin-bottom: 0;
   }
 
   .login-input:focus {
@@ -185,6 +188,7 @@ body {
       font-size: 12px;
       font-weight: bold;
       line-height: 0;
+      font-family: 'Bungee Inline', cursive;
   }
 
   #modal-logo {
@@ -214,21 +218,82 @@ body {
     border: 5px solid rgb(97, 97, 97);
     padding: 7px 12px;
     margin-left: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
+  .joke-link {
+      font-size: 10px;
+      line-height: 0;
+      color: rgb(100, 65, 165);
+      margin-left: 10px;
+  }
+
+  .demo-submit {
+    width: 87%;
+    background-color: rgb(100, 65, 165);
+    color: white;
+    border: 5px solid rgb(97, 97, 97);
+    padding: 7px 12px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
   .right-nav-signed-in button {
-    margin-left: 5px;
+    margin-left: 12px;
     font-size: 12px;
     background: rgb(100, 65, 165);
     color: white;
     border-radius: 5px;
     border: none;
-    padding: 6px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid white;
   }
 
   .right-nav-signed-in button:hover {
       cursor: pointer;
   }
+
+.user-avatar {
+    font-size: 14;
+    font-family: 'Bungee Inline', cursive;
+    color: white;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.right-side-of-or {
+    margin-right: .5rem;
+    flex-grow: 1;
+    border-bottom: 1px solid #dad8de;
+}
+
+.left-side-of-or {
+    margin-left: .5rem;
+    flex-grow: 1;
+    border-bottom: 1px solid #dad8de;
+}
+
+.or-in-line-break {
+    color: #6e6779;
+    font-size: .8rem;
+    line-height: 0;
+}
+
+.line-break-container {
+    width: 87%;
+    margin-bottom: 1rem;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    box-sizing: border-box;
+}

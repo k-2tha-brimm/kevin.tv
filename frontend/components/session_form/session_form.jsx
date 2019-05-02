@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
 
   render() {
 
-    // const demoUser = {username: 'demo', password: 'hunter12'};
+    const demoUser = {username: 'demo', password: 'hunter12'};
     return (
 
       <div className="login-form-container">
@@ -85,9 +85,16 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <a href=""></a>
+            <a href="https://www.twitch.tv" className="joke-link">Trouble logging in?</a>
 
             <input className="session-submit" type="submit" value={this.props.formType} />
+            <div className="line-break-container">
+                <div className="right-side-of-or"></div>
+                <br/>
+                    <p className="or-in-line-break">or</p>
+                <div className="left-side-of-or"></div>
+            </div>
+            <input className="demo-submit" type="submit" value="Demo Sign In" onClick={() => this.props.action(demoUser).then(this.props.closeModal)} />
           </div>
         </form>
       </div>

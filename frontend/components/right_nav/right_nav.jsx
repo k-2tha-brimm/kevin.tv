@@ -1,6 +1,7 @@
 import React from 'react';
 
 // Greeting will eventually need to be an avatar with a dropdown menu
+// for now it is simply styled as text
 
 const RightNav = ({ currentUser, logout, openModal }) => {
     const sessionLinks = () => (
@@ -12,7 +13,7 @@ const RightNav = ({ currentUser, logout, openModal }) => {
 
     const greeting = () => (
         <nav className="right-nav-signed-in"> 
-            <li>Hello, { currentUser.username }</li>
+            <li className="user-avatar">Hello, { currentUser.username }</li>
             <button className="nav-logout-button" onClick={logout}>Sign Out</button>
         </nav>
     );
