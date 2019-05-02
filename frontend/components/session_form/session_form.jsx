@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import { Link } from 'react-router-dom';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import { login } from '../../actions/session_action';
 
@@ -12,7 +11,6 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.updateModal = this.updateModal.bind(this);
   }
 
   update(field) {
@@ -45,7 +43,7 @@ class SessionForm extends React.Component {
 
   render() {
 
-    // const demouser = {username: 'demo', password: 'hunter12'};
+    // const demoUser = {username: 'demo', password: 'hunter12'};
     return (
 
       <div className="login-form-container">
@@ -54,10 +52,9 @@ class SessionForm extends React.Component {
 
             <div className="modal-greeting">{this.props.greeting}</div>
             <br/>
-            <div className="modal-buttons-container">
+            {/* <div className="modal-buttons-container">
                 {this.props.formType} | {this.props.otherForm}
-                {/* <button onClick={updateModal('login')}>Log</button> */}
-            </div>
+            </div> */}
 
             <div onClick={this.props.closeModal} className="close-x">
                 <svg viewBox="0 0 40 40">
@@ -88,6 +85,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
+            <a href=""></a>
 
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>

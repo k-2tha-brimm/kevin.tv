@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 // Greeting will eventually need to be an avatar with a dropdown menu
 
 const RightNav = ({ currentUser, logout, openModal }) => {

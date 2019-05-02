@@ -92,6 +92,7 @@ body {
     left: 0;
     background: rgba(0, 0, 0, 0.7);
     z-index: 10;
+
   }
   
   .modal-child {
@@ -99,13 +100,13 @@ body {
     border-radius: 4px;
     background: white;
     height: 420px;
-    width: 465px;
+    width: 420px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding-left: 2rem;
-    padding-left: 2rem;
+    padding-left: 2rem; 
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
@@ -158,15 +159,26 @@ body {
   }
 
   .login-input {
-      width: 90%;
+      width: 87%;
       margin: 10px;
       display: flex;
       align-items: center;
       border-radius: 5px;
+      box-sizing: border-box;
+      padding: 6px 10px;
+      box-shadow: none;
+      
+  }
+
+  .login-input:focus {
+    outline: none;
+    border-color: rgb(176, 141, 241);
+    box-shadow: 0 0 4px rgb(176, 141, 241);
   }
 
   label {
       margin-left: 10px;
+      font-size: 12px;
       font-weight: bold;
       line-height: 0;
   }
@@ -177,7 +189,7 @@ body {
       background-image: url(app/assets/images/twitchlogomodal.jpg);
   }
 
-  .session-submit {
+  /* .session-submit {
       background-color: rgb(153, 153, 153);
       display: flex;
       color: white;
@@ -189,4 +201,16 @@ body {
       width: 90%;
       margin: 10px;
       font-family: 'Roboto', sans-serif;
+  } */
+
+  .session-submit {
+    width: 87%;
+    background-color: #e7e7e7;
+    color: #3f3f3f;
+    border: 5px solid rgb(97, 97, 97);
+    padding: 7px 12px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
