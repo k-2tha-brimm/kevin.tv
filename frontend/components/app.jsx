@@ -23,6 +23,12 @@ const App = () => (
                     <RightNavContainer />
                 </ul>
             </div>
+
+            <div class="left-side-nav-bar">
+                <ul>
+                    
+                </ul>
+            </div>
         </div>
     </div>
 );

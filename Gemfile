@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'rails_12factor'
 gem 'jquery-rails'
 gem 'rails-ujs'
+gem 'bcrypt'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -49,7 +50,6 @@ group :development do
   gem 'better_errors'
   gem 'pry-rails'
   gem 'annotate'
-  gem 'bcrypt'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
