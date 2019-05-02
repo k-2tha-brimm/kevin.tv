@@ -29,10 +29,6 @@ class SessionForm extends React.Component {
     this.props.action(user).then(this.props.closeModal);
   }
 
-//   updateModal(modal) {
-//       return this.setState({ui: {modal: modal}})
-//   }
-
   renderErrors() {
     return(
       <ul>
@@ -144,6 +140,7 @@ class SessionForm extends React.Component {
                     <path className="close-x-svg" d="M 10,10 L 30,30 M 30,10 L 10,30" />
                 </svg>
             </div>
+  
             <div className="modal-errors-container">
                 {this.renderErrors()}
             </div>
@@ -218,7 +215,7 @@ class SessionForm extends React.Component {
 
             <input className="session-submit" type="submit" value={this.props.formType} />
 
-            {/* <div className="line-break-container">
+            <div className="line-break-container">
                 <div className="right-side-of-or"></div>
                 <br/>
                     <p className="or-in-line-break">or</p>
@@ -226,7 +223,7 @@ class SessionForm extends React.Component {
             </div>
             <div className="redirect-to-signup">
               {this.props.otherForm}
-            </div> */}
+            </div>
             </div>
         </form>
       </div>
