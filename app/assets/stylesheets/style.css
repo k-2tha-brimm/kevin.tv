@@ -182,6 +182,12 @@ body {
     box-shadow: 0 0 4px rgb(176, 141, 241);
   }
 
+  .username-login-input:focus {
+    outline: none;
+    border-color: rgb(176, 141, 241);
+    box-shadow: 0 0 4px rgb(176, 141, 241);
+  }
+
   label {
       margin-left: 10px;
       font-size: 12px;
@@ -393,3 +399,32 @@ body {
     align-content: center;
     width: 90%;
 }
+
+.username-description {
+    display: none;
+}
+
+.username-login-input {
+    width: 87%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    box-shadow: none;
+    border: 1px solid #dfdfdf;
+    margin-bottom: 0;
+}
+
+.username-login-input:focus + .username-description {
+    display: block;
+}
+
+/* .modal-errors-container {
+    background-color: rgb(187, 187, 187);
+    width: 90%;
+    border-radius: 6px;
+    border-right: 5px solid red;
+    border: 2px solid red;
+} */

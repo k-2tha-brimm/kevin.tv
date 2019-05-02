@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
       month: '',
       day: '',
       year: '',
+      email: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -132,11 +133,11 @@ class SessionForm extends React.Component {
 
             <div className="modal-greeting">{this.props.greeting}</div>
             <br/>
-            <div className="modal-buttons-container">
+            {/* <div className="modal-buttons-container">
               <div className="button-container-underline-left"></div>
                   <li>{this.props.otherForm}</li> <li><button type="button">{this.props.formType}</button></li>
                 <div className="button-container-underline-right"></div>
-            </div>
+            </div> */}
 
             <div onClick={this.props.closeModal} className="close-x">
                 <svg viewBox="0 0 40 40">
@@ -154,9 +155,12 @@ class SessionForm extends React.Component {
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="login-input"
+                className="username-login-input"
               />
             </label>
+            <div className="username-description">
+              <p>This is the name that people will know you by on Kevin.Tv. You MIGHT be able to change it later.</p>
+            </div>
             <br/>
             <label>Password
             <br/>
@@ -167,23 +171,23 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            {/* <label>Date of Birth
+            <label>Date of Birth
             <br/>
             <div className="birthday-form">
-              <select name="month" className="month-dropdown" onChange={this.update('month')}>
-                <option value="Month" selected="true" disabled="disabled">Month</option>
-                <option value={this.state.month}>January</option>
-                <option value={this.state.month}>February</option>
-                <option value={this.state.month}>March</option>
-                <option value={this.state.month}>April</option>
-                <option value={this.state.month}>May</option>
-                <option value={this.state.month}>June</option>
-                <option value={this.state.month}>July</option>
-                <option value={this.state.month}>August</option>
-                <option value={this.state.month}>September</option>
-                <option value={this.state.month}>October</option>
-                <option value={this.state.month}>November</option>
-                <option value={this.state.month}>December</option>
+              <select className="month-dropdown" value={this.state.month} onChange={this.update('month')}>
+                <option selected="true" disabled="disabled">Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
               </select>
               <input type="text"
                   placeholder="Day"
@@ -198,7 +202,7 @@ class SessionForm extends React.Component {
                   className="year-input"
                   />
             </div>
-            </label> */}
+            </label>
             <br/>
 
             <label>Email
@@ -214,7 +218,7 @@ class SessionForm extends React.Component {
 
             <input className="session-submit" type="submit" value={this.props.formType} />
 
-            <div className="line-break-container">
+            {/* <div className="line-break-container">
                 <div className="right-side-of-or"></div>
                 <br/>
                     <p className="or-in-line-break">or</p>
@@ -222,7 +226,7 @@ class SessionForm extends React.Component {
             </div>
             <div className="redirect-to-signup">
               {this.props.otherForm}
-            </div>
+            </div> */}
             </div>
         </form>
       </div>
