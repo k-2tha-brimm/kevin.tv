@@ -64,6 +64,10 @@ body {
     cursor: pointer;
 }
 
+.signup-button:hover {
+    cursor: pointer;
+}
+
 .nav-left {
     color: white;
     padding-top: 0.5rem;
@@ -97,10 +101,10 @@ body {
   
   .modal-child {
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 6px;
     background: white;
-    height: 420px;
-    width: 420px;
+    height: 460px;
+    width: 440px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -167,7 +171,7 @@ body {
       box-sizing: border-box;
       padding: 6px 10px;
       box-shadow: none;
-      
+      border: 1px solid #dfdfdf;
   }
 
   .login-input:focus {
@@ -213,4 +217,18 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .right-nav-signed-in button {
+    margin-left: 5px;
+    font-size: 12px;
+    background: rgb(100, 65, 165);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 6px;
+  }
+
+  .right-nav-signed-in button:hover {
+      cursor: pointer;
   }

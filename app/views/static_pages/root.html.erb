@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<head>
+    <script id="bootstrap-current-user" type="text/javascript">
+        <% if logged_in? %>
+            window.currentUser = <%= render("api/users/user.json.jbuilder",
+                user: current_user).html_safe %>
+        <% end %>
+    </script>
+
+</head>
+
 <body>
     <div id="root">
         <p>S.O.S. (Save Our Site). No REACTion detected.</p>
