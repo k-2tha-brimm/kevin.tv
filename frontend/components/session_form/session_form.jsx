@@ -8,7 +8,10 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      month: '',
+      day: '',
+      year: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -44,17 +47,36 @@ class SessionForm extends React.Component {
   render() {
 
     const demoUser = {username: 'demo', password: 'hunter12'};
-    return (
+    // const MONTHS = [
+    //   "none",
+    //   "January",
+    //   "February",
+    //   "March",
+    //   "April",
+    //   "May",
+    //   "June",
+    //   "July",
+    //   "August",
+    //   "September",
+    //   "October",
+    //   "November",
+    //   "December"
+    // ]
 
-      <div className="login-form-container">
+
+
+    const signInForm = (
+        <div className="login-form-container">
 
         <form onSubmit={this.handleSubmit} className="login-form-box">
 
             <div className="modal-greeting">{this.props.greeting}</div>
             <br/>
-            {/* <div className="modal-buttons-container">
-                {this.props.formType} | {this.props.otherForm}
-            </div> */}
+            <div className="modal-buttons-container">
+              <div className="button-container-underline-left-signin"></div>
+                <li><button type="button">{this.props.formType}</button></li> <li>{this.props.otherForm}</li>
+              <div className="button-container-underline-right-signin"></div>
+            </div>
 
             <div onClick={this.props.closeModal} className="close-x">
                 <svg viewBox="0 0 40 40">
@@ -99,6 +121,123 @@ class SessionForm extends React.Component {
         </form>
       </div>
     );
+
+
+
+
+    const logInForm = (
+        <div className="login-form-container">
+
+        <form onSubmit={this.handleSubmit} className="login-form-box">
+
+            <div className="modal-greeting">{this.props.greeting}</div>
+            <br/>
+            <div className="modal-buttons-container">
+              <div className="button-container-underline-left"></div>
+                  <li>{this.props.otherForm}</li> <li><button type="button">{this.props.formType}</button></li>
+                <div className="button-container-underline-right"></div>
+            </div>
+
+            <div onClick={this.props.closeModal} className="close-x">
+                <svg viewBox="0 0 40 40">
+                    <path className="close-x-svg" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+                </svg>
+            </div>
+            <div className="modal-errors-container">
+                {this.renderErrors()}
+            </div>
+
+          <div className="login-form">
+            <br/>
+            <label>Username
+            <br/>
+              <input type="text"
+                value={this.state.username}
+                onChange={this.update('username')}
+                className="login-input"
+              />
+            </label>
+            <br/>
+            <label>Password
+            <br/>
+              <input type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="login-input"
+              />
+            </label>
+            <br/>
+            {/* <label>Date of Birth
+            <br/>
+            <div className="birthday-form">
+              <select name="month" className="month-dropdown" onChange={this.update('month')}>
+                <option value="Month" selected="true" disabled="disabled">Month</option>
+                <option value={this.state.month}>January</option>
+                <option value={this.state.month}>February</option>
+                <option value={this.state.month}>March</option>
+                <option value={this.state.month}>April</option>
+                <option value={this.state.month}>May</option>
+                <option value={this.state.month}>June</option>
+                <option value={this.state.month}>July</option>
+                <option value={this.state.month}>August</option>
+                <option value={this.state.month}>September</option>
+                <option value={this.state.month}>October</option>
+                <option value={this.state.month}>November</option>
+                <option value={this.state.month}>December</option>
+              </select>
+              <input type="text"
+                  placeholder="Day"
+                  value={this.state.day}
+                  onChange={this.update('day')}
+                  className="day-input"
+                  />
+              <input type="text"
+                  value={this.state.year}
+                  placeholder="Year"
+                  onChange={this.update('year')}
+                  className="year-input"
+                  />
+            </div>
+            </label> */}
+            <br/>
+
+            <label>Email
+            <br/>
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className="login-input"
+              />
+            </label>
+
+            <p className="fake-tos">By clicking Sign Up, you are indicating that you have met the founder of Kevin.Tv. Venture forth, brave one.</p>
+
+            <input className="session-submit" type="submit" value={this.props.formType} />
+
+            <div className="line-break-container">
+                <div className="right-side-of-or"></div>
+                <br/>
+                    <p className="or-in-line-break">or</p>
+                <div className="left-side-of-or"></div>
+            </div>
+            <div className="redirect-to-signup">
+              {this.props.otherForm}
+            </div>
+            </div>
+        </form>
+      </div>
+    );
+
+
+
+
+    return (
+        this.props.formType === 'Log In' ? signInForm : logInForm
+    );
+
+
+
+
   }
 }
 

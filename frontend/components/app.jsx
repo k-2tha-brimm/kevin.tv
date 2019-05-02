@@ -24,9 +24,6 @@ const App = () => (
                 </ul>
             </div>
         </div>
-
-        {/* <Route path="/signup" container={SignupFormContainer} />
-        <Route path="/login" container={LoginFormContainer} /> */}
     </div>
 );
 

@@ -103,7 +103,6 @@ body {
     box-sizing: border-box;
     border-radius: 6px;
     background: white;
-    height: 460px;
     width: 440px;
     position: absolute;
     top: 50%;
@@ -296,4 +295,101 @@ body {
     margin-right: .5rem;
     margin-left: .5rem;
     box-sizing: border-box;
+}
+
+.modal-buttons-container button {
+    background: none;
+    border: 0;
+    font-size: 14px;
+    line-height: 1;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.modal-buttons-container button[type=button] {
+    border-bottom: 2px solid rgb(100, 65, 165);
+}
+
+.modal-buttons-container button:hover {
+    cursor: pointer;
+}
+
+.modal-buttons-container > li {
+    list-style: none;
+}
+
+.modal-buttons-container {
+    width: 87%;
+    margin-bottom: 1rem;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    box-sizing: border-box;
+}
+
+.button-container-underline-right {
+    margin-right: 1.2rem;
+    flex-grow: 1;
+    border-bottom: 1px solid rgb(100, 65, 165);
+    align-items: center;
+}
+.button-container-underline-left {
+    margin-left: 1.2rem;
+    flex-grow: 1;
+    border-bottom: 1px solid #dad8de;
+    align-items: center;
+}
+
+.button-container-underline-right-signin {
+    margin-right: 1.2rem;
+    flex-grow: 1;
+    border-bottom: 1px solid #dad8de;
+    align-items: center;
+}
+.button-container-underline-left-signin {
+    margin-left: 1.2rem;
+    flex-grow: 1;
+    border-bottom: 1px solid rgb(100, 65, 165);
+    align-items: center;
+}
+
+.birthday-form {
+    width: 87%;
+}
+
+.fake-tos {
+    margin: 5px;
+    font-size: 11px;
+    text-align: center;
+    width: 87%;
+    color: rgb(149, 149, 149);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.redirect-to-signup button {
+    width: 100%;
+    background-color: rgb(100, 65, 165);
+    color: #3f3f3f;
+    color: white;
+    border: 5px solid rgb(97, 97, 97);
+    padding: 8px 10px;
+    margin-left: 8px;
+    /* margin-top: 5px; */
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.redirect-to-signup li {
+    list-style: none;
+    justify-content: center;
+}
+
+.redirect-to-signup {
+    display: flex;
+    align-content: center;
+    width: 90%;
 }

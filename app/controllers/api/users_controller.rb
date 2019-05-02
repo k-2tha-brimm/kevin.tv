@@ -2,6 +2,7 @@ class Api::UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
+        # @user.date_of_birth = Date.new(params[:user][:year], params[:user][:month], params[:user][:day])
 
         if @user.save
             login_user!(@user)
@@ -21,7 +22,13 @@ class Api::UsersController < ApplicationController
     end
 
     private
+
     def user_params
-        params.require(:user).permit(:username, :password, :date_of_birth, :email)
+        params.require(:user).permit(:username, :password, :email)
     end
+
+    def date_params
+        params.require(:user).permit(:month, :day, :year)
+    end
+
 end
