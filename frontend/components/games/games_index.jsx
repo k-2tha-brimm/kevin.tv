@@ -1,4 +1,5 @@
 import React from 'react';
+import GameIndexItem from './games_index_item';
 
 class GamesIndex extends React.Component {
     constructor(props) {
