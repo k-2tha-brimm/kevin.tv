@@ -11,9 +11,11 @@
     background-color: #6441A3;
     color: white;
     border-radius: 8px;
-    padding: 12px 12px;
+    padding: 11px 18px;
     border: none;
+    font-size: 11px;
     margin: 0 auto;
+    margin-bottom: 5px;
 }
 
 .left-menu-signup-button:hover {
@@ -22,6 +24,7 @@
 
 .top-bar-join-container {
     display: fixed;
+    text-align: center;
 }
 
 .left-hand-menu-signed-out {
@@ -39,15 +42,16 @@
     color: white;
     text-align: center;
     font-size: 14px;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .sub-text {
     color: #898395;
     text-align: center;
-    font-size: 12px;
-    margin-top: 8px;
-    margin-bottom: 10px;
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 1rem;
+    margin-bottom: 12px;
 }
 
 .popular-channels-heading {
