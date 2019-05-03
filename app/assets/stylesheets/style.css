@@ -2,6 +2,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* .jumbotron {
+    height: 350px;
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    left: 20%;
+} */
+
 .top-nav {
     position: absolute;
     margin: 0 auto;
@@ -88,10 +96,10 @@ i {
 .nav-left li {
     font-size: 14px;
     text-decoration: none;
-    color: white;
+    color: rgb(210, 206, 219);
     margin: 0 auto;
     padding: 10px;
-    margin-left: 8px;
+    margin-left: 5px;
 }
 
 .modal-background {

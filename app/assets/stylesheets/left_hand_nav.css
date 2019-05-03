@@ -1,0 +1,16 @@
+.left-hand-side-nav-bar {
+    position: fixed;
+    left: 0;
+    top: 50px;
+    width: 239px;
+    height: -webkit-fill-available;
+    background-color: rgb(24,23,27); 
+}
+
+.left-menu-signup-button {
+    background-color: #6441A3;
+    color: white;
+    border-radius: 8px;
+    padding: 4px 5px;
+    border: none;
+}

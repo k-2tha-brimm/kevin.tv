@@ -3,6 +3,7 @@ import { Route, Link } from 'react-router-dom';
 import LoginFormContainer from '../components/session_form/login_form_container';
 import SignupFormContainer from '../components/session_form/signup_form_container';
 import RightNavContainer from '../components/right_nav/right_nav_container';
+import LeftHandMenu from '../components/left_hand_menu/left_hand';
 import Modal from '../components/modal/modal';
 
 const App = () => (
@@ -27,10 +28,12 @@ const App = () => (
 
         </div>
         <div class="left-hand-side-nav-bar">
-            <ul>
-
-            </ul>
+            <LeftHandMenu />
         </div>
+
+        {/* <div className="jumbotron">
+            <img src="./assets/zeldabackground.jpg" alt="stream-background"/>
+        </div> */}
     </div>
 );
 

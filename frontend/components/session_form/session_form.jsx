@@ -185,7 +185,7 @@ class SessionForm extends React.Component {
               </select>
               <input type="text"
                   placeholder="Day"
-                  maxlength="2"
+                  maxLength="2"
                   value={this.state.day}
                   onChange={this.update('day')}
                   className="day-input"
@@ -193,7 +193,7 @@ class SessionForm extends React.Component {
               <input type="text"
                   value={this.state.year}
                   placeholder="Year"
-                  maxlength="4"
+                  maxLength="4"
                   onChange={this.update('year')}
                   className="year-input"
                   />
@@ -241,4 +241,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default withRouter(SessionForm);
+export default SessionForm;
