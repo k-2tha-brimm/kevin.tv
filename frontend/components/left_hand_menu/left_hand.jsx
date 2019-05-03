@@ -15,8 +15,8 @@ const LeftHandMenu = ({ currentUser, openModal }) => {
 
     const followersList = () => (
         <div className="signed-in-left-nav-container">
-            <p>Popular Channels</p>
-            <ul>
+            <p className="popular-channels-heading">Popular Channels</p>
+            <ul className="popular-channels-items">
                 <li>Keystone Light</li>
                 <li>Budweiser</li>
                 <li>Old Milwaukee's Best</li>

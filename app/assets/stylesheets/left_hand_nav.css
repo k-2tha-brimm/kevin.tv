@@ -16,6 +16,10 @@
     margin: 0 auto;
 }
 
+.left-menu-signup-button:hover {
+    cursor: pointer;
+}
+
 .top-bar-join-container {
     display: fixed;
 }
@@ -44,5 +48,29 @@
     font-size: 12px;
     margin-top: 8px;
     margin-bottom: 10px;
-
 }
+
+.popular-channels-heading {
+    color: white;
+    font-size: 15px;
+}
+
+.popular-channels-items > li {
+    list-style: none;
+    color: #898395;
+    font-size: 12px;
+}
+
+/* .jumbotron {
+    height: 200px;
+    top: 50px;
+    left: 239px;
+}
+
+.test-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+} */
