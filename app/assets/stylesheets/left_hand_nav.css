@@ -65,16 +65,21 @@
     font-size: 12px;
 }
 
-/* .jumbotron {
-    height: 200px;
+.jumbotron {
+    position: fixed;
+    height: 394px;
     top: 50px;
     left: 239px;
+    border: 1px solid red;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    display: grid;
 }
 
-.test-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-} */
+.jumbotron > h1 {
+    align-content: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    font-size: 40px;
+}

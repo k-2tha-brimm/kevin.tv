@@ -2,13 +2,13 @@ class Api::GamesController < ApplicationController
 
     def index
         @games = Game.all
-        render json: 'api/games'
+        render "api/games/index.json.jbuilder"
     end
 
     def show
-        @game = Game.find(params[:id])
+        @game = Game.find_by!(id: params[:id])
         if @game
-            render json: 'api/games/show'
+            render 'api/games/show.json.jbuilder'
         else
             render json: @game.errors.full_messages, status: 418
         end

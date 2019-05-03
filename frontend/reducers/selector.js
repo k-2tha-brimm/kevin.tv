@@ -1,0 +1,1 @@
+export const selectAllGames = state => Object.values(state.entities.games);

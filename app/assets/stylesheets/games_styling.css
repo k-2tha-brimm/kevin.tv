@@ -1,0 +1,14 @@
+.games-directory {
+    position: fixed;
+    top: 100px;
+    left: 200px;
+}
+
+.games-directory > h1 {
+    font-size: 200px;
+}
+
+.game-index-list-items {
+    list-style: none;
+    
+}

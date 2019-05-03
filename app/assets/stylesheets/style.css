@@ -102,6 +102,15 @@ i {
     margin-left: 5px;
 }
 
+.link-button {
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(210, 206, 219);
+    margin: 0 auto;
+    padding: 10px;
+    margin-left: 5px;
+}
+
 .modal-background {
     position: fixed;
     display: flex;
