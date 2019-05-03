@@ -48,22 +48,22 @@ class SessionForm extends React.Component {
 
     const demoUser = {username: 'demo', password: 'hunter12'};
 
-    let errorsBox;
-    switch (this.props.errors) {
-      case(null):
-           errorsBox = (
-             <div className="no-errors-container">
-             </div>
-           );
-      default:
-            errorsBox = (
-              <div className="errors-present-container">
-                <h3>Oops! Something went wrong!</h3>
-                <p> {renderErrors} </p>
-                <a href="https://help.myspace.com/hc/en-us/articles/201956084-Forgot-Password">Forgot your password?</a>
-              </div>
-            );
-    }
+    // let errorsBox;
+    // switch (this.props.errors) {
+    //   case(null):
+    //        errorsBox = (
+    //          <div className="no-errors-container">
+    //          </div>
+    //        );
+    //   default:
+    //         errorsBox = (
+    //           <div className="errors-present-container">
+    //             <h3>Oops! Something went wrong!</h3>
+    //             <p> {this.renderErrors()} </p>
+    //             <a href="https://help.myspace.com/hc/en-us/articles/201956084-Forgot-Password">Forgot your password?</a>
+    //           </div>
+    //         );
+    // }
 
 
     const signInForm = (
@@ -88,8 +88,8 @@ class SessionForm extends React.Component {
                 </svg>
             </div>
             <div className="modal-errors-container">
-                {/* {this.renderErrors()} */}
-                {errorsBox}
+                {this.renderErrors()}
+                {/* {errorsBox} */}
             </div>
 
           <div className="login-form">
@@ -186,13 +186,13 @@ class SessionForm extends React.Component {
                 <input type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
-                  className="login-input"
+                  className="password-login-input"
                 />
 
               </label>
 
               <div className="password-description">
-                <p>Strong passwords are over eight characters, and do not inlcude the word 'password'.</p>
+                <p>Psssst... User 'hunter12'.</p>
               </div>
 
             </div>
@@ -254,7 +254,7 @@ class SessionForm extends React.Component {
             <input className="session-submit" type="submit" value={this.props.formType} />
 
             <div className="line-break-container">
-            
+
               <div className="right-side-of-or"></div>
               <br/>
 
