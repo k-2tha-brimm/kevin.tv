@@ -13,6 +13,7 @@ const App = () => (
             
             <div class="nav-left">
                 <ul>
+                    <li className="kevin-tv-logo"><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Kevin.Tv</Link></li>
                     <li>Discover</li>
                     <li>Browse</li>
                 </ul>
@@ -25,11 +26,11 @@ const App = () => (
             </div>
 
         </div>
-    {/* <div class="left-side-nav-bar">
+        <div class="left-hand-side-nav-bar">
             <ul>
 
             </ul>
-        </div> */}
+        </div>
     </div>
 );
 

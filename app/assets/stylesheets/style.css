@@ -23,7 +23,7 @@ body {
 
 .right-nav {
     display: flex;
-    margin-right: 10px;
+    margin-right: 45px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
@@ -38,6 +38,13 @@ body {
     text-decoration: none;
     color: white;
     margin-right: 10px;
+}
+
+i {
+    color: white;
+    padding: 4px;
+    margin-left: 21px;
+    size: 7px;
 }
 
 .login-button {
@@ -84,7 +91,7 @@ body {
     color: white;
     margin: 0 auto;
     padding: 10px;
-    margin-left: 10px;
+    margin-left: 8px;
 }
 
 .modal-background {
@@ -488,4 +495,11 @@ body {
     box-shadow: none;
     border: 1px solid #dfdfdf;
     margin-bottom: 0;
+}
+
+.kevin-tv-logo {
+    font-size: 18px;
+    font-family: 'Bungee Inline', cursive;
+    font-size: 13px;
+    color: white;
 }

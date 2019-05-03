@@ -8,6 +8,7 @@ const RightNav = ({ currentUser, logout, openModal }) => {
         <nav className="right-nav-signed-out">
             <button className="login-button" onClick={() => openModal('login')}>Log In</button>
             <button className="signup-button" onClick={() => openModal('signup')}>Sign Up</button>
+            <i className="fas fa-otter"></i>
         </nav>
     );
 
