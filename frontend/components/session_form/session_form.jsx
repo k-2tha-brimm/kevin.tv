@@ -56,7 +56,8 @@ class SessionForm extends React.Component {
       
       <div className="login-form-container">
 
-      <div className="modal-greeting"><img src="./assets/twitchlogomodal.jpg" alt="kevinLogo" height="25" width="25"/>{this.props.greeting}</div>
+      <div className="modal-greeting"><img className="modal-logo" src="./assets/twitchlogopng.png" alt="kevinLogo" height="40" width="40"/>  {this.props.greeting}</div>
+        
         <div className="modal-buttons-container">
           <div className="button-container-underline-left-signin"></div>
             <li><button type="button">{this.props.formType}</button></li> <li>{this.props.otherForm}</li>
@@ -118,7 +119,7 @@ class SessionForm extends React.Component {
     const logInForm = (
 
         <div className="login-form-container">
-          <div className="modal-greeting">{this.props.greeting}</div>
+          <div className="modal-greeting"><img className="modal-logo" src="./assets/twitchlogopng.png" alt="kevinLogo" height="40" width="40"/>  {this.props.greeting}</div>
           <br/>
           <div className="modal-buttons-container">
             <div className="button-container-underline-left"></div>
@@ -168,7 +169,7 @@ class SessionForm extends React.Component {
             <br/>
             <div className="birthday-form">
               <select className="month-dropdown" value={this.state.month} onChange={this.update('month')}>
-                <option selected="true" disabled="disabled">Month</option>
+                <option defaultValue="selected" disabled="disabled">Month</option>
                 <option value="1">January</option>
                 <option value="2">February</option>
                 <option value="3">March</option>
