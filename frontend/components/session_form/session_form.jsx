@@ -23,6 +23,10 @@ class SessionForm extends React.Component {
     });
   }
 
+  componentWillUnmount() {
+    this.props.resetErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -44,36 +48,25 @@ class SessionForm extends React.Component {
   render() {
 
     const demoUser = {username: 'demo', password: 'hunter12'};
-    // const MONTHS = [
-    //   "none",
-    //   "January",
-    //   "February",
-    //   "March",
-    //   "April",
-    //   "May",
-    //   "June",
-    //   "July",
-    //   "August",
-    //   "September",
-    //   "October",
-    //   "November",
-    //   "December"
-    // ]
+
 
 
 
     const signInForm = (
-        <div className="login-form-container">
+      
+      <div className="login-form-container">
+
+      <div className="modal-greeting"><img src="./assets/twitchlogomodal.jpg" alt="kevinLogo" height="25" width="25"/>{this.props.greeting}</div>
+        <div className="modal-buttons-container">
+          <div className="button-container-underline-left-signin"></div>
+            <li><button type="button">{this.props.formType}</button></li> <li>{this.props.otherForm}</li>
+          <div className="button-container-underline-right-signin"></div>
+        </div>
+
 
         <form onSubmit={this.handleSubmit} className="login-form-box">
 
-            <div className="modal-greeting">{this.props.greeting}</div>
             <br/>
-            <div className="modal-buttons-container">
-              <div className="button-container-underline-left-signin"></div>
-                <li><button type="button">{this.props.formType}</button></li> <li>{this.props.otherForm}</li>
-              <div className="button-container-underline-right-signin"></div>
-            </div>
 
             <div onClick={this.props.closeModal} className="close-x">
                 <svg viewBox="0 0 40 40">
@@ -123,30 +116,32 @@ class SessionForm extends React.Component {
 
 
     const logInForm = (
+
         <div className="login-form-container">
+          <div className="modal-greeting">{this.props.greeting}</div>
+          <br/>
+          <div className="modal-buttons-container">
+            <div className="button-container-underline-left"></div>
+                <li>{this.props.otherForm}</li> <li><button type="button">{this.props.formType}</button></li>
+              <div className="button-container-underline-right"></div>
+          </div>
 
         <form onSubmit={this.handleSubmit} className="login-form-box">
 
-            <div className="modal-greeting">{this.props.greeting}</div>
-            <br/>
-            {/* <div className="modal-buttons-container">
-              <div className="button-container-underline-left"></div>
-                  <li>{this.props.otherForm}</li> <li><button type="button">{this.props.formType}</button></li>
-                <div className="button-container-underline-right"></div>
-            </div> */}
 
             <div onClick={this.props.closeModal} className="close-x">
                 <svg viewBox="0 0 40 40">
                     <path className="close-x-svg" d="M 10,10 L 30,30 M 30,10 L 10,30" />
                 </svg>
             </div>
-  
+            
             <div className="modal-errors-container">
                 {this.renderErrors()}
             </div>
 
           <div className="login-form">
             <br/>
+            <div className="user-message">
             <label>Username
             <br/>
               <input type="text"
@@ -157,6 +152,7 @@ class SessionForm extends React.Component {
             </label>
             <div className="username-description">
               <p>This is the name that people will know you by on Kevin.Tv. You MIGHT be able to change it later.</p>
+            </div>
             </div>
             <br/>
             <label>Password

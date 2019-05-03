@@ -24,12 +24,12 @@ const App = () => (
                 </ul>
             </div>
 
-            <div class="left-side-nav-bar">
-                <ul>
-                    
-                </ul>
-            </div>
         </div>
+    {/* <div class="left-side-nav-bar">
+            <ul>
+
+            </ul>
+        </div> */}
     </div>
 );
 
