@@ -11,6 +11,38 @@
     background-color: #6441A3;
     color: white;
     border-radius: 8px;
-    padding: 4px 5px;
+    padding: 12px 12px;
     border: none;
+    margin: 0 auto;
+}
+
+.top-bar-join-container {
+    display: fixed;
+}
+
+.left-hand-menu-signed-out {
+    background-color: #2B2441;
+    margin: 1rem;
+    border-radius: 6px;
+    padding: 1rem;
+    padding-right: 1.5rem;
+    display: flex;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
+
+.headline {
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.sub-text {
+    color: #898395;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+
 }

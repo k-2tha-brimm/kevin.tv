@@ -5,6 +5,9 @@ const LeftHandMenu = ({ currentUser, openModal }) => {
     const sessionLinks = () => (
         <div className="left-hand-menu-signed-out">
             <div className="top-bar-join-container">
+                <img src="./assets/jointhecommunity.png" alt="community img" width="199" height="97" />
+                <p className="headline">Join the Kevin.Tv Community</p>
+                <p className="sub-text">Discover the best live streamers anywhere.</p>
                 <button className="left-menu-signup-button" onClick={() => openModal('signup')}>Sign Up</button>
             </div>
         </div>
