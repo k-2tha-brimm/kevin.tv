@@ -38,7 +38,7 @@ const App = () => (
 
         <Switch>
             <Route path="/directory" component={GamesIndexContainer} />
-            {/* <Route path="/directory/game/gameId" component={StreamerIndexContainer} /> */}
+            {/* <Route path="/directory/gameId" component={StreamerIndexContainer} /> */}
             <Route exact path="/" component={Jumbotron} />
         </Switch>
     </div>
