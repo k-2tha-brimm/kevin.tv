@@ -11,7 +11,7 @@ const streamersReducer = (state = {}, action ) => {
             streamers = action.game.streamers;
             return merge({}, state, streamers)
         default:
-            state;
+            return state;
     }
 }
 
