@@ -1,14 +1,34 @@
 .games-directory {
     position: fixed;
     top: 100px;
-    left: 200px;
+    left: 300px;
+    width: 90%;
+    display: grid;
 }
 
-.games-directory > h1 {
-    font-size: 200px;
+.fake-ad-container {
+    text-align: center;
+    margin-right: 175px;
+    margin-bottom: 50px;
+    border: 1px dashed red;
+    padding: 30px;
+}
+
+.fake-advertisement {
+    font-size: 30px;
+    font-family: 'Bungee Inline', cursive;
 }
 
 .game-index-list-items {
     list-style: none;
-    
 }
+
+.game-title-tag:hover {
+    text-decoration: underline;
+}
+
+.game-photograph {
+    border-radius: 5px;
+}
+
+/Users/k.brimm/Desktop/kevinTv/app/assets/images/jointhecommunity.png
