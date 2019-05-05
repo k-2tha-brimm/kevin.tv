@@ -25,7 +25,7 @@ class StreamerIndex extends React.Component {
                     </div>
 
                     <div className="list-of-streamers">
-
+                    
 
                     </div>
                 </div>
