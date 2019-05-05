@@ -57,3 +57,11 @@
 .game-photograph {
     border-radius: 5px;
 }
+
+.streamers-index-container {
+    font-size: 48px;
+    position: fixed;
+    display: flex;
+    top: 200px;
+    right: 300px;
+}
