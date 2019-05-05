@@ -8,7 +8,7 @@ const streamersReducer = (state = {}, action ) => {
 
     switch (action.type) {
         case RECEIVE_GAME:
-            streamers = action.payload.streamers;
+            streamers = action.game.streamers;
             return merge({}, state, streamers)
         default:
             return state;

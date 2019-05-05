@@ -11,7 +11,10 @@ class StreamerIndex extends React.Component {
         return (
 
             <div className="streamers-index-container">
-                <p>HELLO THERE</p>
+                <div className="content-container-for-streamer-index">
+                    <div className="thumbnail-image"><img className="thumbnail-image" src={this.props.game.photoUrl} alt={this.props.game.title} height="173" width="130"/></div>
+                    <p>{this.props.game.title}</p>
+                </div>
             </div>
             
         )

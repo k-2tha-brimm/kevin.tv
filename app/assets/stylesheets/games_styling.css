@@ -21,6 +21,7 @@
     display: flex;
     justify-content: flex-start;
     margin-right: 100px;
+    margin-left: 40px;
     flex-wrap: wrap;
 }
 
@@ -62,6 +63,17 @@
     font-size: 48px;
     position: fixed;
     display: flex;
-    top: 200px;
-    right: 300px;
+    top: 50px;
+    left: 239px;
+    border: 1px solid red;
+    width:100vw;
+    height: 233px;
+}
+
+.content-container-for-streamer-index {
+    padding: 21px;
+}
+
+.thumbnail-image {
+    border-radius: 5px;
 }
