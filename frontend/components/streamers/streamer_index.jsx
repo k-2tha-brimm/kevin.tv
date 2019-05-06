@@ -20,9 +20,15 @@ class StreamerIndex extends React.Component {
 
     render () {
 
+    if(!this.props.game) {
+        return null;
+    }   
+
+    let {streams} = this.props;
+
     let streamz = this.props.streamers.map(streamer =>
                                             {
-                                                let stream = this.props.streams.filter(stream => stream.streamer_id === streamer.id);
+                                                let stream = streams.filter(stream => stream.streamer_id === streamer.id)[0];
                                                 return <li><StreamIndexItem key={streamer.id} streamer={streamer} stream={stream} /></li> 
                                             });
 

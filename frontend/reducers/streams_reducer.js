@@ -1,5 +1,6 @@
 import merge from 'lodash/merge';
 import { RECEIVE_GAME } from '../actions/games_actions';
+import { RECEIVE_USER } from '../actions/users_actions';
 
 const streamsReducer = (state = {}, action ) => {
     Object.freeze(state);
@@ -8,6 +9,8 @@ const streamsReducer = (state = {}, action ) => {
         case RECEIVE_GAME:
             let streams = action.game.streams;
             return merge({}, state, streams )
+        case RECEIVE_USER:
+            
         default:
             return {};
     }

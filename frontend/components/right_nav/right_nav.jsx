@@ -15,6 +15,7 @@ const RightNav = ({ currentUser, logout, openModal }) => {
     const greeting = () => (
         <nav className="right-nav-signed-in"> 
             <li className="user-avatar">Welcome to Kevin.Tv, { currentUser.username }!</li>
+            <i className="fas fa-otter"></i>
             <button className="nav-logout-button" onClick={logout}>Sign Out</button>
         </nav>
     );

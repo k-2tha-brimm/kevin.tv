@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 /* .jumbotron {
@@ -401,7 +401,7 @@ i {
     text-align: center;
     width: 87%;
     color: rgb(149, 149, 149);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .redirect-to-signup button {
@@ -454,7 +454,7 @@ i {
     text-align: left;
     width: 87%;
     color: rgb(149, 149, 149);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .username-description > p {
@@ -554,7 +554,7 @@ i {
     text-align: left;
     width: 87%;
     color: rgb(149, 149, 149);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .password-description > p {
