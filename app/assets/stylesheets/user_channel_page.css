@@ -1,0 +1,49 @@
+.channel-header-container {
+    position: fixed;
+    top: 50px;
+    left: 238px;
+    right: 340;
+    width: 85.8%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-information-top-bar {
+    width: 100%;
+    border: 1px solid green;
+}
+
+.chat-box {
+    width: 430px;
+    border: 1px solid pink;
+    height: 100vh;
+}
+
+.chat-box-top {
+    box-sizing: border-box;
+    height: 49px;
+    border: 1px solid blue;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.video-player-container {
+    position: absolute;
+    top: 122px;
+    left: 265px;
+    display: block;
+    border: 1px solid rgb(210, 206, 219);
+    /* border-radius: 6px; */
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    height: 700px;
+    width: 63%
+}
+
+.streamer-username {
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 12px;
+}
