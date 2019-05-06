@@ -1,13 +1,21 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
+import StreamIndexItem from './stream_index_item';
 
 class StreamerIndex extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
+
     componentDidMount() {
         this.props.fetchOneGame(this.props.match.params.gameId)
     }
 
     render () {
 
+        // let streamz = this.props.entities.games.undefined.streamers ? this.props.entities.games.undefined.streamers.map(streamer => <li><StreamIndexItem key={streamer.id} streamer={streamer}/></li>) : [] ;
+        // let streamz = this.props.game.streamers.map(streamer => <StreamIndexItem streamer={streamer} />)
         return (
             <>
                 <div className="streamers-index-container">
@@ -25,7 +33,9 @@ class StreamerIndex extends React.Component {
                     </div>
 
                     <div className="list-of-streamers">
-                    
+                        <ul>
+                            {/* { streamz } */}
+                        </ul>
 
                     </div>
                 </div>

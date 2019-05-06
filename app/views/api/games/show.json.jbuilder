@@ -11,3 +11,11 @@ json.streamers do
         end
     end
 end
+
+json.streams do 
+    @game.streams.each do |stream|
+        json.set! stream.id do
+            json.extract! stream, :id, :title
+        end
+    end
+end

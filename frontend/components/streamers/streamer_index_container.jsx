@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
     if(game) {
         return {
             game,
+            streams: game.streams,
             streamers: game.streamers
         }
     } else {
