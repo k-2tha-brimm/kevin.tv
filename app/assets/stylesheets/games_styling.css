@@ -62,9 +62,9 @@
 /* I am going to need to go back and get background images for each game's display page as well, because that will also
 need to be hosted on AWS */
 
-.streamers-index-container {
+.streamers-index-container-banner {
     position: fixed;
-    display: flex;
+    display: block;
     top: 50px;
     left: 239px;
     border: 1px solid red;
@@ -99,4 +99,21 @@ need to be hosted on AWS */
 
 .fake-ad-container {
     justify-content: center;
+}
+
+.streamers-idx {
+    display: flex;
+    height: 100%;
+    width: 85%;
+}
+
+.list-of-streamers {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-of-streamers > ul {
+    display: flex;
+    justify-content: space-around;
+    width: 87%;
 }

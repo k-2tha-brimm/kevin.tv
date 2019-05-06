@@ -20,33 +20,33 @@ class StreamerIndex extends React.Component {
 
     render () {
 
-        let streamz = this.props.streamers.map(streamer => <li><StreamIndexItem key={streamer.id} streamer={streamer} /></li>)
+    let streamz = this.props.streamers.map(streamer =>
+                                            {
+                                                let stream = this.props.streams.filter(stream => stream.streamer_id === streamer.id);
+                                                return <li><StreamIndexItem key={streamer.id} streamer={streamer} stream={stream} /></li> 
+                                            });
 
         return (
-            <>
-                <div className="streamers-index-container">
+            <div className="streamers-idx">
+                <div className="streamers-index-container-banner">
                     <div className="content-container-for-streamer-index">
                         <div className="thumbnail-image"><img className="thumbnail-image" src={this.props.game.photoUrl} alt={this.props.game.title} height="173" width="130"/></div>
                         <div className="title-streamers-viewers-count">
                             <p>{this.props.game.title}</p>
-
                         </div>
                     </div>
-
                     <div className="fake-ad-container">
                         <div className="fake-advertisement">
                             <p>This is going to be a fake ad</p>        
                         </div>
                     </div>
-
                     <div className="list-of-streamers">
                         <ul>
                             { streamz }
                         </ul>
-
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 }

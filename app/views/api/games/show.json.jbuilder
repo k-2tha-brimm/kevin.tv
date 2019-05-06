@@ -15,7 +15,7 @@ end
 json.streams do 
     @game.streams.each do |stream|
         json.set! stream.id do
-            json.extract! stream, :id, :title
+            json.extract! stream, :id, :streamer_id, :title
         end
     end
 end
