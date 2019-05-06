@@ -1,16 +1,16 @@
 import merge from 'lodash/merge';
 import { RECEIVE_GAME } from '../actions/games_actions';
 
-const streamersReducer = (state = {}, action ) => {
+const streamsReducer = (state = {}, action ) => {
     Object.freeze(state);
 
     switch (action.type) {
         case RECEIVE_GAME:
-            let streamers = action.game.streamers;
-            return merge({}, state, streamers )
+            let streams = action.game.streams;
+            return merge({}, state, streams )
         default:
             return {};
     }
 }
 
-export default streamersReducer;
+export default streamsReducer;

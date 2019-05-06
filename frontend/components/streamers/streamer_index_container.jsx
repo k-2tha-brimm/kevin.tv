@@ -1,7 +1,7 @@
 import React from 'react';
 import { fetchOneGame } from '../../actions/games_actions';
 import { connect } from 'react-redux';
-import { selectAllStreamers } from '../../reducers/selector';
+import { selectAllStreamers, selectAllStreams } from '../../reducers/selector';
 import StreamerIndex from './streamer_index';
 
 const mapStateToProps = (state, ownProps) => {
@@ -9,8 +9,8 @@ const mapStateToProps = (state, ownProps) => {
     if(game) {
         return {
             game,
-            streams: game.streams,
-            streamers: game.streamers
+            streamers: selectAllStreamers(state),
+            streams: selectAllStreams(state)
         }
     } else {
         return {}

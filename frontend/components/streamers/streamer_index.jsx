@@ -12,10 +12,16 @@ class StreamerIndex extends React.Component {
         this.props.fetchOneGame(this.props.match.params.gameId)
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.gameId !== this.props.match.params.gameId) {
+            this.props.fetchOneGame(this.props.match.params.gameId);
+        }
+      }
+
     render () {
 
-        // let streamz = this.props.entities.games.undefined.streamers ? this.props.entities.games.undefined.streamers.map(streamer => <li><StreamIndexItem key={streamer.id} streamer={streamer}/></li>) : [] ;
-        // let streamz = this.props.game.streamers.map(streamer => <StreamIndexItem streamer={streamer} />)
+        let streamz = this.props.streamers.map(streamer => <li><StreamIndexItem key={streamer.id} streamer={streamer} /></li>)
+
         return (
             <>
                 <div className="streamers-index-container">
@@ -23,6 +29,7 @@ class StreamerIndex extends React.Component {
                         <div className="thumbnail-image"><img className="thumbnail-image" src={this.props.game.photoUrl} alt={this.props.game.title} height="173" width="130"/></div>
                         <div className="title-streamers-viewers-count">
                             <p>{this.props.game.title}</p>
+
                         </div>
                     </div>
 
@@ -34,7 +41,7 @@ class StreamerIndex extends React.Component {
 
                     <div className="list-of-streamers">
                         <ul>
-                            {/* { streamz } */}
+                            { streamz }
                         </ul>
 
                     </div>
@@ -45,3 +52,5 @@ class StreamerIndex extends React.Component {
 }
 
 export default StreamerIndex;
+
+// Still need to add follower count and viewer count for each title within the index container
