@@ -8,7 +8,8 @@ const gamesReducer = (state={}, action) => {
             return action.games
         case RECEIVE_GAME:
             let game = action.game
-            return merge({}, state, game);
+            // debugger
+            return merge({}, state, { [game.id]: game });
         default:
             return state;
     }

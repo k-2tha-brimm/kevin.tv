@@ -47,3 +47,18 @@
     padding-left: 10px;
     font-size: 12px;
 }
+
+.game-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.follower-count {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.content-container-for-streamer-index {
+    padding: 32px;
+}

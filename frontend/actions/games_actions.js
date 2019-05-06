@@ -8,9 +8,11 @@ const receiveAllGames = games => ({
     games
 })
 
-const receiveGame = game => ({
+const receiveGame = ({game, streamers, streams}) => ({
     type: RECEIVE_GAME,
-    game
+    game,
+    streamers,
+    streams
 })
 
 export const fetchAllGames = games => dispatch => (
@@ -21,6 +23,6 @@ export const fetchAllGames = games => dispatch => (
 
 export const fetchOneGame = id => dispatch => (
     GamesApiUtils.fetchOneGame(id)
-        .then(game =>
-            dispatch(receiveGame(game)))
+        .then(payload =>
+            dispatch(receiveGame(payload)))
 );

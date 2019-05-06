@@ -4,14 +4,17 @@ import { Route, Link } from 'react-router-dom';
 class StreamerChannel extends React.Component {
 
     componentDidMount() {
-        
+
     }
 
     render() {
+
         let {streamer} = this.props;
+        
         if(!streamer) {
             return null;
         }
+
         return (
             <>
                 <div className="channel-header-container">

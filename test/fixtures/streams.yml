@@ -7,6 +7,7 @@
 #  game_id     :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  title       :string           default("(Untitled)")
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

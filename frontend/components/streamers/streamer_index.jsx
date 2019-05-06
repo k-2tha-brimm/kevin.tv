@@ -6,19 +6,28 @@ class StreamerIndex extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            game: this.props.game,
+            streamers: this.props.streamers,
+            streams: this.props.streams
+        }
     }
 
     componentDidMount() {
+        // debugger
         this.props.fetchOneGame(this.props.match.params.gameId)
     }
 
     componentDidUpdate(prevProps) {
+        // debugger
         if (prevProps.match.params.gameId !== this.props.match.params.gameId) {
             this.props.fetchOneGame(this.props.match.params.gameId);
         }
       }
 
     render () {
+
+    // debugger
 
     if(!this.props.game) {
         return null;
@@ -38,7 +47,8 @@ class StreamerIndex extends React.Component {
                     <div className="content-container-for-streamer-index">
                         <div className="thumbnail-image"><img className="thumbnail-image" src={this.props.game.photoUrl} alt={this.props.game.title} height="173" width="130"/></div>
                         <div className="title-streamers-viewers-count">
-                            <p>{this.props.game.title}</p>
+                            <p className="game-title">{this.props.game.title}</p>
+                            <p className="follower-count">Follower Count Will Be Here</p>
                         </div>
                     </div>
                     <div className="fake-ad-container">

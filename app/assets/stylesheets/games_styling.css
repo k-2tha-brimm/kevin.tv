@@ -85,7 +85,10 @@ need to be hosted on AWS */
 }
 
 .title-streamers-viewers-count {
-    justify-content: flex-end;
+    justify-content: flex-start;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 18px;
 }
 
 .streamers-index-container > .fake-ad-container {
