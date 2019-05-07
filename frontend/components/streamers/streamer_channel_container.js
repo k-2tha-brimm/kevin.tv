@@ -5,8 +5,11 @@ import StreamerChannel from './streamer_channel';
 
 const mapStateToProps = (state, ownProps) => {
     let streamer = state.entities.streamers[ownProps.match.params.userId];
-    return {
-        streamer
+    if(streamer){
+        return {
+            streamer,
+            stream: streamer.stream
+        }
     }
 }
 

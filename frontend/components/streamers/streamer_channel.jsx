@@ -3,9 +3,13 @@ import { Route, Link } from 'react-router-dom';
 
 class StreamerChannel extends React.Component {
 
-    componentDidMount() {
-
+    constructor(props) {
+        super(props);
     }
+
+    // componentDidMount() {
+    //     this.props.fetchOneUser(this.props.match.params.userId);
+    // }
 
     render() {
 
@@ -21,6 +25,12 @@ class StreamerChannel extends React.Component {
                     <div className="user-information-top-bar">
                         <ul>
                             <li className="streamer-username">{streamer.username}</li>
+                            <li className="streamers-videos">Videos</li>
+                            <li className="channel-followers">Followers</li>
+                            <ul className="channel-following">
+                                <li>Following</li>
+                                <button className="follow-button"><i class="far fa-heart"> </i> Follow</button>
+                            </ul>
                         </ul>
                     </div>
                     <div className="chat-box">
@@ -38,6 +48,9 @@ class StreamerChannel extends React.Component {
                         scrolling="no"
                         allowfullscreen="true">
                     </iframe>
+                </div>
+                <div className="channel-description">
+                    <p>It's enpty in here</p>
                 </div>
             </>
         );

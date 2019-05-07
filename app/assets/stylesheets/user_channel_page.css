@@ -46,6 +46,23 @@
     padding-top: 15px;
     padding-left: 10px;
     font-size: 12px;
+    width: 20%;
+    border: 1px solid red;
+}
+
+.streamers-videos {
+    width: 12%;
+    border: 1px solid red;
+}
+
+.channel-followers {
+    width: 10%;
+    border: 1px solid red;
+}
+
+.channel-following {
+    width: 100%;
+    border: 1px solid red;
 }
 
 .game-title {
@@ -59,6 +76,59 @@
     font-size: 12px;
 }
 
+.streamer-username {
+    text-align: left;
+}
+
 .content-container-for-streamer-index {
     padding: 32px;
 }
+
+.user-information-top-bar > ul {
+    list-style: none;
+    display: flex;  
+    height: 100%;
+    text-align: center;
+    align-content: center;
+}
+
+.user-information-top-bar > ul > li {
+    padding-top: 15px;
+    padding-left: 8px;
+    font-size: 12px;
+}
+
+.channel-description {
+    display: flex;
+}
+
+.channel-following {
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-right: 8px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.follow-button {
+    /* background: rgb(100, 65, 165);
+    border-radius: 5px;
+    padding-right: 5px;
+    /* padding-left: 5px; */
+    /* padding-top: 2px;
+    padding-bottom: 2px;
+    color: white;
+    justify-content: center; */
+
+    margin-right: 5px;
+    font-size: 13px;
+    background: rgb(100, 65, 165);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+

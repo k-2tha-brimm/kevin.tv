@@ -14,20 +14,16 @@ class StreamerIndex extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         this.props.fetchOneGame(this.props.match.params.gameId)
     }
 
     componentDidUpdate(prevProps) {
-        // debugger
         if (prevProps.match.params.gameId !== this.props.match.params.gameId) {
             this.props.fetchOneGame(this.props.match.params.gameId);
         }
       }
 
     render () {
-
-    // debugger
 
     if(!this.props.game) {
         return null;

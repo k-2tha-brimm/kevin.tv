@@ -6,9 +6,7 @@ import StreamerIndex from './streamer_index';
 
 const mapStateToProps = (state, ownProps) => {
     const game = state.entities.games[ownProps.match.params.gameId]
-    // debugger
     if(game) {
-        // debugger
         return {
             game,
             streamers: selectAllStreamers(state),
