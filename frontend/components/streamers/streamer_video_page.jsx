@@ -2,14 +2,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const StreamerVideo = () => {
+const StreamerVideo = ({streamer}) => {
 
-    return ( 
-
-        <div>
-            <p>Hello</p>
+    return (
+        <>
+        <div className="channel-header-container">
+            <div className="user-information-top-bar">
+                <ul>
+                    <li className="streamer-username">{streamer.username}</li>
+                    <li className="streamers-videos"><Link to={`/channel/${streamer.id}/videos`} streamer={streamer}>Videos</Link></li>
+                    <li className="channel-followers">Followers</li>
+                    <ul className="channel-following">
+                        <li>Following</li>
+                        <button className="follow-button"> Follow</button>
+                    </ul>
+                </ul>
+            </div>
+            <div className="chat-box">
+                <div className="chat-box-top">
+                    <p>Stream Chat</p>
+                </div>
+            </div>
         </div>
-        
+    </>
     )
 
 }
@@ -19,9 +34,12 @@ const StreamerVideo = () => {
 
 
 const mapStateToProps = (state, ownProps) => {
-    return {
-
-    };
+    let streamer = state.entities.streamers[ownProps.match.params.userId];
+    if(streamer){
+        return {
+            streamer
+        }
+    }
 };
 
 const mapDispatchToProps = dispatch => {

@@ -41,6 +41,7 @@ class StreamerIndex extends React.Component {
             <div className="streamers-idx">
                 <div className="streamers-index-container-banner">
                     <div className="content-container-for-streamer-index">
+                    {/* <img className="background-image" src={this.props.game.backgroundUrl} alt=""/>   */}
                         <div className="thumbnail-image"><img className="thumbnail-image" src={this.props.game.photoUrl} alt={this.props.game.title} height="173" width="130"/></div>
                         <div className="title-streamers-viewers-count">
                             <p className="game-title">{this.props.game.title}</p>

@@ -12,7 +12,8 @@ class Game < ApplicationRecord
     validates :title, presence: true, uniqueness: true
 
     has_one_attached :photo
-    has_one_attached :bakckground
+
+    has_one_attached :background
 
     has_many :streams,
         foreign_key: :game_id,
@@ -23,3 +24,6 @@ class Game < ApplicationRecord
         source: :streamer
 
 end
+
+# HTML VIDEO TAG
+# Just edit the default video

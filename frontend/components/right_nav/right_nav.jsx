@@ -13,10 +13,13 @@ const RightNav = ({ currentUser, logout, openModal }) => {
                 <button className="dropdown-trigger">Drop Me Down</button>
                 <div className="dropdown-items">
                     <li>Online</li>
+                    <br/>
                     <li>Channel</li>
                     <div className="line-break"></div>
                     <li>Settings</li>
+                    <br/>
                     <li>Language</li>
+                    <br/>
                     <li>Dark Theme</li>
                     <div className="line-break"></div>
                     <li>Log Out</li>
@@ -34,10 +37,13 @@ const RightNav = ({ currentUser, logout, openModal }) => {
                 <button className="dropdown-trigger">Drop Me Down</button>
                 <div className="dropdown-items">
                     <li>Online</li>
+                    <br/>
                     <li>Channel</li>
                     <div className="line-break"></div>
                     <li>Settings</li>
+                    <br/>
                     <li>Language</li>
+                    <br/>
                     <li>Dark Theme</li>
                     <div className="line-break"></div>
                     <li>Log Out</li>
