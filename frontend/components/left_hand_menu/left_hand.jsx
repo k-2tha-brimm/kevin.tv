@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LeftHandMenu = ({ currentUser, openModal }) => {
 
@@ -15,10 +16,11 @@ const LeftHandMenu = ({ currentUser, openModal }) => {
 
     const followersList = () => (
         <div className="signed-in-left-nav-container">
-            <p className="popular-channels-heading">Popular Channels</p>
+            <p className="popular-channels-heading">Recommended Channels</p>
+            <div className="nav-break"></div>
             <ul className="popular-channels-items">
-                <li>Keystone Light</li>
-                <li>Budweiser</li>
+                <li><Link to="/channel/12">Keystone Light</Link></li>
+                <li><Link to="/channel/13">Budweiser</Link></li>
                 <li>Old Milwaukee's Best</li>
                 <li>Pabst Blue Ribbon</li>
                 <li>Natural Ice</li>

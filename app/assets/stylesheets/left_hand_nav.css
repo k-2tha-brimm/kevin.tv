@@ -83,3 +83,21 @@
     margin: 0 auto;
     font-size: 40px;
 }
+
+.signed-in-left-nav-container {
+    position: absolute;
+    top: 150px;
+}
+
+.popular-channels-heading {
+    font-size: 15px;
+
+}
+
+.nav-break {
+    border-bottom: 1px solid gray;
+}
+
+.popular-channels-items > li {
+    margin-top: 6px;
+}

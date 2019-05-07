@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
-import { fetchOneUser } from '../../utils/users_util';
+import { fetchOneStreamer } from '../../actions/users_actions';
 import StreamerChannel from './streamer_channel';
 
 
 const mapStateToProps = (state, ownProps) => {
     let streamer = state.entities.streamers[ownProps.match.params.userId];
+    // debugger
     if(streamer){
         return {
             streamer,
-            stream: streamer.stream
         }
     }
 }
@@ -17,7 +17,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchOneUser: id => dispatch(fetchOneUser(id)) 
+        fetchOneStreamer: id => dispatch(fetchOneStreamer(id)) 
     }
 }
 

@@ -7,9 +7,15 @@ class StreamerChannel extends React.Component {
         super(props);
     }
 
-    // componentDidMount() {
-    //     this.props.fetchOneUser(this.props.match.params.userId);
-    // }
+    componentDidMount() {
+        this.props.fetchOneStreamer(this.props.match.params.userId);
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.userId !== this.props.match.params.userId) {
+            this.props.fetchOneStreamer(this.props.match.params.userId);
+        }
+      }
 
     render() {
 

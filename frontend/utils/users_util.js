@@ -12,3 +12,10 @@ export const fetchOneUser = id => (
         url: `api/users/${id}`
     })
 )
+
+export const fetchOneStreamer = id => (
+    $.ajax({
+        method: 'GET',
+        url: `api/users/${id}`
+    })
+)
