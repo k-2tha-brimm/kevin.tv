@@ -8,14 +8,14 @@ const RightNav = ({ currentUser, logout, openModal }) => {
         <nav className="right-nav-signed-out">
             <button className="login-button" onClick={() => openModal('login')}>Log In</button>
             <button className="signup-button" onClick={() => openModal('signup')}>Sign Up</button>
-            <i className="fas fa-otter"></i>
+            {/* <i className="fas fa-otter"></i> */}
         </nav>
     );
 
     const greeting = () => (
         <nav className="right-nav-signed-in"> 
             <li className="user-avatar">Welcome to Kevin.Tv, { currentUser.username }!</li>
-            <i className="fas fa-otter"></i>
+            {/* <i className="fas fa-otter"></i> */}
             <button className="nav-logout-button" onClick={logout}>Sign Out</button>
         </nav>
     );

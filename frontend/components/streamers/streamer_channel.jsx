@@ -29,7 +29,7 @@ class StreamerChannel extends React.Component {
                             <li className="channel-followers">Followers</li>
                             <ul className="channel-following">
                                 <li>Following</li>
-                                <button className="follow-button"><i class="far fa-heart"> </i> Follow</button>
+                                <button className="follow-button"> Follow</button>
                             </ul>
                         </ul>
                     </div>
@@ -60,3 +60,5 @@ class StreamerChannel extends React.Component {
 }
 
 export default StreamerChannel;
+
+// <i class="far fa-heart"> </i>
