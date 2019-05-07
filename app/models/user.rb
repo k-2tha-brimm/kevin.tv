@@ -35,6 +35,10 @@ class User < ApplicationRecord
         through: :stream,
         source: :game
 
+    has_many :videos,
+        foreign_key: :streamer_id,
+        class_name: :Video
+
     def password=(password)
         @password = password
         self.password_digest = BCrypt::Password.create(password)

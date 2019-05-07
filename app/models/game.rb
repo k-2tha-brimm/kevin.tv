@@ -23,6 +23,10 @@ class Game < ApplicationRecord
         through: :streams,
         source: :streamer
 
+    has_many :videos,
+        foreign_key: :game_id,
+        class_name: :Video
+
 end
 
 # HTML VIDEO TAG
