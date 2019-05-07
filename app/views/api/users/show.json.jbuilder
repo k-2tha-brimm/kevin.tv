@@ -25,3 +25,13 @@ if @user.game
         end
     end
 end
+
+if @user.videos
+    json.videos do
+        @user.videos.each do |video|
+            json.set! video.id do
+                json.extract! video, :title, :streamer_id, :game_id
+            end
+        end
+    end
+end

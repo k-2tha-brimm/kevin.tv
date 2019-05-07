@@ -26,11 +26,11 @@ class StreamerChannel extends React.Component {
         }
 
         return (
-            <>
+            <div className="this-is-a-div">
                 <div className="channel-header-container">
                     <div className="user-information-top-bar">
                         <ul>
-                            <li className="streamer-username">{streamer.username}</li>
+                            <li className="streamer-username"><li className="streamers-videos"><Link to={`/channel/${streamer.id}`} streamer={streamer}>{streamer.username}</Link></li></li>
                             <li className="streamers-videos"><Link to={`/channel/${streamer.id}/videos`} streamer={streamer}>Videos</Link></li>
                             <li className="channel-followers">Followers</li>
                             <ul className="channel-following">
@@ -46,19 +46,20 @@ class StreamerChannel extends React.Component {
                     </div>
                 </div>
                 <div className="video-player-container">
-                    <iframe
+                    {/* <iframe
                         src="https://clips.twitch.tv/embed?clip=IncredulousAbstemiousFennelImGlitch&autoplay=false"
                         height="600"
                         width="100%"
                         frameborder="0"
                         scrolling="no"
                         allowfullscreen="true">
-                    </iframe>
+                    </iframe> */}
+                    <video width="100%" height="600" controls></video>
                 </div>
                 <div className="channel-description">
-                    <p>It's enpty in here</p>
+                    <p>It's empty in here</p>
                 </div>
-            </>
+            </div>
         );
 
     }

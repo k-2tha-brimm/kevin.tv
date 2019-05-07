@@ -30,7 +30,7 @@
 }
 
 .video-player-container {
-    position: absolute;
+    position: relative;
     top: 122px;
     left: 265px;
     display: block;
@@ -39,7 +39,8 @@
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     height: 700px;
-    width: 63%
+    width: 63%;
+    background: white;
 }
 
 .streamer-username {
@@ -99,12 +100,21 @@
 }
 
 .channel-description {
-    display: flex;
+    position: absolute;
+    display: block;
+    top: 95%;
+    left: 44%;
+    height: 600px;
+    font: italic;
+}
+
+body {
+    background: #FAF9FA;
 }
 
 .channel-following {
     padding-top: 15px;
-    padding-left: 0px;
+    padding-left: 10px;
     padding-right: 8px;
     display: flex;
     text-align: center;
@@ -123,12 +133,11 @@
     justify-content: center; */
 
     margin-right: 5px;
-    font-size: 13px;
     background: rgb(100, 65, 165);
     color: white;
     border: 1px solid white;
     border-radius: 5px;
-    padding: 6px;
+    margin-bottom: auto;
+    font-size: medium;
 }
-
 

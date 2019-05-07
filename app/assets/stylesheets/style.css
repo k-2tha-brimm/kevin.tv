@@ -588,6 +588,7 @@ i {
 
 .dropdown-menu:hover .dropdown-items {
     display: block;
+    position: absolute;
 }
 
 .line-break {
@@ -604,4 +605,8 @@ i {
     padding: 5px;
     margin-right: 10px;
     border: 1px solid white;
+}
+
+.game-index-item-container .games-directory .list-of-streamers {
+    overflow-y: scroll;
 }

@@ -20,4 +20,8 @@ class Video < ApplicationRecord
         foreign_key: :streamer_id,
         class_name: :User
 
+    # has_one_attached :video
+
+    # has_one_attached :thumbnail
+
 end
