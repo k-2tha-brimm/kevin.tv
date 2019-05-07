@@ -1,7 +1,7 @@
 class Api::VideosController < ApplicationController
 
     def index
-        @videos = current_user.videos
+        @videos = Video.all
         render "api/users/show.json.jbuilder"
     end
 

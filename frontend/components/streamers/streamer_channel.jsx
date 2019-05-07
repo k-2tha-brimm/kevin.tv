@@ -19,7 +19,7 @@ class StreamerChannel extends React.Component {
 
     render() {
 
-        let {streamer} = this.props;
+        let {streamer, videos} = this.props;
         
         if(!streamer) {
             return null;
@@ -30,7 +30,7 @@ class StreamerChannel extends React.Component {
                 <div className="channel-header-container">
                     <div className="user-information-top-bar">
                         <ul>
-                            <li className="streamer-username"><li className="streamers-videos"><Link to={`/channel/${streamer.id}`} streamer={streamer}>{streamer.username}</Link></li></li>
+                            <li className="streamer-username"><li className="streamers-videos"><Link to={`/channel/${streamer.id}`} videos={videos} streamer={streamer}>{streamer.username}</Link></li></li>
                             <li className="streamers-videos"><Link to={`/channel/${streamer.id}/videos`} streamer={streamer}>Videos</Link></li>
                             <li className="channel-followers">Followers</li>
                             <ul className="channel-following">

@@ -1,32 +1,65 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { fetchOneStreamer } from '../../actions/users_actions';
+import { selectAllVideos } from '../../reducers/selector';
 
-const StreamerVideo = ({streamer}) => {
+class StreamerVideo extends React.Component {
 
-    return (
-        <>
-        <div className="channel-header-container">
-            <div className="user-information-top-bar">
-                <ul>
-                    <li className="streamer-username"><li className="streamers-videos"><Link to={`/channel/${streamer.id}`} streamer={streamer}>{streamer.username}</Link></li></li>
-                    <li className="streamers-videos"><Link to={`/channel/${streamer.id}/videos`} streamer={streamer}>Videos</Link></li>
-                    <li className="channel-followers">Followers</li>
-                    <ul className="channel-following">
-                        <li>Following</li>
-                        <button className="follow-button"> Follow</button>
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.props.fetchOneStreamer(this.props.match.params.userId);
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.userId !== this.props.match.params.userId) {
+            this.props.fetchOneStreamer(this.props.match.params.userId);
+        }
+      }
+
+    render() {
+
+        const {streamer, videos} = this.props;
+
+        if(!streamer) {
+            return null;
+        }
+
+        let videoz = videos.map(video =>
+                                <li>{video.title}</li>);
+
+        return (
+            <>
+            <div className="channel-header-container">
+                <div className="user-information-top-bar">
+                    <ul>
+                        <li className="streamer-username"><li className="streamers-videos"><Link to={`/channel/${streamer.id}`} streamer={streamer}>{streamer.username}</Link></li></li>
+                        <li className="streamers-videos"><Link to={`/channel/${streamer.id}/videos`} streamer={streamer}>Videos</Link></li>
+                        <li className="channel-followers">Followers</li>
+                        <ul className="channel-following">
+                            <li>Following</li>
+                            <button className="follow-button"> Follow</button>
+                        </ul>
                     </ul>
-                </ul>
-            </div>
-            <div className="chat-box">
-                <div className="chat-box-top">
-                    <p>Stream Chat</p>
+                </div>
+                <div className="chat-box">
+                    <div className="chat-box-top">
+                        <p>Stream Chat</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </>
-    )
 
+            <div className="channel-description">
+                <ul>
+                    {videoz}
+                </ul>
+            </div>
+        </>
+        )
+    }
 }
 
 
@@ -35,16 +68,18 @@ const StreamerVideo = ({streamer}) => {
 
 const mapStateToProps = (state, ownProps) => {
     let streamer = state.entities.streamers[ownProps.match.params.userId];
+    // debugger
     if(streamer){
         return {
-            streamer
+            streamer,
+            videos: selectAllVideos(state)
         }
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-
+        fetchOneStreamer: id => dispatch(fetchOneStreamer(id))
     };
 };
 
