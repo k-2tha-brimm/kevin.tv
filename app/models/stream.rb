@@ -12,6 +12,8 @@
 
 class Stream < ApplicationRecord
 
+    has_one_attached :thumbnail
+
     belongs_to :streamer,
         foreign_key: :streamer_id,
         class_name: :User

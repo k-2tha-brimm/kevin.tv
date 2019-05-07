@@ -5,6 +5,7 @@ import LeftHandContainer from '../components/left_hand_menu/left_hand_container'
 import GamesIndexContainer from './games/games_index_container';
 import StreamerIndexContainer from '../components/streamers/streamer_index_container';
 import StreamerChannelContainer from '../components/streamers/streamer_channel_container';
+import StreamerVideo from '../components/streamers/streamer_video_page'; 
 import Jumbotron from '../components/jumbotron/jumbotron';
 import Modal from '../components/modal/modal';
 
@@ -40,6 +41,7 @@ const App = () => (
             <Route exact path="/directory" component={GamesIndexContainer} />
             <Route exact path="/directory/:gameId" component={StreamerIndexContainer} />
             <Route exact path="/channel/:userId" component={StreamerChannelContainer} />
+            <Route exact path="/channel/:userId/videos" component={StreamerVideo} />
             <Route path="/" component={Jumbotron} />
         </Switch>
 

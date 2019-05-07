@@ -12,6 +12,7 @@ class Game < ApplicationRecord
     validates :title, presence: true, uniqueness: true
 
     has_one_attached :photo
+    has_one_attached :bakckground
 
     has_many :streams,
         foreign_key: :game_id,

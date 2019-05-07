@@ -25,7 +25,7 @@ class StreamerChannel extends React.Component {
                     <div className="user-information-top-bar">
                         <ul>
                             <li className="streamer-username">{streamer.username}</li>
-                            <li className="streamers-videos">Videos</li>
+                            <li className="streamers-videos"><Link to={`/channel/${streamer.id}/videos`} streamer={streamer}>Videos</Link></li>
                             <li className="channel-followers">Followers</li>
                             <ul className="channel-following">
                                 <li>Following</li>
