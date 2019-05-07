@@ -8,7 +8,7 @@ const videosReducer = (state={}, action) => {
         case RECEIVE_STREAMER:
             return merge({}, state, action.videos)
         default:
-            return state;
+            return {};
     }
 }
 

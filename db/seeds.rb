@@ -45,79 +45,196 @@ User.create(username: 'demo', password: 'hunter12', date_of_birth: '2016-11-02',
 
 
 
-# Game.create(title: 'Yuppie Psycho')
-# Game.create(title: 'Tekkan 7')
-# Game.create(title: 'Battletoads')
-# Game.create(title: 'For Honor')
-# Game.create(title: 'Zelda a Link to the Past')
-# Game.create(title: 'Persona 5')
-# Game.create(title: 'Dark Souls')
-# Game.create(title: 'Conan Exiles')
-# Game.create(title: 'Monster Hunter World')
-# Game.create(title: 'Mario Kart 8')
-# Game.create(title: 'Diablo 3')
-# Game.create(title: 'Science and Technology')
-# Game.create(title: 'War Thunder')
-# Game.create(title: 'Super Smash Brothers: Melee')
-# Game.create(title: 'Human: Fall Flat')
-# Game.create(title: 'Imperator: Rome')
-# Game.create(title: 'Stardew Valley')
-# Game.create(title: 'Getting Over It')
-# Game.create(title: 'Dark Souls 3')
-# Game.create(title: 'Enter the Gungeon')
-# Game.create(title: 'Twitch Sings')
-# Game.create(title: 'Epic 7')
-# Game.create(title: 'Splitgate')
-# Game.create(title: 'MLB The Show 2019')
-# Game.create(title: 'Euro Truck Simulator')
-# Game.create(title: 'Smite')
-# Game.create(title: 'Albion Online')
-# Game.create(title: 'Guild Wars 2')
-# Game.create(title: 'Battlefield 5')
-# Game.create(title: 'Super Smash Brothers Ultimate')
-# Game.create(title: 'Rust')
-# Game.create(title: 'World of Warships')
-# Game.create(title: 'osu!')
-# Game.create(title: 'ARK')
-# Game.create(title: 'Mario 64')
-# Game.create(title: 'The Division 2')
-# Game.create(title: 'The Legend of Zelda: Breath of the Wild')
-# Game.create(title: 'Day Z')
-# Game.create(title: 'NBA 2k19')
-# Game.create(title: 'Borderlands 2')
-# Game.create(title: 'The Elder Scrolls: Skyrim')
-# Game.create(title: 'Heroes of the Storm')
-# Game.create(title: 'Retro Gaming')
-# Game.create(title: 'Dark Souls 2')
-# Game.create(title: 'Path of Exiles')
-# Game.create(title: 'Metal Gear Solid 4')
-# Game.create(title: 'Last Epoch')
-# Game.create(title: 'Atlas')
-# Game.create(title: 'Food and Drink')
-# Game.create(title: 'Lineage 2')
-# Game.create(title: 'Chess')
-# Game.create(title: 'Farming Simulator')
-# Game.create(title: 'Final Fantasy XIV')
-# Game.create(title: 'Pokemon Stadium')
-# Game.create(title: 'God of War')
-# Game.create(title: 'Starcraft 2')
-# Game.create(title: 'Undertale')
-# Game.create(title: 'Mortal Kombat 11')
-# Game.create(title: 'Rainbow Six: Siege')
-# Game.create(title: 'Jump King')
-# Game.create(title: 'Dead by Daylight')
-# Game.create(title: 'Magic: The Gathering')
-# Game.create(title: 'Days Gone')
-# Game.create(title: 'Overwatch')
-# Game.create(title: 'FIFA 2019')
-# Game.create(title: 'Apex Legends')
-# Game.create(title: 'Defenders of the Ancienct: 2')
-# Game.create(title: 'Hearthstone')
-# Game.create(title: 'World of Warcraft')
-# Game.create(title: 'Just Chatting')
-# Game.create(title: 'PLAYERUNKNOWNS BATTLEGROUNDS')
-# Game.create(title: 'League of Legends')
-# Game.create(title: 'Fortnite')
-# Game.create(title: 'Counter Strike: Global Offensive')
-# Game.create(title: 'Rocket League')
+# yuppie = Game.create(title: 'Yuppie Psycho')
+# yuppie.photo.attach
+
+# tekkan = Game.create(title: 'Tekkan 7')
+# tekkan
+# tekkan
+
+# battletoads = Game.create(title: 'Battletoads')
+# battletoads
+# battletoads
+
+# honor = Game.create(title: 'For Honor')
+# honor
+# honor
+
+# zelda = Game.create(title: 'Zelda a Link to the Past')
+# zelda
+# zelda
+
+# p5 = Game.create(title: 'Persona 5')
+# p5
+# p5
+
+# ds = Game.create(title: 'Dark Souls')
+# ds
+# ds
+
+# ce = Game.create(title: 'Conan Exiles')
+# ce
+# ce
+
+# monster = Game.create(title: 'Monster Hunter World')
+# monster
+# monster
+
+# mk8 = Game.create(title: 'Mario Kart 8')
+# mk8
+# mk8
+
+# d3 = Game.create(title: 'Diablo 3')
+# d3
+# d3
+
+# sandt = Game.create(title: 'Science and Technology')
+# sandt
+# sandt
+
+# warthunder = Game.create(title: 'War Thunder')
+# warthunder
+# warthunder
+
+# ssbm = Game.create(title: 'Super Smash Brothers: Melee')
+# ssbm
+# ssbm
+
+# fall = Game.create(title: 'Human: Fall Flat')
+# fall
+# fall
+
+# rome = Game.create(title: 'Imperator: Rome')
+# rome
+# rome
+
+# stardew = Game.create(title: 'Stardew Valley')
+# stardew
+# stardew
+
+# goi = Game.create(title: 'Getting Over It')
+# goi
+# goi
+
+# ds3 = Game.create(title: 'Dark Souls 3')
+# ds3
+# ds3
+
+# gungeon = Game.create(title: 'Enter the Gungeon')
+# gungeon
+# gungeon
+
+# sings = Game.create(title: 'Twitch Sings')
+# sings
+# sings
+
+# epic7 = Game.create(title: 'Epic 7')
+# epic7
+# epic7
+
+# splitgate = Game.create(title: 'Splitgate')
+# splitgate
+# splitgate
+
+# mlb = Game.create(title: 'MLB The Show 2019')
+# mlb
+# mlb
+
+# eurotruck = Game.create(title: 'Euro Truck Simulator')
+# eurotruck
+# eurotruck
+
+# smite = Game.create(title: 'Smite')
+# smite
+# smite
+
+# albion = Game.create(title: 'Albion Online')
+# albion
+# albion
+
+# gw2 = Game.create(title: 'Guild Wars 2')
+# gw2
+# gw2
+
+# bf5 = Game.create(title: 'Battlefield 5')
+# bf5
+# bf5
+
+# ssbu = Game.create(title: 'Super Smash Brothers Ultimate')
+# ssbu
+# ssbu
+
+# rust = Game.create(title: 'Rust')
+# rust
+# rust
+
+# warships = Game.create(title: 'World of Warships')
+# warships
+# warships
+
+# osu = Game.create(title: 'osu!')
+# osu
+# osu
+
+# ark = Game.create(title: 'ARK')
+# ark
+# ark
+
+# m64 = Game.create(title: 'Mario 64')
+# m64
+# m64
+
+# division2 = Game.create(title: 'The Division 2')
+# division2
+# division2
+
+# botw = Game.create(title: 'The Legend of Zelda: Breath of the Wild')
+# botw
+# botw
+
+# dayz = Game.create(title: 'Day Z')
+# dayz
+# dayz
+
+# nba = Game.create(title: 'NBA 2k19')
+# nba
+# nba
+
+# border = Game.create(title: 'Borderlands 2')
+# skyrim = Game.create(title: 'The Elder Scrolls: Skyrim')
+# hots = Game.create(title: 'Heroes of the Storm')
+# retro = Game.create(title: 'Retro Gaming')
+# ds2 = Game.create(title: 'Dark Souls 2')
+# poe = Game.create(title: 'Path of Exiles')
+# mgs4 = Game.create(title: 'Metal Gear Solid 4')
+# epoch = Game.create(title: 'Last Epoch')
+# atlas = Game.create(title: 'Atlas')
+# fooddrink = Game.create(title: 'Food and Drink')
+# lineage = Game.create(title: 'Lineage 2')
+# chess = Game.create(title: 'Chess')
+# farmsim = Game.create(title: 'Farming Simulator')
+# ff14 = Game.create(title: 'Final Fantasy XIV')
+# stadium = Game.create(title: 'Pokemon Stadium')
+# gow = Game.create(title: 'God of War')
+# sc2 = Game.create(title: 'Starcraft 2')
+# undertale = Game.create(title: 'Undertale')
+# mk11 = Game.create(title: 'Mortal Kombat 11')
+# r6s = Game.create(title: 'Rainbow Six: Siege')
+# jump = Game.create(title: 'Jump King')
+# dbd = Game.create(title: 'Dead by Daylight')
+# mtg = Game.create(title: 'Magic: The Gathering')
+# daysgone = Game.create(title: 'Days Gone')
+# ow = Game.create(title: 'Overwatch')
+# fifa = Game.create(title: 'FIFA 2019')
+# apex = Game.create(title: 'Apex Legends')
+# dota = Game.create(title: 'Defenders of the Ancienct: 2')
+# hearthstone = Game.create(title: 'Hearthstone')
+# wow = Game.create(title: 'World of Warcraft')
+# chatting = Game.create(title: 'Just Chatting')
+# pubg = Game.create(title: 'PLAYERUNKNOWNS BATTLEGROUNDS')
+# lol = Game.create(title: 'League of Legends')
+# fortnite = Game.create(title: 'Fortnite')
+# csgo = Game.create(title: 'Counter Strike: Global Offensive')
+# rl = Game.create(title: 'Rocket League')
+# h5 = Game.create(title: 'Halo 5')
 
