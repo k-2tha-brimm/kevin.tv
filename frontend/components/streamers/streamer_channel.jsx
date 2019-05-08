@@ -24,7 +24,7 @@ class StreamerChannel extends React.Component {
         if(!streamer) {
             return null;
         }
-        // debugger
+
         return (
             <div className="this-is-a-div">
                 <div className="channel-header-container">

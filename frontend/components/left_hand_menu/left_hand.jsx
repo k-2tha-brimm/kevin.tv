@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 const LeftHandMenu = ({ currentUser, openModal }) => {
 
@@ -33,4 +34,4 @@ const LeftHandMenu = ({ currentUser, openModal }) => {
 
 }
 
-export default LeftHandMenu;
+export default withRouter(LeftHandMenu);
