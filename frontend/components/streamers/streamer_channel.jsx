@@ -24,6 +24,7 @@ class StreamerChannel extends React.Component {
         if(!streamer) {
             return null;
         }
+        // debugger
 
         return (
             <div className="this-is-a-div">
@@ -55,9 +56,13 @@ class StreamerChannel extends React.Component {
                         allowfullscreen="true">
                     </iframe> */}
                     <video width="100%" height="600" controls></video>
+                    <div className="video-description">
+                        <p>{this.props.stream.title}</p>
+                    </div>
                 </div>
                 <div className="channel-description">
                     <p>It's empty in here</p>
+                    <Link to={`/channel/${streamer.id}/settings`} streamer={streamer}>CLICK HERE FOR SETTINGS</Link>
                 </div>
             </div>
         );

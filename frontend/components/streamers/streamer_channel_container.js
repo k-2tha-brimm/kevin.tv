@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchOneStreamer } from '../../actions/users_actions';
 import StreamerChannel from './streamer_channel';
+import { selectAllStreams } from '../../reducers/selector';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -8,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
     if(streamer){
         return {
             streamer,
+            stream: selectAllStreams(state)[0]
         }
     }
 }
