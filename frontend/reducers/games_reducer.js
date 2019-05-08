@@ -11,7 +11,8 @@ const gamesReducer = (state={}, action) => {
             let game = action.game
             return merge({}, state, { [game.id]: game });
         case RECEIVE_STREAMER:
-            return merge({},state, action.game)
+            return action.game;
+            // return merge({},state, action.game)
         default:
             return state;
     }
