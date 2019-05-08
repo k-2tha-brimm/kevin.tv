@@ -59,7 +59,7 @@ class StreamerChannel extends React.Component {
                     <div className="video-description">
                         <li><img src={this.props.game.photoUrl} alt="game-photo" height="65" width="52"/></li>
                         <li>{this.props.stream.title}</li>
-                        <button className="edit-button">Edit</button>
+                        <button className="edit-button" onClick={() => this.props.openModal('edit')}>Edit</button>
                     </div>
                 </div>
                 <div className="channel-description">

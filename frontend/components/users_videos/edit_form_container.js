@@ -1,9 +1,9 @@
+import React from 'react';
 import { connect } from 'react-redux';
-import { fetchOneStreamer } from '../../actions/users_actions';
-import StreamerChannel from './streamer_channel';
+import { Link } from 'react-router-dom';
 import { selectAllStreams, selectAllGames } from '../../reducers/selector';
 import { openModal, closeModal } from '../../actions/modal_actions';
-
+import EditForm from './edit_form';
 
 const mapStateToProps = (state, ownProps) => {
     let streamer = state.entities.streamers[ownProps.match.params.userId];
@@ -16,13 +16,10 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-// will need to pull followers and following once we have that table
-
 const mapDispatchToProps = dispatch => {
     return {
-        fetchOneStreamer: id => dispatch(fetchOneStreamer(id)),
-        openModal: modal => dispatch(openModal(modal))
-    }
-}
+        closeModal: () => dispatch(closeModal())
+    };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(StreamerChannel);
+export default connect(mapStateToProps, mapDispatchToProps)(EditForm);
