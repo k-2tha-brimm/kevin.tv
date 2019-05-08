@@ -22,6 +22,7 @@ if @user.game
     json.game do
         json.set! @user.game.id do
             json.extract! @user.game, :id, :title
+            json.photoUrl url_for(@user.game.photo)
         end
     end
 end

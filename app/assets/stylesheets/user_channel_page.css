@@ -141,3 +141,10 @@ body {
     font-size: medium;
 }
 
+.video-description {
+    display: flex;
+}
+
+.video-description > img {
+    border-radius: 6px;
+}
