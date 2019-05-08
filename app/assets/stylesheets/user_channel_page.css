@@ -143,8 +143,30 @@ body {
 
 .video-description {
     display: flex;
+    padding: 10px;
+}
+
+.video-description > li {
+    list-style: none;
+    margin-left: 18px;
 }
 
 .video-description > img {
     border-radius: 6px;
+}
+
+.edit-button {
+    margin-left: 78%;
+    height: 30px;
+    font-size: 13px;
+    border-radius: 6px;
+    background: white;
+    width: 60px;
+    margin-top: 40px;
+    color: rgb(100, 65, 165);
+    border: 1px solid rgb(100, 65, 165);
+}
+
+.edit-button:hover {
+    cursor: pointer;
 }

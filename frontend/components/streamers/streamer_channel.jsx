@@ -57,9 +57,9 @@ class StreamerChannel extends React.Component {
                     </iframe> */}
                     <video width="100%" height="600" controls></video>
                     <div className="video-description">
-                        <img src={this.props.game.photoUrl} alt="game-photo" height="65" width="52"/>
-                        <p>{this.props.stream.title}</p>
-                        <p>{this.props.game.title}</p>
+                        <li><img src={this.props.game.photoUrl} alt="game-photo" height="65" width="52"/></li>
+                        <li>{this.props.stream.title}</li>
+                        <button className="edit-button">Edit</button>
                     </div>
                 </div>
                 <div className="channel-description">
