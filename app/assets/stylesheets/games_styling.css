@@ -34,7 +34,6 @@
     text-align: center;
     margin-right: 175px;
     margin-bottom: 50px;
-    border: 1px dashed red;
     padding: 30px;
 }
 
@@ -102,7 +101,7 @@ need to be hosted on AWS */
 
 .fake-advertisement {
     /* position: absolute; */
-    background: url(app/assets/images/totinos-pizza-rolls.jpg);
+    /* background-image: url(app/assets/images/totinos-pizza-rolls.jpg); */
 }
 
 .fake-ad-container {
@@ -118,10 +117,25 @@ need to be hosted on AWS */
 .list-of-streamers {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .list-of-streamers > ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 87%;
+    flex-wrap: wrap;
+    margin-left: 25px;
+    /* margin: 0 auto; */
 }
+
+.list-of-streamers > ul > li {
+    margin-left: 25px;
+    text-align: left;
+}
+
+.game-video-thumbnail > img {
+    border-radius: 6px;
+    border: none;
+}
+
