@@ -7,6 +7,7 @@ import StreamerIndexContainer from '../components/streamers/streamer_index_conta
 import StreamerChannelContainer from '../components/streamers/streamer_channel_container';
 import StreamerVideo from '../components/streamers/streamer_video_page'; 
 import Jumbotron from '../components/jumbotron/jumbotron';
+import UserSettings from '../components/user_settings/user_settings';
 import Modal from '../components/modal/modal';
 
 const App = () => (
@@ -42,6 +43,7 @@ const App = () => (
             <Route exact path="/directory/:gameId" component={StreamerIndexContainer} />
             <Route exact path="/channel/:userId" component={StreamerChannelContainer} />
             <Route exact path="/channel/:userId/videos" component={StreamerVideo} />
+            <Route exact path="/channel/:userId/settings" component={UserSettings}/>
             <Route path="/" component={Jumbotron} />
         </Switch>
 

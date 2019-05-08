@@ -584,6 +584,7 @@ i {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
+    border-radius: 6px;
 }
 
 .dropdown-menu:hover .dropdown-items {
@@ -609,4 +610,20 @@ i {
 
 .game-index-item-container .games-directory .list-of-streamers {
     overflow-y: scroll;
+}
+
+.dropdown-login {
+    height: 30px;
+    font: 13px;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-items > li {
+    height: 35px;
+    line-height: 1;
+    font-size: 13px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    justify-content: space-between;
 }

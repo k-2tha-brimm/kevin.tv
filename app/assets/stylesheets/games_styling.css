@@ -100,6 +100,11 @@ need to be hosted on AWS */
     padding: 30px;
 }
 
+.fake-advertisement {
+    /* position: absolute; */
+    background: url(app/assets/images/totinos-pizza-rolls.jpg);
+}
+
 .fake-ad-container {
     justify-content: center;
 }

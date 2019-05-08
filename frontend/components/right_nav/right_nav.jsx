@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 // Greeting will eventually need to be an avatar with a dropdown menu
 // for now it is simply styled as text
 
@@ -12,17 +12,11 @@ const RightNav = ({ currentUser, logout, openModal }) => {
             <div className="dropdown-menu">
                 <button className="dropdown-trigger">Drop Me Down</button>
                 <div className="dropdown-items">
-                    <li>Online</li>
-                    <br/>
-                    <li>Channel</li>
-                    <div className="line-break"></div>
-                    <li>Settings</li>
-                    <br/>
                     <li>Language</li>
                     <br/>
                     <li>Dark Theme</li>
                     <div className="line-break"></div>
-                    <li>Log Out</li>
+                    <li><Link className="dropdown-login" onClick={() => openModal('login')} style={{color: "rgb(100, 65, 165)", textDecoration: 'none' }} >Log In</Link></li>
                 </div>
             </div>
             {/* <i className="fas fa-otter"></i> */}
