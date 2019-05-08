@@ -16,7 +16,7 @@ class UserSettings extends React.Component {
     render() {
         return (
             <div className="channel-description">
-                <h1>Hello There!</h1>
+                <h1>Hello There, {this.props.user.username}!</h1>
             </div>
         )
     }

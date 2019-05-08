@@ -15,7 +15,7 @@ const streamersReducer = (state = {}, action ) => {
         case RECEIVE_STREAMER:
             return merge({}, state, action.streamer)
         default:
-            return {};
+            return state;
     }
 }
 

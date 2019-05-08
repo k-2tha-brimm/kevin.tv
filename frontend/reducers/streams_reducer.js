@@ -12,7 +12,7 @@ const streamsReducer = (state = {}, action ) => {
         case RECEIVE_STREAMER:
             return merge({}, state, action.stream)
         default:
-            return {};
+            return state;
     }
 }
 

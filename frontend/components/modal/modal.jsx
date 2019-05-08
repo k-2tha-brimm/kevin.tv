@@ -1,6 +1,7 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import EditFormContainer from '../users_videos/edit_form_container';
@@ -18,7 +19,9 @@ function Modal({modal, closeModal}) {
         component = <SignupFormContainer />;
         break;
       case 'edit':
+        // debugger
         component = <EditFormContainer />;
+        break;
       default:
         return null;
     }
@@ -43,4 +46,4 @@ function Modal({modal, closeModal}) {
     };
   };
   
-  export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Modal));

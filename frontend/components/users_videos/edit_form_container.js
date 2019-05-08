@@ -6,13 +6,19 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import EditForm from './edit_form';
 
 const mapStateToProps = (state, ownProps) => {
-    let streamer = state.entities.streamers[ownProps.match.params.userId];
-    if(streamer){
-        return {
-            streamer,
-            stream: selectAllStreams(state)[0],
-            game: selectAllGames(state)[0]
-        }
+    // debugger
+    // let streamer = state.entities.streamers[ownProps.match.params.userId];
+    // if(streamer){
+    //     return {
+    //         streamer,
+    //         stream: selectAllStreams(state)[0],
+    //         game: selectAllGames(state)[0]
+    //     }
+    // }
+    return {
+        game: Object.values(state.entities.games)[0],
+        streamer: Object.values(state.entities.streamers)[0],
+        stream: Object.values(state.entities.streams)[0]
     }
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 import RightNavContainer from '../components/right_nav/right_nav_container';
 import LeftHandContainer from '../components/left_hand_menu/left_hand_container'
 import GamesIndexContainer from './games/games_index_container';
@@ -43,7 +44,7 @@ const App = () => (
             <Route exact path="/directory/:gameId" component={StreamerIndexContainer} />
             <Route exact path="/channel/:userId" component={StreamerChannelContainer} />
             <Route exact path="/channel/:userId/videos" component={StreamerVideo} />
-            <Route exact path="/channel/:userId/settings" component={UserSettings}/>
+            <ProtectedRoute exact path="/channel/:userId/settings" component={UserSettings}/>
             <Route path="/" component={Jumbotron} />
         </Switch>
 

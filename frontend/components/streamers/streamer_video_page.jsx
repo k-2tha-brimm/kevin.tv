@@ -68,7 +68,6 @@ class StreamerVideo extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
     let streamer = state.entities.streamers[ownProps.match.params.userId];
-    // debugger
     if(streamer){
         return {
             streamer,

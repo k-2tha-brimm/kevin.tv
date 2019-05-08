@@ -19,13 +19,12 @@ class StreamerChannel extends React.Component {
 
     render() {
 
-        let {streamer, videos} = this.props;
-        
+        let {streamer, videos, settingsId} = this.props;
+
         if(!streamer) {
             return null;
         }
         // debugger
-
         return (
             <div className="this-is-a-div">
                 <div className="channel-header-container">
@@ -59,12 +58,12 @@ class StreamerChannel extends React.Component {
                     <div className="video-description">
                         <li><img src={this.props.game.photoUrl} alt="game-photo" height="65" width="52"/></li>
                         <li>{this.props.stream.title}</li>
-                        <button className="edit-button" onClick={() => this.props.openModal('edit')}>Edit</button>
+                        <button className="edit-button" streamer={streamer} onClick={() => this.props.openModal('edit')}>Edit</button>
                     </div>
                 </div>
                 <div className="channel-description">
                     <p>It's empty in here</p>
-                    <Link to={`/channel/${streamer.id}/settings`} streamer={streamer}>CLICK HERE FOR SETTINGS</Link>
+                    <Link to={`/channel/${settingsId}/settings`} streamer={streamer}>CLICK HERE FOR SETTINGS</Link>
                 </div>
             </div>
         );
