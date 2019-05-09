@@ -6,12 +6,23 @@ import { fetchOneUser } from '../../actions/users_actions';
 class UserSettings extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props;
+
+        this.state = {
+            avatar: null
+        }
     }
 
     componentDidMount() {
         this.props.fetchOneUser(this.props.match.params.userId)
     }
+
+    // handleFileSelect = e => {
+
+    // }
+
+    // handleFileUpload = () => {
+
+    // }
 
     render() {
         return (
@@ -22,8 +33,8 @@ class UserSettings extends React.Component {
                 <div className="profile-picture">Profile Picture</div>
 
                 <div className="profile-picture-box">
-                    <input type="file" id="file" className="inputfile"/>
-                    <label htmlFor="file">Update Profile Picture</label>
+                    <input type="file" id="file" className="inputfile" onChange={this.handleFileSelect}/>
+                    <label htmlFor="file" onClick={this.handleFileUpload}>Update Profile Picture</label>
                 </div>
 
 
