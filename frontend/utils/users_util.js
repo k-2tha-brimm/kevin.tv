@@ -32,6 +32,8 @@ export const updateAvatar = (id, avatar) => {
     $.ajax({
         method: 'PATCH',
         url: `api/users/${id}`,
-        avatar
+        data: avatar,
+        contentType: false,
+        processData: false
     })
 }

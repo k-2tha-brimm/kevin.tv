@@ -8,9 +8,10 @@ class UserSettings extends React.Component {
         super(props);
 
         this.state = {
-            avatar: this.props.user.avatar
+            imageUrl: '',
+            imageFile: null
         }
-        this.handleFileUpload = this.handleFileUpload.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFileSelect = this.handleFileSelect.bind(this);
     }
 
@@ -19,20 +20,34 @@ class UserSettings extends React.Component {
     }
 
     handleFileSelect(e) {  
-        debugger 
-        this.setState({ avatar: e.target.files[0] });
-        // this.setState(this.state.avatar.attach(e.target.files[0]));
+        const reader = new FileReader();
+        // debugger
+        const file = e.currentTarget.files[0];
+        reader.onloadend = () => this.setState({ imageUrl: reader.result, imageFile: file });
+
+        if (file) {
+            reader.readAsDataURL(file);
+          } else {
+            this.setState({ imageUrl: "", imageFile: null });
+          }
     }
 
-    handleFileUpload() {
+    handleSubmit(e) {
+        e.preventDefault();
         const formData = new FormData();
-        formData.append(
-            'avatar',
-            this.state.avatar,
-            this.state.avatar.name
-        )
-        updateUserAvatar(this.props.user.id, formData);
-    }
+        formData.append('user[url]', this.state.imageUrl);
+        if (this.state.imageUrl) {
+            formData.append('user[avatar]', this.state.imageFile);
+        }
+        // debugger
+        $.ajax({
+          url: `/api/users/${this.props.user.id}`,
+          method: 'PATCH',
+          data: formData,
+          contentType: false,
+          processData: false
+        });
+      }
 
     render() {
         return (
@@ -45,7 +60,8 @@ class UserSettings extends React.Component {
                 <div className="profile-picture-box">
                     <img src={this.props.user.avatar} alt="user avatar" height="96" width="96"/>
                     <input type="file" id="file" className="inputfile" onChange={this.handleFileSelect}/>
-                    <label htmlFor="file" onClick={this.handleFileUpload}>Update Profile Picture</label>
+                    <label htmlFor="file" >Update Profile Picture</label>
+                    <input type="submit" onClick={this.handleSubmit}/>
                     {/* <i class="fas fa-trash-alt"></i> */}
                 </div>
 

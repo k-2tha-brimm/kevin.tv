@@ -20,10 +20,11 @@ class Api::UsersController < ApplicationController
     end
     
     def update
+        
         @user = User.find_by!(id: params[:id])
-        @user.avatar.attach(params[:avatar])
+        @user.avatar.attach(params[:user][:avatar])
         if @user.save
-            render "api/users/show"
+            render json: "api/users/show"
         else
             render json: ['Please try again.'], status: 422
         end
