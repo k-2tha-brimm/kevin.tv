@@ -22,23 +22,42 @@ class UserSettings extends React.Component {
                 <div className="profile-picture">Profile Picture</div>
 
                 <div className="profile-picture-box">
+                    <input type="file" id="file" className="inputfile"/>
+                    <label htmlFor="file">Update Profile Picture</label>
                 </div>
 
 
                 <div className="profile-picture">Profile Settings</div>
                 <div className="profile-settings-desc">Change identifying details about your Kevin.Tv account.</div>
-                <div className="profile-picture-box">
-                    <div className="left-settings-input">
-                        <div className="settings-label">Username</div>
-                    </div>
+
+                <div className="settings-box">
+                    <div className="profile-settings-box">
                         
-                    <div className="right-settings-input">
-                        <input type="text"
-                                className="settings-input" />
-                        <div className="profile-settings-username-desc">You may not update your username at this time.</div>
+                        <div className="left-settings-input">
+                            <div className="settings-label">Username</div>
+                        </div>
+                            
+                        <div className="right-settings-input">
+                            <input type="text"
+                                    className="settings-input" />
+                            <div className="profile-settings-username-desc">You may not update your username at this time.</div>
+                        </div>
+
+                    </div>
+                    
+                    <div className="profile-bio-box">
+                        <div className="left-settings-input">
+                            <div className="settings-label">Bio</div>
+                        </div>
+                            
+                        <div className="right-settings-input">
+                            <textarea type="text"
+                                    className="settings-input"
+                                    row="10" ></textarea>
+                            <div className="profile-settings-username-desc">Tell us a little bit about yourself!.</div>
+                        </div>
                     </div>
                 </div>
-
             </div>
         )
     }

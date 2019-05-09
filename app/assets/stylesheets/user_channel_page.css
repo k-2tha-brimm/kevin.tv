@@ -328,3 +328,82 @@ body {
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 200;
 }
+
+.profile-settings-box {
+    background-color: white;
+    width: 100%;
+    border-radius: 6px;
+    margin-right: 18%;
+    margin-top: .5rem;
+    border: 1px solid rgb(210, 206, 219);
+    padding: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-bio-box {
+    background-color: white;
+    width: 100%;
+    border-radius: 6px;
+    margin-right: 18%;
+    height: 125px;
+    margin-top: .5rem;
+    border: 1px solid rgb(210, 206, 219);
+    padding: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+}
+
+.settings-box {
+    display: block;
+    width: 55%;
+    background-color: rgb(210, 206, 219);
+    border-radius: 6px;
+    border: 1px solid rgb(210, 206, 219);
+}
+
+textarea {
+    max-height: 59px;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+/* .inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+} */
+ 
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: rgb(245, 241, 241);
+    cursor: pointer;
+}
+
+.inputfile + label {
+    height: 30px;
+    font-weight: inherit;
+    width: 150px;
+    border: 1px solid #B19DD8;
+    color: #6441a4;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 15px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
