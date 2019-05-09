@@ -585,11 +585,19 @@ i {
     padding: 12px 16px;
     z-index: 1;
     border-radius: 6px;
+    top: 100%;
+    left: 0;
+    z-index: 1;
 }
 
-.dropdown-menu:hover .dropdown-items {
+/* .dropdown-menu:hover .dropdown-items {
     display: block;
     position: absolute;
+} */
+
+.show {
+    display: block;
+    /* position: absolute; */
 }
 
 .line-break {
@@ -611,6 +619,10 @@ i {
 
 .game-index-item-container .games-directory .list-of-streamers {
     overflow-y: scroll;
+}
+
+.game-index-item-container {
+    z-index: -1;
 }
 
 .dropdown-login {

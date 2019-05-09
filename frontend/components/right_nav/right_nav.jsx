@@ -5,12 +5,21 @@ import { Link } from 'react-router-dom';
 
 const RightNav = ({ currentUser, logout, openModal }) => {
 
+    
+    const bombsAway = () => {
+        if(document.getElementsByClassName("show").length > 0) {
+            document.getElementsByClassName("dropdown-items")[0].classList.remove("show");
+        } else {
+            document.getElementsByClassName("dropdown-items")[0].classList.add("show");
+        }
+    }
+
     const sessionLinks = () => (
         <nav className="right-nav-signed-out">
             <button className="login-button" onClick={() => openModal('login')}>Log In</button>
             <button className="signup-button" onClick={() => openModal('signup')}>Sign Up</button>
             <div className="dropdown-menu">
-                <button className="dropdown-trigger">Drop Me Down</button>
+                <button className="dropdown-trigger" onClick={() => bombsAway()}>Drop Me Down</button>
                 <div className="dropdown-items">
                     <li>Language</li>
                     <br/>
@@ -28,19 +37,19 @@ const RightNav = ({ currentUser, logout, openModal }) => {
             <li className="user-avatar">Welcome to Kevin.Tv, { currentUser.username }!</li>
             {/* <i className="fas fa-otter"></i> */}
             <div className="dropdown-menu">
-                <button className="dropdown-trigger">Drop Me Down</button>
+                <button className="dropdown-trigger" onClick={() => bombsAway()}>Drop Me Down</button>
                 <div className="dropdown-items">
                     <li>Online</li>
                     <br/>
                     <li>Channel</li>
                     <div className="line-break"></div>
-                    <li>Settings</li>
+                    <li><Link to={`/channel/${currentUser.id}/settings`} user={currentUser}>Settings</Link></li>
                     <br/>
                     <li>Language</li>
                     <br/>
                     <li>Dark Theme</li>
                     <div className="line-break"></div>
-                    <li>Log Out</li>
+                    <li><button className="nav-logout-button" onClick={logout}>Sign Out</button></li>
                 </div>
             </div>
             <button className="nav-logout-button" onClick={logout}>Sign Out</button>

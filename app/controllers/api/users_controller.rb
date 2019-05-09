@@ -18,6 +18,17 @@ class Api::UsersController < ApplicationController
             render "api/users/show.json.jbuilder"
         end
     end
+    
+    def update
+        @user = User.find_by!(id: params[:id])
+        @user.avatar.attach(params[:avatar])
+        if @user.save
+            render "api/users/show"
+        else
+            render json: ['Please try again.'], status: 422
+        end
+
+    end
 
     private
 

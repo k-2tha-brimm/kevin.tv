@@ -75,6 +75,7 @@
     text-align: center;
     align-content: center;
     display: grid;
+    z-index: -1;
 }
 
 .jumbotron > h1 {
@@ -91,13 +92,22 @@
 
 .popular-channels-heading {
     font-size: 15px;
-
+    text-align: center;
 }
 
 .nav-break {
     border-bottom: 1px solid gray;
+    margin: 22px;
 }
 
 .popular-channels-items > li {
-    margin-top: 6px;
+    margin: 6px;
+}
+
+.popular-channels-items > li > img {
+    border-radius: 6px;
+}
+
+.popular-channels-items > li > link {
+    border-radius: 6px;
 }

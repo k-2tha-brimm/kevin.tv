@@ -20,12 +20,12 @@ const LeftHandMenu = ({ currentUser, openModal }) => {
             <p className="popular-channels-heading">Recommended Channels</p>
             <div className="nav-break"></div>
             <ul className="popular-channels-items">
-                <li><Link to="/channel/12">Keystone Light</Link></li>
-                <li><Link to="/channel/13">Budweiser</Link></li>
-                <li>Old Milwaukee's Best</li>
-                <li>Pabst Blue Ribbon</li>
-                <li>Natural Ice</li>
-                <li>Hamm's</li>
+                <li><img src="./assets/userthumbnail.jpeg" height="40" width="40"/><Link to="/channel/12" style={{color: "rgb(100, 65, 165)", textDecoration: 'none', margin: '30px', marginBottom: '25px' }}>Keystone Light</Link></li>
+                <li><img src="./assets/userthumbnail.jpeg" height="40" width="40"/><Link to="/channel/13" style={{color: "rgb(100, 65, 165)", textDecoration: 'none', margin: '30px', marginBottom: '25px' }}>Budweiser</Link></li>
+                <li><img src="./assets/userthumbnail.jpeg" height="40" width="40"/><Link to="/directory" style={{color: "rgb(100, 65, 165)", textDecoration: 'none', margin: '30px', marginBottom: '25px' }}>Old Milwaukee's Best</Link></li>
+                <li><img src="./assets/userthumbnail.jpeg" height="40" width="40"/><Link to="/directory" style={{color: "rgb(100, 65, 165)", textDecoration: 'none', margin: '30px', marginBottom: '25px' }}>Pabst Blue Ribbon</Link></li>
+                <li><img src="./assets/userthumbnail.jpeg" height="40" width="40"/><Link to="/directory" style={{color: "rgb(100, 65, 165)", textDecoration: 'none', margin: '30px', marginBottom: '25px' }}>Natural Ice</Link></li>
+                <li><img src="./assets/userthumbnail.jpeg" height="40" width="40"/><Link to="/directory" style={{color: "rgb(100, 65, 165)", textDecoration: 'none', margin: '30px', marginBottom: '25px' }}>Hamm's</Link></li>
             </ul>
         </div>
     );

@@ -63,7 +63,7 @@ class StreamerChannel extends React.Component {
                 </div>
                 <div className="channel-description">
                     <p>It's empty in here</p>
-                    <Link to={`/channel/${settingsId}/settings`} streamer={streamer}>CLICK HERE FOR SETTINGS</Link>
+                    
                 </div>
             </div>
         );
