@@ -15,8 +15,30 @@ class UserSettings extends React.Component {
 
     render() {
         return (
-            <div className="channel-description">
-                <h1>Hello There, {this.props.user.username}!</h1>
+            <div className="settings-page-container">
+                <h1>Settings</h1>
+                <div className="bottom-border"></div>
+
+                <div className="profile-picture">Profile Picture</div>
+
+                <div className="profile-picture-box">
+                </div>
+
+
+                <div className="profile-picture">Profile Settings</div>
+                <div className="profile-settings-desc">Change identifying details about your Kevin.Tv account.</div>
+                <div className="profile-picture-box">
+                    <div className="left-settings-input">
+                        <div className="settings-label">Username</div>
+                    </div>
+                        
+                    <div className="right-settings-input">
+                        <input type="text"
+                                className="settings-input" />
+                        <div className="profile-settings-username-desc">You may not update your username at this time.</div>
+                    </div>
+                </div>
+
             </div>
         )
     }

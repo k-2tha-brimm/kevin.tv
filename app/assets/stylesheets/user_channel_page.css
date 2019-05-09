@@ -192,17 +192,20 @@ body {
 .video-list-items {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .video-list-items > ul {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .video-list-items > ul > li {
     display: flex;
-    margin-left: 15px;
+    margin-left: 20px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .channel-following > li {
@@ -224,4 +227,104 @@ body {
 
 .channel-following > button:hover {
     cursor: pointer;
+}
+
+.settings-page-container {
+    top: 80px;
+    left: 270px;
+    position: relative;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.settings-page-container > h1 {
+    font-weight: 400;
+    line-height: 1;
+    font-size: 28px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.bottom-border {
+    border-bottom: 1px solid rgb(210, 206, 219);
+    margin-top: 20px;
+    margin-right: 20%;
+}
+
+.profile-picture-box {
+    background-color: white;
+    width: 55%;
+    border-radius: 6px;
+    margin-right: 18%;
+    height: 150px;
+    margin-top: .5rem;
+    border: 1px solid rgb(210, 206, 219);
+    padding: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+}
+
+.profile-picture {
+    font-size: 18px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    padding: 15px;
+    padding-left: 4px;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+}
+
+.profile-settings-desc {
+    margin: 5px;
+    margin-left: 4px;
+    margin-top: 2px;
+    font-size: 11px;
+    text-align: left;
+    width: 87%;
+    color: rgb(149, 149, 149);
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 200;
+}
+
+.settings-label {
+    margin: 10px;
+    font-weight: 600;
+    line-height: 1;
+    font-size: 14px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    margin-left: 4px;
+    margin-top: 11px;
+}
+
+.settings-input {
+    height: 30px;
+    width: 92%;
+    margin: 10px;
+    align-items: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    box-shadow: none;
+    border: 1px solid #dfdfdf;
+    margin-bottom: 0;
+    margin-top: 0px;
+}
+
+.right-settings-input {
+    display: block;
+    width: 68%;
+    margin-top: 8px;
+}
+
+.profile-settings-username-desc {
+    margin: 5px;
+    margin-left: 11px;
+    /* margin-top: 2px; */
+    font-size: 11px;
+    text-align: left;
+    width: 87%;
+    margin-top: 11px;
+    color: rgb(149, 149, 149);
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 200;
 }
