@@ -11,7 +11,7 @@
 
 .user-information-top-bar {
     width: 100%;
-    border: 1px solid green;
+    background-color: white;
 }
 
 .chat-box {
@@ -48,22 +48,23 @@
     padding-left: 10px;
     font-size: 12px;
     width: 20%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .streamers-videos {
     width: 12%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .channel-followers {
     width: 10%;
-    border: 1px solid red;
+    padding-right: 3px;
+    /* border: 1px solid red; */
 }
 
 .channel-following {
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .game-title {
@@ -96,7 +97,10 @@
 .user-information-top-bar > ul > li {
     padding-top: 15px;
     padding-left: 8px;
-    font-size: 12px;
+    font-size: 14px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #6441a4;
+    border: 0.25px solid gray;
 }
 
 .channel-description {
@@ -119,6 +123,8 @@ body {
     text-align: center;
     justify-content: space-between;
     font-size: 12px;
+    border: 0.25px solid gray;
+    background-color: white;
 }
 
 .follow-button {
@@ -167,5 +173,55 @@ body {
 }
 
 .edit-button:hover {
+    cursor: pointer;
+}
+
+.video-index {
+    position: relative;
+    top: 100px;
+    left: 239px;
+}
+
+.video-index-header > h2 {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.video-list-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-list-items > ul {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.video-list-items > ul > li {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.channel-following > li {
+    font-size: 14px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #6441a4;
+}
+
+.channel-following > button {
+    margin-top: 0;
+    padding-top: 2px;
+    margin-bottom: 10px;
+    border-color: black;
+    width: 100px;
+    font-weight: 400;
+    font-size: 14px;
+    /* height: 25px; */
+}
+
+.channel-following > button:hover {
     cursor: pointer;
 }
