@@ -7,6 +7,7 @@
 json.streamer do
     json.set! @user.id do 
         json.extract! @user, :id, :username
+        json.avatar url_for(@user.avatar)
     end
 end
 

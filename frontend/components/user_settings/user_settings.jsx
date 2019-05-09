@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchOneUser } from '../../actions/users_actions';
+import { fetchOneUser, updateUserAvatar } from '../../actions/users_actions';
 
 
 class UserSettings extends React.Component {
@@ -8,21 +8,31 @@ class UserSettings extends React.Component {
         super(props);
 
         this.state = {
-            avatar: null
+            avatar: this.props.user.avatar
         }
+        this.handleFileUpload = this.handleFileUpload.bind(this);
+        this.handleFileSelect = this.handleFileSelect.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchOneUser(this.props.match.params.userId)
     }
 
-    // handleFileSelect = e => {
+    handleFileSelect(e) {  
+        debugger 
+        this.setState({ avatar: e.target.files[0] });
+        // this.setState(this.state.avatar.attach(e.target.files[0]));
+    }
 
-    // }
-
-    // handleFileUpload = () => {
-
-    // }
+    handleFileUpload() {
+        const formData = new FormData();
+        formData.append(
+            'avatar',
+            this.state.avatar,
+            this.state.avatar.name
+        )
+        updateUserAvatar(this.props.user.id, formData);
+    }
 
     render() {
         return (
@@ -33,8 +43,10 @@ class UserSettings extends React.Component {
                 <div className="profile-picture">Profile Picture</div>
 
                 <div className="profile-picture-box">
+                    <img src={this.props.user.avatar} alt="user avatar" height="96" width="96"/>
                     <input type="file" id="file" className="inputfile" onChange={this.handleFileSelect}/>
                     <label htmlFor="file" onClick={this.handleFileUpload}>Update Profile Picture</label>
+                    {/* <i class="fas fa-trash-alt"></i> */}
                 </div>
 
 
@@ -85,7 +97,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchOneUser: id => dispatch(fetchOneUser(id))
+        fetchOneUser: id => dispatch(fetchOneUser(id)),
+        updateUserAvatar: (id, avatar) => dispatch(updateUserAvatar(id, avatar))
     };
 };
 

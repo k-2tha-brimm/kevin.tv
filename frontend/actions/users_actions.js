@@ -28,6 +28,11 @@ const receiveVideos = ({videos, streamer}) => ({
     videos
 })
 
+export const updateUserAvatar = (id, avatar) => dispatch => (
+    UsersApiUtils.updateAvatar(id, avatar)
+        .then(user => dispatch(receiveUser(user)))
+);
+
 export const fetchAllUsers = users => dispatch => (
     UsersApiUtils.fetchAllUsers(users)
         .then(users =>

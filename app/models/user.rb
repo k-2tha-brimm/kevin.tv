@@ -27,6 +27,8 @@ class User < ApplicationRecord
     validates :password, length: { minimum: 8, allow_nil: true }
     validates :password_digest, presence: true
 
+    has_one_attached :avatar
+
     has_one :stream,
         foreign_key: :streamer_id,
         class_name: :Stream

@@ -254,14 +254,24 @@ body {
     width: 55%;
     border-radius: 6px;
     margin-right: 18%;
-    height: 150px;
+    /* height: 150px; */
     margin-top: .5rem;
     border: 1px solid rgb(210, 206, 219);
     padding: 20px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     box-sizing: border-box;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     display: flex;
+}
+
+.profile-picture-box  > img {
+    margin-right: 15px;
+    border-radius: 6px;
+    border: 1px solid rgb(210, 206, 219);
+}
+
+.profile-picture-box > label {
+    align-content: center;
 }
 
 .profile-picture {
@@ -396,6 +406,9 @@ textarea {
 
 .inputfile + label {
     height: 30px;
+    margin: auto;
+    margin-left: 20px;
+    margin-bottom: 58px;
     font-weight: inherit;
     width: 150px;
     border: 1px solid #B19DD8;

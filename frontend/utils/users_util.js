@@ -27,3 +27,11 @@ export const fetchAllVideos = (id, videos) => (
         videos
     })
 )
+
+export const updateAvatar = (id, avatar) => {
+    $.ajax({
+        method: 'PATCH',
+        url: `api/users/${id}`,
+        avatar
+    })
+}
