@@ -14,6 +14,8 @@ const sessionReducer = (state=_nullUser, action) => {
             return { id: parseInt(Object.keys(action.currentUser.streamer)[0]) };
         case LOGOUT_CURRENT_USER:
             return _nullUser;
+        case RECEIVE_SESSION_ERRORS:
+            return _nullUser;
         default:
             return state;
     }
