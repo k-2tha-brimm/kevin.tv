@@ -639,3 +639,8 @@ i {
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     justify-content: space-between;
 }
+
+.nav-logout-button {
+    background: white;
+    border: 1px solid rgb(176, 141, 241);
+}

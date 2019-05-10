@@ -63,9 +63,9 @@ class RightNav extends React.Component {
                         <div className="line-break"></div>
                         <li><Link to={`/channel/${this.props.currentUser.id}/settings`} user={this.props.currentUser} style={{color: "rgb(100, 65, 165)", fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif", fontSize: "14px"}}>Settings</Link></li>
                         <br/>
-                        <li>Language</li>
+                        <li><Link to={`/directory`} user={this.props.currentUser} style={{color: "rgb(100, 65, 165)", fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif", fontSize: "14px"}}>Language</Link></li>
                         <br/>
-                        <li>Dark Theme</li>
+                        <li><Link to={`/directory`} user={this.props.currentUser} style={{color: "rgb(100, 65, 165)", fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif", fontSize: "14px"}}>Dark Theme</Link></li>
                         <div className="line-break"></div>
                         <li><button className="nav-logout-button" onClick={this.props.logout}>Sign Out</button></li>
                     </div>

@@ -1,7 +1,7 @@
 class Api::VideosController < ApplicationController
 
     def index
-        @videos = Video.all
+        @videos = current_user.videos
         render "api/users/show.json.jbuilder"
     end
 
@@ -10,7 +10,7 @@ class Api::VideosController < ApplicationController
         @video.streamer_id = current_user.id 
 
         if @video.save
-            
+            render "api/users/show.json.jbuilder"
         else
 
         end

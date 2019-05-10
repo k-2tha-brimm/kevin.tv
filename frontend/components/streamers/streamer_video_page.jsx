@@ -3,11 +3,17 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchOneStreamer } from '../../actions/users_actions';
 import { selectAllVideos } from '../../reducers/selector';
+import { closeModal } from '../../actions/modal_actions';
 
 class StreamerVideo extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            videoUrl: '',
+            videoFile: null
+        }
     }
 
     componentDidMount() {
@@ -19,6 +25,38 @@ class StreamerVideo extends React.Component {
             this.props.fetchOneStreamer(this.props.match.params.userId);
         }
       }
+
+    handleFileSelect(e) {  
+        const reader = new FileReader();
+
+        const file = e.currentTarget.files[0];
+        reader.onloadend = () => this.setState({ videoUrl: reader.result, videoFile: file });
+
+        if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                this.setState({ videoUrl: "", videoFile: null });
+            }
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const formData = new FormData();
+
+        formData.append('user[url]', this.state.imageUrl);
+        
+        if (this.state.imageUrl) {
+            formData.append('user[avatar]', this.state.imageFile);
+        }
+        
+        $.ajax({
+          url: `/api/users/${this.props.user.id}/videos`,
+          method: 'POST',
+          data: formData,
+          contentType: false,
+          processData: false
+        });
+    }
 
     render() {
 
@@ -55,6 +93,11 @@ class StreamerVideo extends React.Component {
 
                 <div className="video-index-header">
                     <h2>Showing Featured Videos</h2>
+                    <div className="upload-video-right">
+                        <input type="file" accept="video" id="file" className="inputfile"/>
+                        <label htmlFor="file" >Upload a Video</label>
+                        <input type="submit"/>
+                    </div>
                 </div>
 
                 <div className="video-list-items">
@@ -69,7 +112,7 @@ class StreamerVideo extends React.Component {
 }
 
 
-
+// one handles select, one handles submit
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -84,7 +127,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchOneStreamer: id => dispatch(fetchOneStreamer(id))
+        fetchOneStreamer: id => dispatch(fetchOneStreamer(id)),
+        closeModal: () => dispatch(closeModal())
     };
 };
 

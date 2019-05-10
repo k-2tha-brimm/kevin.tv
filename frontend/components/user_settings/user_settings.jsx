@@ -9,7 +9,7 @@ class UserSettings extends React.Component {
 
         this.state = {
             imageUrl: '',
-            imageFile: null
+            imageFile: null,
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFileSelect = this.handleFileSelect.bind(this);

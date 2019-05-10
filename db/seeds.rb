@@ -95,74 +95,77 @@ ai = User.create(username: 'poser', password: 'hunter12', date_of_birth: '1970-0
 aj = User.create(username: 'HALO', password: 'hunter12', date_of_birth: '1993-05-16', email: 'bungee@gmail.com').avatar.attach(io: thumbnail41, filename: 'avatar41.jpeg')
 aj.avatar.attach(io: thumbnail, filename: 'avatar.jpeg')
 
-
-
-# yuppie = Game.create(title: 'Yuppie Psycho')
-# yuppie.photo.attach
 # .photo.attach(io: File.open("/Users/k.brimm/Desktop/kevinTv-game-images/for-honor-twitch.jpg"), filename: 'forhonor.jpg')
-# tekkan = Game.create(title: 'Tekkan 7')
-# tekkan.photo.attach
+
+
+yuppie = Game.create(title: 'Yuppie Psycho')
+yup = open('https://s3-us-west-1.amazonaws.com/app-seed-names/yuppie-psycho-twitch.jpg')
+yuppie.photo.attach(io: yup, filename: 'yuppie')
+
+tekkan = Game.create(title: 'Tekkan 7')
+tek = open('https://s3-us-west-1.amazonaws.com/app-seed-names/tekken-7-twitch.jpg')
+tekkan.photo.attach(io: tek, filename: 'tekkan')
 # tekkan
 
-# battletoads = Game.create(title: 'Battletoads')
-# battletoads.photo.attach
-# battletoads
+battletoads = Game.create(title: 'Battletoads')
+bat = open('https://s3-us-west-1.amazonaws.com/app-seed-names/battletoads-twitch.jpg')
+battletoads.photo.attach(io: bat, filename: 'battle')
 
-# honor = Game.create(title: 'For Honor')
-# honor.photo.attach
-# honor
+honor = Game.create(title: 'For Honor')
+hon = open('https://s3-us-west-1.amazonaws.com/app-seed-names/for-honor-twitch.jpg')
+honor.photo.attach(io: hon, filename: 'honor')
 
-# zelda = Game.create(title: 'Zelda a Link to the Past')
-# zelda.photo.attach
-# zelda
+zelda = Game.create(title: 'Zelda a Link to the Past')
+zel = open('https://s3-us-west-1.amazonaws.com/app-seed-names/zelda-a-linktothepast-twitch.jpg')
+zelda.photo.attach(io: zel, filename: 'zelda')
 
-# p5 = Game.create(title: 'Persona 5')
-# p5.photo.attach
-# p5
+p5 = Game.create(title: 'Persona 5')
+per = open('https://s3-us-west-1.amazonaws.com/app-seed-names/persona-5-twitch.jpg')
+p5.photo.attach(io: p5, filename: 'p5')
 
-# ds = Game.create(title: 'Dark Souls')
-# ds.photo.attach
-# ds
+ds = Game.create(title: 'Dark Souls')
+ds1 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/dark-souls-twitch.jpg')
+ds.photo.attach(io: ds, filename: 'ds')
 
-# ce = Game.create(title: 'Conan Exiles')
-# ce.photo.attach
-# ce
+ce = Game.create(title: 'Conan Exiles')
+conan = open('https://s3-us-west-1.amazonaws.com/app-seed-names/conan-exiles-twitch.jpg')
+ce.photo.attach(io: conan, filename: 'conan')
 
-# monster = Game.create(title: 'Monster Hunter World')
-# monster.photo.attach
-# monster
+monster = Game.create(title: 'Monster Hunter World')
+mons = open('https://s3-us-west-1.amazonaws.com/app-seed-names/monster-hunter-world-twitch.jpg')
+monster.photo.attach(io: mons, filename: 'mons')
 
-# mk8 = Game.create(title: 'Mario Kart 8')
-# mk8.photo.attach
-# mk8
+mk8 = Game.create(title: 'Mario Kart 8')
+mortal = open('https://s3-us-west-1.amazonaws.com/app-seed-names/mario-kart-8-twitch.jpg')
+mk8.photo.attach(io: mortal, filename: 'mortal')
 
-# d3 = Game.create(title: 'Diablo 3')
-# d3.photo.attach
-# d3
+d3 = Game.create(title: 'Diablo 3')
+diab = open('https://s3-us-west-1.amazonaws.com/app-seed-names/diable-3-twitch.jpg')
+d3.photo.attach(io: diab, filename: 'diab')
 
-# sandt = Game.create(title: 'Science and Technology')
-# sandt.photo.attach
-# sandt
+sandt = Game.create(title: 'Science and Technology')
+science = open('https://s3-us-west-1.amazonaws.com/app-seed-names/science-technology-twitch.jpg')
+sandt.photo.attach(io: science, filename: 'science')
 
-# warthunder = Game.create(title: 'War Thunder')
-# warthunder
-# warthunder
+warthunder = Game.create(title: 'War Thunder')
+thun = open('https://s3-us-west-1.amazonaws.com/app-seed-names/war-thunder-twitch.jpg')
+warthunder.photo.attach(io: thun, filename: 'thun')
 
-# ssbm = Game.create(title: 'Super Smash Brothers: Melee')
-# ssbm
-# ssbm
+ssbm = Game.create(title: 'Super Smash Brothers: Melee')
+smash = open('https://s3-us-west-1.amazonaws.com/app-seed-names/ssb-melee-twitch.jpg')
+ssbm.photo.attach(io: smash, filename: 'smash')
 
-# fall = Game.create(title: 'Human: Fall Flat')
-# fall
-# fall
+fall = Game.create(title: 'Human: Fall Flat')
+hooman = open('https://s3-us-west-1.amazonaws.com/app-seed-names/human-fall-flat-twitch.jpg')
+fall.photo.attach(io: hooman, filename: 'hooman')
 
-# rome = Game.create(title: 'Imperator: Rome')
-# rome
-# rome
+rome = Game.create(title: 'Imperator: Rome')
+rome = open('https://s3-us-west-1.amazonaws.com/app-seed-names/imperator-rome-twitch.jpg')
+rome.photo.attach(io: rome, filename: 'rome')
 
-# stardew = Game.create(title: 'Stardew Valley')
-# stardew
-# stardew
+stardew = Game.create(title: 'Stardew Valley')
+star = open('https://s3-us-west-1.amazonaws.com/app-seed-names/stardew-valley-twitch.jpg')
+stardew.photo.attach(io: star, filename: 'star')
 
 # goi = Game.create(title: 'Getting Over It')
 # goi
