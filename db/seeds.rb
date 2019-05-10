@@ -105,7 +105,7 @@ yuppie.photo.attach(io: yup, filename: 'yuppie')
 
 tekken = Game.create(title: 'Tekken 7')
 tek = open('https://s3-us-west-1.amazonaws.com/app-seed-names/tekken-7-twitch.jpg')
-tekkan.photo.attach(io: tek, filename: 'tekkan')
+tekken.photo.attach(io: tek, filename: 'tekkan')
 
 battletoads = Game.create(title: 'Battletoads')
 bat = open('https://s3-us-west-1.amazonaws.com/app-seed-names/battletoads-twitch.jpg')
