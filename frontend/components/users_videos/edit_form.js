@@ -2,10 +2,11 @@ import React from 'react';
 import { format } from 'url';
 
 class EditForm extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
-            title: this.props.stream.title,
+            title: '',
             game: '',
         }
         // this.handleSumbit = this.handleSubmit.bind(this);
@@ -31,17 +32,30 @@ class EditForm extends React.Component {
 
     render() {
 
-        // let max = 150;
-        // let text = document.querySelector('textarea');
-        // let info = document.querySelector('#info');
+        const loggedoutForm = (
 
-        // info.textContent = max - text.value.length;
+            <div className="login-form-container">
 
-        // text.addEventListener('input', () => {
-        //     info.textContent = max - this.value.length;
-        // })
+            <div className="modal-greeting"><img className="modal-logo" src="./assets/twitchlogopng.png" alt="kevinLogo" height="20" width="20"/>Set up your channel!</div>
+            <div className="line-break"></div>
+            <br/>
+                <form>
+                    <label>Title <div className="info"></div>
+                        <textarea 
+                            value=''
+                            className="login-input"
+                            onChange={(this.update('title'))}
+                            maxLength="150">
+                        </textarea>
+                    </label>
 
-        return (
+                </form>
+
+            </div>
+
+        );
+
+        const loggedinForm = (
 
 
             <div className="login-form-container">
@@ -62,6 +76,22 @@ class EditForm extends React.Component {
                 </form>
 
             </div>
+
+        )
+
+        // let max = 150;
+        // let text = document.querySelector('textarea');
+        // let info = document.querySelector('#info');
+
+        // info.textContent = max - text.value.length;
+
+        // text.addEventListener('input', () => {
+        //     info.textContent = max - this.value.length;
+        // })
+
+        return (
+
+            this.props.streams ? loggedinForm : loggedoutForm
 
         );
     }
