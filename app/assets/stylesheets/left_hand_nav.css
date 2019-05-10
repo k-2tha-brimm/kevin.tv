@@ -67,10 +67,9 @@
 
 .jumbotron {
     position: fixed;
-    height: 394px;
+    height: 600px;
     top: 50px;
     left: 239px;
-    border: 1px solid red;
     width: 100%;
     text-align: center;
     align-content: center;
