@@ -6,7 +6,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-    let streamer = state.entities.users[ownProps.match.params.userId];
+    let streamer = state.entities.streamers[ownProps.match.params.userId];
     let settingsId = state.session.id
     if(streamer){
         return {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { format } from 'url';
 
 class EditForm extends React.Component {
 

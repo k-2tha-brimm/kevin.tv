@@ -25,19 +25,20 @@ class StreamerIndex extends React.Component {
 
     render () {
 
-    if(!this.props.game) {
-        return null;
-    }   
+        if(!this.props.game) {
+            return null;
+        }   
 
-    let {streams} = this.props;
+        let {streams} = this.props;
 
-    let streamz = this.props.streamers.map(streamer =>
-                                            {
-                                                let stream = streams.filter(stream => stream.streamer_id === streamer.id)[0];
-                                                return <li><StreamIndexItem key={streamer.id} streamer={streamer} stream={stream} /></li> 
-                                            });
+        let streamz = this.props.streamers.map(streamer =>
+                                                {
+                                                    let stream = streams.filter(stream => stream.streamer_id === streamer.id)[0];
+                                                    return <li><StreamIndexItem key={streamer.id} streamer={streamer} stream={stream} /></li> 
+                                                });
 
-        return (
+        const hasStreamers = (
+
             <div className="streamers-idx">
                 <div className="streamers-index-container-banner">
                     <div className="content-container-for-streamer-index">
@@ -60,7 +61,40 @@ class StreamerIndex extends React.Component {
                     </div>
                 </div>
             </div>
+
         )
+
+        const hasNoStremers = (
+
+            <div className="streamers-idx">
+                <div className="streamers-index-container-banner">
+                    <div className="content-container-for-streamer-index">
+                    {/* <img className="background-image" src={this.props.game.backgroundUrl} alt=""/>   */}
+                        <div className="thumbnail-image"><img className="thumbnail-image" src={this.props.game.photoUrl} alt={this.props.game.title} height="173" width="130"/></div>
+                        <div className="title-streamers-viewers-count">
+                            <p className="game-title">{this.props.game.title}</p>
+                            <p className="follower-count">Follower Count Will Be Here</p>
+                        </div>
+                    </div>
+                    <div className="fake-ad-container">
+                        <div className="fake-advertisement">
+                            <img src="/assets/totinos-pizza-rolls.jpg" alt=""/>       
+                        </div>
+                    </div>
+                    <div className="sorry-message">
+                        <h1>Sorry, there are no streams or videos available at this time.</h1>
+                    </div>
+                </div>
+             </div>
+
+        )
+    
+
+        return (
+
+            this.props.streams.length > 0 ? hasStreamers : hasNoStremers
+
+            );
     }
 }
 
