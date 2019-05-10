@@ -644,3 +644,29 @@ i {
     background: white;
     border: 1px solid rgb(176, 141, 241);
 }
+
+.featured-videos {
+    margin-top: 60px;
+    align-items: left;
+    justify-content: center;
+    display: flex;
+    margin-right: 240px;
+    width: 87%;
+}
+
+.featured-videos > h1 {
+    font-weight: 400;
+    line-height: 1;
+    font-size: 28px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.game-index-list-items-scroll {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 100px;
+    margin-left: 40px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: 85%;
+}

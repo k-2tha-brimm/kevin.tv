@@ -13,7 +13,7 @@ class Game < ApplicationRecord
 
     has_one_attached :photo
 
-    has_one_attached :background
+    # has_one_attached :background
 
     has_many :streams,
         foreign_key: :game_id,

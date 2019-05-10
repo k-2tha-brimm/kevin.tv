@@ -1,6 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { fetchAllGames } from '../../actions/games_actions';
+import { selectAllGames } from '../../reducers/selector';
+import GameIndexItem from '../../components/games/games_index_item';
 
 class Jumbotron extends React.Component {
+
+    componentDidMount() {
+        this.props.fetchAllGames()
+    }
 
     render() {
 
@@ -22,6 +30,7 @@ class Jumbotron extends React.Component {
         //     });
         // }
 
+        const gamez = this.props.games.slice(0, 10).map(game => <li><GameIndexItem key={game.id} game={game} /></li>)
 
         return (
 
@@ -29,15 +38,19 @@ class Jumbotron extends React.Component {
                 <div className="jumbotron">
                     <iframe
                         src="https://clips.twitch.tv/embed?clip=IncredulousAbstemiousFennelImGlitch&autoplay=false"
-                        height="600"
-                        width="86%"
+                        height="700"
+                        width="67%"
                         frameborder="0"
                         scrolling="no"
                         allowfullscreen="true">
                     </iframe>
-                </div>
 
-                <div className="featured-videos"></div>
+                    <div className="featured-videos">
+                        <h1>Featured Content</h1>
+                        <ul className="game-index-list-items-scroll">{gamez}</ul>
+                    </div>
+                    
+                </div>
                 <div>
     
                 </div>
@@ -46,4 +59,16 @@ class Jumbotron extends React.Component {
     }
 }
 
-export default Jumbotron;
+const mstp = state => {
+    return {
+        games: selectAllGames(state)
+    };
+};
+
+const mdtp = dispatch => {
+    return {
+        fetchAllGames: games => dispatch(fetchAllGames(games))
+    };
+};
+
+export default connect(mstp, mdtp)(Jumbotron);

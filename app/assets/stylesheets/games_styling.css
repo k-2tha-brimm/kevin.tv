@@ -72,8 +72,8 @@ need to be hosted on AWS */
     width:100vw;
     height: 233px;
     /* background-image: url(https://static-cdn.jtvnw.net/community-images/26d866a4-a30d-424c-b25a-cc99466d42fa/7ad6b90b-d5b0-4d57-8bdc-371448ef5c13-1200x180.jpeg); */
-    height: inherit;
     text-align: center;
+    z-index: -1;
 }
 
 .content-container-for-streamer-index {

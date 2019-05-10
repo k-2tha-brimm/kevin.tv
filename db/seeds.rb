@@ -93,7 +93,8 @@ ag = User.create(username: 'meli5a', password: 'hunter12', date_of_birth: '1989-
 ah User.create(username: 'kevykev', password: 'hunter12', date_of_birth: '1991-01-06', email: 'kevykev@gmail.com').avatar.attach(io: thumbnail39, filename: 'avatar39.jpeg')
 ai = User.create(username: 'poser', password: 'hunter12', date_of_birth: '1970-04-14', email: 'icnacode@gmail.com').avatar.attach(io: thumbnail40, filename: 'avatar40.jpeg')
 aj = User.create(username: 'HALO', password: 'hunter12', date_of_birth: '1993-05-16', email: 'bungee@gmail.com').avatar.attach(io: thumbnail41, filename: 'avatar41.jpeg')
-aj.avatar.attach(io: thumbnail, filename: 'avatar.jpeg')
+
+# aj.avatar.attach(io: thumbnail, filename: 'avatar.jpeg')
 
 # .photo.attach(io: File.open("/Users/k.brimm/Desktop/kevinTv-game-images/for-honor-twitch.jpg"), filename: 'forhonor.jpg')
 
@@ -102,10 +103,9 @@ yuppie = Game.create(title: 'Yuppie Psycho')
 yup = open('https://s3-us-west-1.amazonaws.com/app-seed-names/yuppie-psycho-twitch.jpg')
 yuppie.photo.attach(io: yup, filename: 'yuppie')
 
-tekkan = Game.create(title: 'Tekkan 7')
+tekken = Game.create(title: 'Tekken 7')
 tek = open('https://s3-us-west-1.amazonaws.com/app-seed-names/tekken-7-twitch.jpg')
 tekkan.photo.attach(io: tek, filename: 'tekkan')
-# tekkan
 
 battletoads = Game.create(title: 'Battletoads')
 bat = open('https://s3-us-west-1.amazonaws.com/app-seed-names/battletoads-twitch.jpg')
@@ -121,11 +121,11 @@ zelda.photo.attach(io: zel, filename: 'zelda')
 
 p5 = Game.create(title: 'Persona 5')
 per = open('https://s3-us-west-1.amazonaws.com/app-seed-names/persona-5-twitch.jpg')
-p5.photo.attach(io: p5, filename: 'p5')
+p5.photo.attach(io: per, filename: 'p5')
 
 ds = Game.create(title: 'Dark Souls')
 ds1 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/dark-souls-twitch.jpg')
-ds.photo.attach(io: ds, filename: 'ds')
+ds.photo.attach(io: ds1, filename: 'ds')
 
 ce = Game.create(title: 'Conan Exiles')
 conan = open('https://s3-us-west-1.amazonaws.com/app-seed-names/conan-exiles-twitch.jpg')
@@ -160,56 +160,63 @@ hooman = open('https://s3-us-west-1.amazonaws.com/app-seed-names/human-fall-flat
 fall.photo.attach(io: hooman, filename: 'hooman')
 
 rome = Game.create(title: 'Imperator: Rome')
-rome = open('https://s3-us-west-1.amazonaws.com/app-seed-names/imperator-rome-twitch.jpg')
-rome.photo.attach(io: rome, filename: 'rome')
+rom = open('https://s3-us-west-1.amazonaws.com/app-seed-names/imperator-rome-twitch.jpg')
+rome.photo.attach(io: rom, filename: 'rome')
 
 stardew = Game.create(title: 'Stardew Valley')
 star = open('https://s3-us-west-1.amazonaws.com/app-seed-names/stardew-valley-twitch.jpg')
 stardew.photo.attach(io: star, filename: 'star')
 
-# goi = Game.create(title: 'Getting Over It')
-# goi
-# goi
+goi = Game.create(title: 'Getting Over It')
+get = open('https://s3-us-west-1.amazonaws.com/app-seed-names/getting-over-it-twitch.jpg')
+goi.photo.attach(io: get, filename: 'get')
 
-# ds3 = Game.create(title: 'Dark Souls 3')
-# ds3
-# ds3
+ds3 = Game.create(title: 'Dark Souls 3')
+souls3 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/dark-souls-3.jpg')
+ds3.photo.attach(io: souls3, filename: 'souls3')
 
-# gungeon = Game.create(title: 'Enter the Gungeon')
-# gungeon
-# gungeon
+gungeon = Game.create(title: 'Enter the Gungeon')
+gun = open('https://s3-us-west-1.amazonaws.com/app-seed-names/enter-the-gungeon-twitch.jpg')
+gungeon.photo.attach(io: gun, filename: 'gun')
 
-# sings = Game.create(title: 'Twitch Sings')
-# sings
-# sings
+epic7 = Game.create(title: 'Epic 7')
+e7 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/epic-7-twitch.jpg')
+epic7.photo.attach(io: e7, filename: 'e7')
 
-# epic7 = Game.create(title: 'Epic 7')
-# epic7
-# epic7
+splitgate = Game.create(title: 'Splitgate')
+split = open('https://s3-us-west-1.amazonaws.com/app-seed-names/splitgate-twitch.jpg')
+splitgate.photo.attach(io: split, filename: 'split')
 
-# splitgate = Game.create(title: 'Splitgate')
-# splitgate
-# splitgate
+mlb = Game.create(title: 'MLB The Show 2019')
+base = open('https://s3-us-west-1.amazonaws.com/app-seed-names/mlb-the-the-show-2019-twitch.jpg')
+mlb.photo.attach(io: base, filename: 'base')
 
-# mlb = Game.create(title: 'MLB The Show 2019')
-# mlb
-# mlb
+eurotruck = Game.create(title: 'Euro Truck Simulator')
+truck = open('https://s3-us-west-1.amazonaws.com/app-seed-names/euro-truck-simulator-twitch.jpg')
+eurotruck.photo.attach(io: truck, filename: 'truck')
 
-# eurotruck = Game.create(title: 'Euro Truck Simulator')
-# eurotruck
-# eurotruck
+smite = Game.create(title: 'Smite')
+mit = open('https://s3-us-west-1.amazonaws.com/app-seed-names/smite-twitch.jpg')
+smite.photo.attach(io: mit, filename: 'mit')
 
-# smite = Game.create(title: 'Smite')
-# smite
-# smite
+albion = Game.create(title: 'Albion Online')
+alb = open('https://s3-us-west-1.amazonaws.com/app-seed-names/albion-online-twitch.jpg')
+albion.photo.attach(io: alb, filename: 'alb')
 
-# albion = Game.create(title: 'Albion Online')
-# albion
-# albion
+gw2 = Game.create(title: 'Guild Wars 2')
+guild = open('https://s3-us-west-1.amazonaws.com/app-seed-names/guild-wars-2-twitch.jpg')
+gw2.photo.attach(io: guild, filename: 'guild')
 
-# gw2 = Game.create(title: 'Guild Wars 2')
-# gw2
-# gw2
+
+
+
+
+
+
+
+
+
+
 
 # bf5 = Game.create(title: 'Battlefield 5')
 # bf5
@@ -293,3 +300,26 @@ stardew.photo.attach(io: star, filename: 'star')
 # rl = Game.create(title: 'Rocket League')
 # h5 = Game.create(title: 'Halo 5')
 
+thumb = open('https://s3-us-west-1.amazonaws.com/app-seed-names/CSGOThumb.jpeg')
+thumb1 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/CSGOThumb.jpeg')
+thumb2 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/CSGOThumb.jpeg')
+thumb3 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/CSGOThumb.jpeg')
+thumb4 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/CSGOThumb.jpeg')
+thumb5 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/CSGOThumb.jpeg')
+thumb6 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/CSGOThumb.jpeg')
+thumb7 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/CSGOThumb.jpeg')
+thumb8 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/CSGOThumb.jpeg')
+thumb9 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/CSGOThumb.jpeg')
+
+
+
+Stream.create(title: 'dis good stream', streamer_id: 2, game_id: 2).thumbnail.attach(io: thumb, filename: 'thumn')
+Stream.create(title: 'dis good stream', streamer_id: 3, game_id: 3).thumbnail.attach(io: thumb1, filename: 'thumn1')
+Stream.create(title: 'dis better', streamer_id: 9, game_id: 4).thumbnail.attach(io: thumb2, filename: 'thumn2')
+Stream.create(title: 'dis good stream', streamer_id: 6, game_id: 5).thumbnail.attach(io: thumb3, filename: 'thumn3')
+Stream.create(title: 'MOAR STREAM', streamer_id: 12, game_id: 6).thumbnail.attach(io: thumb4, filename: 'thumn4')
+Stream.create(title: 'stream', streamer_id: 13, game_id: 7).thumbnail.attach(io: thumb5, filename: 'thumn5')
+Stream.create(title: 'STREAM', streamer_id: 18, game_id: 8).thumbnail.attach(io: thumb6, filename: 'thumn6')
+Stream.create(title: 'GAMES', streamer_id: 14, game_id: 9).thumbnail.attach(io: thumb7, filename: 'thumn7')
+Stream.create(title: 'who', streamer_id: 20, game_id: 10).thumbnail.attach(io: thumb8, filename: 'thumn8')
+Stream.create(title: 'hello, world', streamer_id: 7, game_id: 11).thumbnail.attach(io: thumb9, filename: 'thumn9')
