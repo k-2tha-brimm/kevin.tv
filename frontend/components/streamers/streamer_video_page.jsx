@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchOneStreamer } from '../../actions/users_actions';
+import { fetchOneStreamer, fetchVideo } from '../../actions/users_actions';
 import { selectAllVideos } from '../../reducers/selector';
 import { closeModal } from '../../actions/modal_actions';
 
@@ -67,7 +67,7 @@ class StreamerVideo extends React.Component {
         }
 
         let videoz = videos.map(video =>
-                                <li>{video.title}</li>);
+                                <li><Link to={`/channel/${streamer.id}`} streamer={streamer}>{video.title}</Link></li>);
 
         return (
             <>
@@ -128,7 +128,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchOneStreamer: id => dispatch(fetchOneStreamer(id)),
-        closeModal: () => dispatch(closeModal())
+        fetchVideo: (userId, video) => dispatch(fetchOneVideo(userId, video))
     };
 };
 

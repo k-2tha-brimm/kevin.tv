@@ -4,6 +4,7 @@ export const RECEIVE_ALL_USERS = "RECEIVE_ALL_USERS";
 export const RECEIVE_USER = "RECEIVE_USER";
 export const RECEIVE_STREAMER = "RECEIVE_STREAMER";
 export const RECEIVE_ALL_VIDEOS = "RECEIVE_ALL_VIDEOS";
+export const RECEIVE_VIDEO = 'RECEIVE_VIDEO'
 
 const receiveAllUsers = users => ({
     type: RECEIVE_ALL_USERS,
@@ -23,9 +24,14 @@ const receiveStreamer = ({game, streamer, stream, videos}) => ({
     videos
 })
 
-const receiveVideos = ({videos, streamer}) => ({
+const receiveVideos = videos => ({
     type: RECEIVE_ALL_VIDEOS,
     videos
+})
+
+const receiveOneVideo = video => ({
+    type: RECEIVE_VIDEO,
+    video
 })
 
 export const updateUserAvatar = (id, avatar) => dispatch => (
@@ -55,4 +61,10 @@ export const fetchAllVideos = id => dispatch => (
     UsersApiUtils.fetchAllVideos(id)
         .then(videos =>
             dispatch(receiveVideos(videos)))
+)
+
+export const fetchVideo = (userId, video) => dispatch => (
+    UsersApiUtils.fetchOneVideo(userId, video)
+        .then(video =>
+            dispatch(receiveOneVideo(video)))
 )
