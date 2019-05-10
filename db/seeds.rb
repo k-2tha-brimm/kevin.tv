@@ -187,25 +187,25 @@ splitgate = Game.create(title: 'Splitgate')
 split = open('https://s3-us-west-1.amazonaws.com/app-seed-names/splitgate-twitch.jpg')
 splitgate.photo.attach(io: split, filename: 'split')
 
-mlb = Game.create(title: 'MLB The Show 2019')
-base = open('https://s3-us-west-1.amazonaws.com/app-seed-names/mlb-the-the-show-2019-twitch.jpg')
-mlb.photo.attach(io: base, filename: 'base')
+# mlb = Game.create(title: 'MLB The Show 2019')
+# base = open('https://s3-us-west-1.amazonaws.com/app-seed-names/mlb-the-the-show-2019-twitch.jpg')
+# mlb.photo.attach(io: base, filename: 'base')
 
-eurotruck = Game.create(title: 'Euro Truck Simulator')
-truck = open('https://s3-us-west-1.amazonaws.com/app-seed-names/euro-truck-simulator-twitch.jpg')
-eurotruck.photo.attach(io: truck, filename: 'truck')
+# eurotruck = Game.create(title: 'Euro Truck Simulator')
+# truck = open('https://s3-us-west-1.amazonaws.com/app-seed-names/euro-truck-simulator-twitch.jpg')
+# eurotruck.photo.attach(io: truck, filename: 'truck')
 
-smite = Game.create(title: 'Smite')
-mit = open('https://s3-us-west-1.amazonaws.com/app-seed-names/smite-twitch.jpg')
-smite.photo.attach(io: mit, filename: 'mit')
+# smite = Game.create(title: 'Smite')
+# mit = open('https://s3-us-west-1.amazonaws.com/app-seed-names/smite-twitch.jpg')
+# smite.photo.attach(io: mit, filename: 'mit')
 
-albion = Game.create(title: 'Albion Online')
-alb = open('https://s3-us-west-1.amazonaws.com/app-seed-names/albion-online-twitch.jpg')
-albion.photo.attach(io: alb, filename: 'alb')
+# albion = Game.create(title: 'Albion Online')
+# alb = open('https://s3-us-west-1.amazonaws.com/app-seed-names/albion-online-twitch.jpg')
+# albion.photo.attach(io: alb, filename: 'alb')
 
-gw2 = Game.create(title: 'Guild Wars 2')
-guild = open('https://s3-us-west-1.amazonaws.com/app-seed-names/guild-wars-2-twitch.jpg')
-gw2.photo.attach(io: guild, filename: 'guild')
+# gw2 = Game.create(title: 'Guild Wars 2')
+# guild = open('https://s3-us-west-1.amazonaws.com/app-seed-names/guild-wars-2-twitch.jpg')
+# gw2.photo.attach(io: guild, filename: 'guild')
 
 
 
