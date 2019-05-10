@@ -19,9 +19,16 @@ class UserSettings extends React.Component {
         this.props.fetchOneUser(this.props.match.params.userId)
     }
 
+    // componentDidUpdate(prevProps) {
+    //     // debugger
+    //     if(this.state.user.avatar !== prevProps.user.avatar) {
+    //         this.props.fetchOneUser(this.props.match.params.userId)
+    //     }
+    // }
+
     handleFileSelect(e) {  
         const reader = new FileReader();
-        // debugger
+
         const file = e.currentTarget.files[0];
         reader.onloadend = () => this.setState({ imageUrl: reader.result, imageFile: file });
 
@@ -35,11 +42,13 @@ class UserSettings extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const formData = new FormData();
+
         formData.append('user[url]', this.state.imageUrl);
+        
         if (this.state.imageUrl) {
             formData.append('user[avatar]', this.state.imageFile);
         }
-        // debugger
+        
         $.ajax({
           url: `/api/users/${this.props.user.id}`,
           method: 'PATCH',

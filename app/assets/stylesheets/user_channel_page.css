@@ -18,6 +18,7 @@
     width: 430px;
     border: 1px solid pink;
     height: 100vh;
+    z-index: -1;
 }
 
 .chat-box-top {
@@ -27,6 +28,7 @@
     padding-top: 15px;
     padding-left: 10px;
     font-size: 12px;
+    z-index: -1;
 }
 
 .video-player-container {

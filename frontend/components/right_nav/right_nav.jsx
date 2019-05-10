@@ -43,7 +43,7 @@ const RightNav = ({ currentUser, logout, openModal }) => {
                     <br/>
                     <li>Channel</li>
                     <div className="line-break"></div>
-                    <li><Link to={`/channel/${currentUser.id}/settings`} user={currentUser}>Settings</Link></li>
+                    <li><Link to={`/channel/${currentUser.id}/settings`} user={currentUser} style={{color: "rgb(100, 65, 165)", fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif", fontSize: "14px"}}>Settings</Link></li>
                     <br/>
                     <li>Language</li>
                     <br/>
