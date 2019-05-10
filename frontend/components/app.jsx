@@ -16,10 +16,10 @@ const App = () => (
 
         <Modal />
 
-        <div class="top-nav">
+        <div className="top-nav">
 
             
-            <div class="nav-left">
+            <div className="nav-left">
                 <ul>
                     <li className="kevin-tv-logo"><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Kevin.Tv</Link></li>
                     <li>Discover</li>
@@ -27,7 +27,7 @@ const App = () => (
                 </ul>
             </div>
 
-            <div class="right-nav">
+            <div className="right-nav">
                 <ul>
                     <RightNavContainer />
                 </ul>
@@ -35,7 +35,7 @@ const App = () => (
 
         </div>
 
-        <div class="left-hand-side-nav-bar">
+        <div className="left-hand-side-nav-bar">
             <LeftHandContainer />
         </div>
 

@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
+thumbnail = File.open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+
 User.create(username: 'demo', password: 'hunter12', date_of_birth: '2016-11-02', email: 'demo@gmail.com')
 # User.create(username: 'thedemo', password: 'hunter12', date_of_birth: '1992-02-02', email: 'gemo@gmail.com')
 # User.create(username: 'smeli5a', password: 'hunter12', date_of_birth: '1989-02-05', email: 'melisa@gmail.com')
