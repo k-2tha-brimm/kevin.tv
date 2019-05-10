@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-import { fetchOneStreamer } from '../../actions/users_actions';
+import { fetchOneStreamer, fetchAllUsers } from '../../actions/users_actions';
 import StreamerChannel from './streamer_channel';
 import { selectAllStreams, selectAllGames } from '../../reducers/selector';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-    let streamer = state.entities.streamers[ownProps.match.params.userId];
+    let streamer = state.entities.users[ownProps.match.params.userId];
     let settingsId = state.session.id
     if(streamer){
         return {
@@ -22,6 +22,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        fetchAllUsers: users => dispatch(fetchAllUsers(users)),
         fetchOneStreamer: id => dispatch(fetchOneStreamer(id)),
         openModal: modal => dispatch(openModal(modal))
     }

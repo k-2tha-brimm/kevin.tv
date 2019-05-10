@@ -59,7 +59,7 @@ class RightNav extends React.Component {
                     <div className="dropdown-items">
                         <li>Online</li>
                         <br/>
-                        <li>Channel</li>
+                        <li><Link to={`/channel/${this.props.currentUser.id}`} user={this.props.currentUser} style={{color: "rgb(100, 65, 165)", fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif", fontSize: "14px"}}>Channel</Link></li>
                         <div className="line-break"></div>
                         <li><Link to={`/channel/${this.props.currentUser.id}/settings`} user={this.props.currentUser} style={{color: "rgb(100, 65, 165)", fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif", fontSize: "14px"}}>Settings</Link></li>
                         <br/>

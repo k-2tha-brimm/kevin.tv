@@ -55,7 +55,7 @@ class UserSettings extends React.Component {
           data: formData,
           contentType: false,
           processData: false
-        });
+        }).then(res => setState({imageUrl: res}));
       }
 
     render() {

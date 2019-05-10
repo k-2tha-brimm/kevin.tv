@@ -8,92 +8,140 @@
 
 require 'open-uri'
 
-thumbnail = File.open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail1 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail2 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail3 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail4 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail5 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail6 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail7= open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail8 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail9 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail10 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail11 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail12 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail13 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail14 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail15 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail16 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail17 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail18 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail19 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail20 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail21 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail22 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail23 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail24 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail25 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail26 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail27 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail28 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail29 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail30 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail31 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail32 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail33 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail34 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail35 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail36 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail37 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail38 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail39 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail40 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
+thumbnail41 = open('https://s3-us-west-1.amazonaws.com/app-seed-names/userthumbnail.jpeg')
 
-User.create(username: 'demo', password: 'hunter12', date_of_birth: '2016-11-02', email: 'demo@gmail.com')
-# User.create(username: 'thedemo', password: 'hunter12', date_of_birth: '1992-02-02', email: 'gemo@gmail.com')
-# User.create(username: 'smeli5a', password: 'hunter12', date_of_birth: '1989-02-05', email: 'melisa@gmail.com')
-# User.create(username: 'kevin', password: 'hunter12', date_of_birth: '1987-09-01', email: 'kev.brimm@gmail.com')
-# User.create(username: 'ashton', password: 'hunter12', date_of_birth: '1986-05-07', email: 'ahston210z@gmail.com')
-# User.create(username: 'king-ben', password: 'hunter12', date_of_birth: '1987-05-05', email: 'king_ben@gmail.com')
-# User.create(username: 'fake_user', password: 'hunter12', date_of_birth: '1980-12-03', email: 'fake@gmail.com')
-# User.create(username: 'twitch_stream', password: 'hunter12', date_of_birth: '2000-06-11', email: 'twitch@gmail.com')
-# User.create(username: 'halo2besthalo', password: 'hunter12', date_of_birth: '1995-04-19', email: 'kevin_tv@gmail.com')
-# User.create(username: 'halo5rules', password: 'hunter12', date_of_birth: '2000-11-02', email: 'h5rules@gmail.com')
-# User.create(username: 'i_love_halo', password: 'hunter12', date_of_birth: '1999-02-02', email: 'ilovehalo@gmail.com')
-# User.create(username: 'this_is_halo', password: 'hunter12', date_of_birth: '1980-09-09', email: 'thisishalo@gmail.com')
-# User.create(username: 'heroes_of_the_storm', password: 'hunter12', date_of_birth: '2005-07-10', email: 'hots@gmail.com')
-# User.create(username: 'em0_kid', password: 'hunter12', date_of_birth: '1990-08-08', email: 'em0kid@gmail.com')
-# User.create(username: 'OMGTHISISREAL', password: 'hunter12', date_of_birth: '1992-11-30', email: 'omg@gmail.com')
-# User.create(username: 'fighting_games', password: 'hunter12', date_of_birth: '2004-04-04', email: 'fightinggames@gmail.com')
-# User.create(username: 'summit1g', password: 'hunter12', date_of_birth: '1991-01-06', email: 'summit@gmail.com')
-# User.create(username: 'drdisrespect', password: 'hunter12', date_of_birth: '1980-07-21', email: 'thedoc@gmail.com')
-# User.create(username: 'ninja', password: 'hunter12', date_of_birth: '1999-11-09', email: 'ninja@gmail.com')
-# User.create(username: 'grimmy', password: 'hunter12', date_of_birth: '1995-10-19', email: 'grim@gmail.com')
-# User.create(username: 'summit1g', password: 'hunter12', date_of_birth: '2012-01-01', email: 'appacademy@gmail.com')
-# User.create(username: 'leet_yeet', password: 'hunter12', date_of_birth: '1991-01-06', email: 'twitchsux@gmail.com')
-# User.create(username: 'notleetyeet', password: 'hunter12', date_of_birth: '2005-05-09', email: 'kevin@gmail.com')
-# User.create(username: 'gerardbutler', password: 'hunter12', date_of_birth: '1991-01-06', email: 'demo@hotmail.com')
-# User.create(username: 'theguywhoplaysironman', password: 'hunter12', date_of_birth: '1991-01-06', email: 'robertdowney@gmail.com')
-# User.create(username: 'robert_downey', password: 'hunter12', date_of_birth: '1991-01-06', email: 'aa@gmail.com')
-# User.create(username: 'melisa', password: 'hunter12', date_of_birth: '1991-01-06', email: 'wtfamidoing@gmail.com')
-# User.create(username: 'kev_cuddy', password: 'hunter12', date_of_birth: '1991-01-06', email: 'itis10pm@gmail.com')
-# User.create(username: 'kev_cudi', password: 'hunter12', date_of_birth: '1991-01-06', email: 'freebeer@gmail.com')
-# User.create(username: 'big_byrd', password: 'hunter12', date_of_birth: '1987-12-11', email: 'richard@gmail.com')
-# User.create(username: 'steve', password: 'hunter12', date_of_birth: '2001-30-02', email: 'steve@gmail.com')
-# User.create(username: 'benjamin', password: 'hunter12', date_of_birth: '1991-01-06', email: 'ben@gmail.com')
-# User.create(username: 'meli5a', password: 'hunter12', date_of_birth: '1989-02-05', email: 'meli5a@gmail.com')
-# User.create(username: 'kevykev', password: 'hunter12', date_of_birth: '1991-01-06', email: 'kevykev@gmail.com')
-# User.create(username: 'poser', password: 'hunter12', date_of_birth: '1970-04-14', email: 'icnacode@gmail.com')
-# User.create(username: 'HALO', password: 'hunter12', date_of_birth: '1993-05-16', email: 'bungee@gmail.com')
+User.create(username: 'demo', password: 'hunter12', date_of_birth: '2016-11-02', email: 'demo@gmail.com').avatar.attach(io: thumbnail, filename: 'avatar.jpeg')
+User.create(username: 'thedemo', password: 'hunter12', date_of_birth: '1992-02-02', email: 'gemo@gmail.com').avatar.attach(io: thumbnail1, filename: 'avatar1.jpeg')
+User.create(username: 'smeli5a', password: 'hunter12', date_of_birth: '1989-02-05', email: 'melisa@gmail.com').avatar.attach(io: thumbnail2, filename: 'avatar2.jpeg')
+User.create(username: 'kevin', password: 'hunter12', date_of_birth: '1987-09-01', email: 'kev.brimm@gmail.com').avatar.attach(io: thumbnail3, filename: 'avatar3.jpeg')
+User.create(username: 'ashton', password: 'hunter12', date_of_birth: '1986-05-07', email: 'ahston210z@gmail.com').avatar.attach(io: thumbnail4, filename: 'avatar4.jpeg')
+User.create(username: 'king-ben', password: 'hunter12', date_of_birth: '1987-05-05', email: 'king_ben@gmail.com').avatar.attach(io: thumbnail5, filename: 'avatar5.jpeg')
+User.create(username: 'fake_user', password: 'hunter12', date_of_birth: '1980-12-03', email: 'fake@gmail.com').avatar.attach(io: thumbnail6, filename: 'avatar6.jpeg')
+User.create(username: 'twitch_stream', password: 'hunter12', date_of_birth: '2000-06-11', email: 'twitch@gmail.com').avatar.attach(io: thumbnail7, filename: 'avatar7.jpeg')
+User.create(username: 'halo2besthalo', password: 'hunter12', date_of_birth: '1995-04-19', email: 'kevin_tv@gmail.com').avatar.attach(io: thumbnail8, filename: 'avatar8.jpeg')
+User.create(username: 'halo5rules', password: 'hunter12', date_of_birth: '2000-11-02', email: 'h5rules@gmail.com').avatar.attach(io: thumbnail9, filename: 'avatar9.jpeg')
+k = User.create(username: 'i_love_halo', password: 'hunter12', date_of_birth: '1999-02-02', email: 'ilovehalo@gmail.com').avatar.attach(io: thumbnail10, filename: 'avatar10.jpeg')
+hh = User.create(username: 'Keystone_Light', password: 'hunter12', date_of_birth: '1990-02-02', email: 'ilovehalo@gmail.com').avatar.attach(io: thumbnail11, filename: 'avatar11.jpeg')
+kk = User.create(username: 'budweiser', password: 'hunter12', date_of_birth: '1999-08-02', email: 'ilovehalo@gmail.com').avatar.attach(io: thumbnail12, filename: 'avatar12.jpeg')
+jj = User.create(username: 'Milwaukees_Best', password: 'hunter12', date_of_birth: '1999-02-11', email: 'ilovehalo@gmail.com').avatar.attach(io: thumbnail13, filename: 'avatar13.jpeg')
+ll = User.create(username: 'PBR', password: 'hunter12', date_of_birth: '1996-07-09', email: 'ilovehalo@gmail.com').avatar.attach(io: thumbnail14, filename: 'avatar14.jpeg')
+mm = User.create(username: 'Natty_Ice', password: 'hunter12', date_of_birth: '1979-12-02', email: 'ilovehalo@gmail.com').avatar.attach(io: thumbnail15, filename: 'avatar15.jpeg')
+bb = User.create(username: 'Hamms', password: 'hunter12', date_of_birth: '1953-12-12', email: 'ilovehalo@gmail.com').avatar.attach(io: thumbnail16, filename: 'avatar16.jpeg')
+l = User.create(username: 'this_is_halo', password: 'hunter12', date_of_birth: '1980-09-09', email: 'thisishalo@gmail.com').avatar.attach(io: thumbnail17, filename: 'avatar17.jpeg')
+m = User.create(username: 'heroes_of_the_storm', password: 'hunter12', date_of_birth: '2005-07-10', email: 'hots@gmail.com').avatar.attach(io: thumbnail18, filename: 'avatar18.jpeg')
+n = User.create(username: 'em0_kid', password: 'hunter12', date_of_birth: '1990-08-08', email: 'em0kid@gmail.com').avatar.attach(io: thumbnail19, filename: 'avatar19.jpeg')
+o = User.create(username: 'OMGTHISISREAL', password: 'hunter12', date_of_birth: '1992-11-30', email: 'omg@gmail.com').avatar.attach(io: thumbnail20, filename: 'avatar20.jpeg')
+p = User.create(username: 'fighting_games', password: 'hunter12', date_of_birth: '2004-04-04', email: 'fightinggames@gmail.com').avatar.attach(io: thumbnail21, filename: 'avatar21.jpeg')
+q = User.create(username: 'summit1g', password: 'hunter12', date_of_birth: '1991-01-06', email: 'summit@gmail.com').avatar.attach(io: thumbnail22, filename: 'avatar22.jpeg')
+r = User.create(username: 'drdisrespect', password: 'hunter12', date_of_birth: '1980-07-21', email: 'thedoc@gmail.com').avatar.attach(io: thumbnail23, filename: 'avatar23.jpeg')
+s = User.create(username: 'ninja', password: 'hunter12', date_of_birth: '1999-11-09', email: 'ninja@gmail.com').avatar.attach(io: thumbnail24, filename: 'avatar24.jpeg')
+t = User.create(username: 'grimmy', password: 'hunter12', date_of_birth: '1995-10-19', email: 'grim@gmail.com').avatar.attach(io: thumbnail25, filename: 'avatar25.jpeg')
+u = User.create(username: 'summit1g', password: 'hunter12', date_of_birth: '2012-01-01', email: 'appacademy@gmail.com').avatar.attach(io: thumbnail26, filename: 'avatar26.jpeg')
+v = User.create(username: 'leet_yeet', password: 'hunter12', date_of_birth: '1991-01-06', email: 'twitchsux@gmail.com').avatar.attach(io: thumbnail27, filename: 'avatar27.jpeg')
+w = User.create(username: 'notleetyeet', password: 'hunter12', date_of_birth: '2005-05-09', email: 'kevin@gmail.com').avatar.attach(io: thumbnail28, filename: 'avatar28.jpeg')
+x = User.create(username: 'gerardbutler', password: 'hunter12', date_of_birth: '1991-01-06', email: 'demo@hotmail.com').avatar.attach(io: thumbnail29, filename: 'avatar29.jpeg')
+y = User.create(username: 'theguywhoplaysironman', password: 'hunter12', date_of_birth: '1991-01-06', email: 'robertdowney@gmail.com').avatar.attach(io: thumbnail30, filename: 'avatar30.jpeg')
+z = User.create(username: 'robert_downey', password: 'hunter12', date_of_birth: '1991-01-06', email: 'aa@gmail.com').avatar.attach(io: thumbnail31, filename: 'avatar31.jpeg')
+aa = User.create(username: 'melisa', password: 'hunter12', date_of_birth: '1991-01-06', email: 'wtfamidoing@gmail.com').avatar.attach(io: thumbnail32, filename: 'avatar32.jpeg')
+ab = User.create(username: 'kev_cuddy', password: 'hunter12', date_of_birth: '1991-01-06', email: 'itis10pm@gmail.com').avatar.attach(io: thumbnail33, filename: 'avatar33.jpeg')
+ac = User.create(username: 'kev_cudi', password: 'hunter12', date_of_birth: '1991-01-06', email: 'freebeer@gmail.com').avatar.attach(io: thumbnail34, filename: 'avatar34.jpeg')
+ad = User.create(username: 'big_byrd', password: 'hunter12', date_of_birth: '1987-12-11', email: 'richard@gmail.com').avatar.attach(io: thumbnail35, filename: 'avatar35.jpeg')
+ae = User.create(username: 'steve', password: 'hunter12', date_of_birth: '2001-30-02', email: 'steve@gmail.com').avatar.attach(io: thumbnail36, filename: 'avatar36.jpeg')
+af = User.create(username: 'benjamin', password: 'hunter12', date_of_birth: '1991-01-06', email: 'ben@gmail.com').avatar.attach(io: thumbnail37, filename: 'avatar37.jpeg')
+ag = User.create(username: 'meli5a', password: 'hunter12', date_of_birth: '1989-02-05', email: 'meli5a@gmail.com').avatar.attach(io: thumbnail38, filename: 'avatar38.jpeg')
+ah User.create(username: 'kevykev', password: 'hunter12', date_of_birth: '1991-01-06', email: 'kevykev@gmail.com').avatar.attach(io: thumbnail39, filename: 'avatar39.jpeg')
+ai = User.create(username: 'poser', password: 'hunter12', date_of_birth: '1970-04-14', email: 'icnacode@gmail.com').avatar.attach(io: thumbnail40, filename: 'avatar40.jpeg')
+aj = User.create(username: 'HALO', password: 'hunter12', date_of_birth: '1993-05-16', email: 'bungee@gmail.com').avatar.attach(io: thumbnail41, filename: 'avatar41.jpeg')
+aj.avatar.attach(io: thumbnail, filename: 'avatar.jpeg')
 
 
 
 # yuppie = Game.create(title: 'Yuppie Psycho')
 # yuppie.photo.attach
-
+# .photo.attach(io: File.open("/Users/k.brimm/Desktop/kevinTv-game-images/for-honor-twitch.jpg"), filename: 'forhonor.jpg')
 # tekkan = Game.create(title: 'Tekkan 7')
-# tekkan
+# tekkan.photo.attach
 # tekkan
 
 # battletoads = Game.create(title: 'Battletoads')
-# battletoads
+# battletoads.photo.attach
 # battletoads
 
 # honor = Game.create(title: 'For Honor')
-# honor
+# honor.photo.attach
 # honor
 
 # zelda = Game.create(title: 'Zelda a Link to the Past')
-# zelda
+# zelda.photo.attach
 # zelda
 
 # p5 = Game.create(title: 'Persona 5')
-# p5
+# p5.photo.attach
 # p5
 
 # ds = Game.create(title: 'Dark Souls')
-# ds
+# ds.photo.attach
 # ds
 
 # ce = Game.create(title: 'Conan Exiles')
-# ce
+# ce.photo.attach
 # ce
 
 # monster = Game.create(title: 'Monster Hunter World')
-# monster
+# monster.photo.attach
 # monster
 
 # mk8 = Game.create(title: 'Mario Kart 8')
-# mk8
+# mk8.photo.attach
 # mk8
 
 # d3 = Game.create(title: 'Diablo 3')
-# d3
+# d3.photo.attach
 # d3
 
 # sandt = Game.create(title: 'Science and Technology')
-# sandt
+# sandt.photo.attach
 # sandt
 
 # warthunder = Game.create(title: 'War Thunder')

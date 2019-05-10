@@ -1,5 +1,10 @@
 class Api::UsersController < ApplicationController
 
+    def index
+        @users = User.all
+        render 'api/users/index.json.jbuilder'
+    end
+
     def create
         @user = User.new(user_params)
         @user.date_of_birth = Date.new((params[:user][:year]).to_i, (params[:user][:month]).to_i, (params[:user][:day]).to_i)
