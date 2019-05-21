@@ -1,24 +1,4 @@
-# README
+# Kevin.Tv
+An homage to the days of Justin.tv, Kevin.Tv is a clone of the popular online streaming platform Twitch.tv. Built over the course of two weeks, the project leverages Ruby on Rails to build out the backend web API, while taking advantage of React/Redux to create the frontend components.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Screenshots and code snippets forthcoming. =)
