@@ -5,6 +5,7 @@ class StreamerChannel extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state ={};
     }
 
     componentDidMount() {
@@ -24,6 +25,17 @@ class StreamerChannel extends React.Component {
         if(!streamer) {
             return null;
         }
+        
+        let editForm;
+        if(streamer.id === settingsId) {
+            editForm = (
+                <button className="edit-button" streamer={streamer} onClick={() => this.props.openModal('edit')}>Edit</button>
+            )
+        } else {
+            editForm = null;
+        }
+        
+
 
         return (
             <div className="this-is-a-div">
@@ -46,19 +58,12 @@ class StreamerChannel extends React.Component {
                     </div>
                 </div>
                 <div className="video-player-container">
-                    {/* <iframe
-                        src="https://clips.twitch.tv/embed?clip=IncredulousAbstemiousFennelImGlitch&autoplay=false"
-                        height="600"
-                        width="100%"
-                        frameborder="0"
-                        scrolling="no"
-                        allowfullscreen="true">
-                    </iframe> */}
                     <video width="100%" height="600" controls></video>
                     <div className="video-description">
                         {/* <li><img src={this.props.game.photoUrl} alt="game-photo" height="65" width="52"/></li>
                         <li>{this.props.stream.title}</li> */}
-                        <button className="edit-button" streamer={streamer} onClick={() => this.props.openModal('edit')}>Edit</button>
+                        {/* <button className="edit-button" streamer={streamer} onClick={() => this.props.openModal('edit')}>Edit</button> */}
+                        { editForm }
                     </div>
                 </div>
                 <div className="channel-description">
