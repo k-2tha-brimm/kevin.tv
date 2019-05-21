@@ -36,14 +36,7 @@ class Jumbotron extends React.Component {
 
             <>
                 <div className="jumbotron">
-                    <iframe
-                        src="https://clips.twitch.tv/embed?clip=IncredulousAbstemiousFennelImGlitch&autoplay=false"
-                        height="700"
-                        width="67%"
-                        frameborder="0"
-                        scrolling="no"
-                        allowfullscreen="true">
-                    </iframe>
+                
 
                     <div className="featured-videos">
                         <h1>Featured Content</h1>
