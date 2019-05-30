@@ -1,6 +1,19 @@
 # Kevin.Tv
 An homage to the days of Justin.tv, Kevin.Tv is a clone of the popular online streaming platform Twitch.tv. Built over the course of two weeks, the project leverages Ruby on Rails to build out the backend web API, while taking advantage of React/Redux to create the frontend components.
 
+## Running Kevin.Tv
+From within the root directory:
+```
+npm install
+bundle install
+```
+You will need to run both
+```
+npm start
+rails s
+```
+in two separate terminal windows in order to navigate to the site. Then you can navigate to the site at your localhost:3000.
+
 ## User Login/Signup
 Login and signup are handled through an interactive modal, which is only accessible when a user is not currently logged in. There is a route to this modal for a logged out user in both the navigation bar, as well as the left hand bar.
 
