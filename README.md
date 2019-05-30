@@ -49,4 +49,3 @@ Keeping organized routes on both the front and back end was crucial to the succe
         </Switch>
 ```
 As you can see from the above, the project eventually came to encompass several separate components. State management became key to reducing load times, and a lot of time was spent determining the best way to access information within the front end views.
-
