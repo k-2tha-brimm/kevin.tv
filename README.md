@@ -31,3 +31,22 @@ Users will also be allowed to edit their stream title and what game they are pla
 Over the next couple of weeks, the goal of Kevin.Tv is to complete deployment to a production environment, and to finish implementing full CRUD functionality for the user video portion of the page.
 
 Immediately after that, Following will be implemented, with live chat being the final MVP for this project.
+
+## Code Snippets and Highlights
+One of the most challenging parts of this project was just dealing with the amount of pages and routes that it required. Users can browse featured content or full game directories. From there each game has streamers, each streamer has a channel, each channel has videos, and each user has the ability to edit their avatars, videos and channels.
+
+Keeping organized routes on both the front and back end was crucial to the success of this project.
+
+```
+    ~./frontend/components/app.js
+        <Switch>
+            <Route exact path="/directory" component={GamesIndexContainer} />
+            <Route exact path="/directory/:gameId" component={StreamerIndexContainer} />
+            <Route exact path="/channel/:userId" component={StreamerChannelContainer} />
+            <Route exact path="/channel/:userId/videos" component={StreamerVideo} />
+            <ProtectedRoute exact path="/channel/:userId/settings" component={UserSettings}/>
+            <Route path="/" component={Jumbotron} />
+        </Switch>
+```
+As you can see from the above, the project eventually came to encompass several separate components. State management became key to reducing load times, and a lot of time was spent determining the best way to access information within the front end views.
+
