@@ -6,7 +6,7 @@ Login and signup are handled through an interactive modal, which is only accessi
 
 There is a default demo user account that users can use to browse the site if they do not wish to signup themselves. See a short demo of the signup experience below.
 
-![Alternative Text](./app/assets/images/kevin.tv.signup.gif)
+![Alternative Text](./app/assets/images/NEWNEW.gif)
 
 ## Games & Streamers Directories
 Once logged in, users can browse games that currently have live streams, and from there, explore the streamers that are currently playing those games and click onto their channel.
