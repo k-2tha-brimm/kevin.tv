@@ -43,7 +43,7 @@ class RightNav extends React.Component {
                         <br/>
                         <li>Dark Theme</li>
                         <div className="line-break"></div>
-                        <li><Link className="dropdown-login" onClick={() => this.props.openModal('login')} style={{color: "rgb(100, 65, 165)", textDecoration: 'none' }} >Log In</Link></li>
+                        <li><button className="dropdown-login" onClick={() => this.props.openModal('login')} style={{color: "rgb(100, 65, 165)", textDecoration: 'none' }} >Log In</button></li>
                     </div>
                 </div>
                 {/* <i className="fas fa-otter"></i> */}

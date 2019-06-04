@@ -113,18 +113,18 @@ class UserSettings extends React.Component {
 
 
 
-const mapStateToProps = (state, ownProps) => {
+const mstp = (state, ownProps) => {
     const user = state.entities.users[ownProps.match.params.userId]
     return {
         user
     };
 };
 
-const mapDispatchToProps = dispatch => {
+const mdtp = dispatch => {
     return {
         fetchOneUser: id => dispatch(fetchOneUser(id)),
         updateUserAvatar: (id, avatar) => dispatch(updateUserAvatar(id, avatar))
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserSettings);
+export default connect(mstp, mdtp)(UserSettings);
