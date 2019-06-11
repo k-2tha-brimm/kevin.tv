@@ -30,7 +30,7 @@ class Jumbotron extends React.Component {
         //     });
         // }
 
-        const gamez = this.props.games.slice(0, 10).map(game => <li><GameIndexItem key={game.id} game={game} /></li>)
+        const gamez = this.props.games.slice(0, 21).map(game => <li><GameIndexItem key={game.id} game={game} /></li>)
 
         return (
 
