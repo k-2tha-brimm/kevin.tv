@@ -1,5 +1,9 @@
 body {
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    z-index: -20;
 }
 
 /* .jumbotron {

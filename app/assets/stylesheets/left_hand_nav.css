@@ -67,13 +67,12 @@
 
 .jumbotron {
     position: fixed;
-    height: 600px;
     top: 50px;
     left: 239px;
     width: 100%;
     text-align: center;
     align-content: center;
-    display: grid;
+    display: flex;
     z-index: -1;
 }
 
