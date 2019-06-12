@@ -16,7 +16,7 @@ end
 json.streams do 
     @game.streams.each do |stream|
         json.set! stream.id do
-            json.extract! stream, :id, :streamer_id, :title
+            json.extract! stream, :id, :streamer_id, :title, :game_id
             json.thumbUrl url_for(stream.thumbnail)
         end
     end

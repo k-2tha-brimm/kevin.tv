@@ -7,6 +7,7 @@
     height: 50px;
     display: flex;
     justify-content: space-between;
+    z-index: -20;
 }
 
 .user-information-top-bar {
@@ -32,6 +33,7 @@
 }
 
 .video-player-container {
+    z-index: -20;
     position: relative;
     top: 122px;
     left: 265px;
@@ -246,7 +248,7 @@ body {
     left: 270px;
     position: relative;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    /* z-index: -1; */
+    z-index: -20;
 }
 
 .settings-page-container > h1 {

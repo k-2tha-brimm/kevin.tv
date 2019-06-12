@@ -24,17 +24,23 @@ class StreamerIndex extends React.Component {
       }
 
     render () {
+        console.log(this.props.streamers);
 
         if(!this.props.game) {
             return null;
         }   
 
         let {streams} = this.props;
-
-        let streamz = this.props.streamers.map(streamer =>
+        let streamz;
+        console.log(streams);
+        console.log(this.props.game);
+        if(this.props.game) {
+            streamz = streams.filter((stream) => stream.game_id === this.props.game.id)
+        }
+        console.log(streamz);
+        let daStreamz = streamz.map((streamer, idx) =>
                                                 {
-                                                    let stream = streams.filter(stream => stream.streamer_id === streamer.id)[0];
-                                                    return <li><StreamIndexItem key={streamer.id} streamer={streamer} stream={stream} /></li> 
+                                                    return <li><StreamIndexItem key={streamer.id} streamer={streamer} stream={streamz[idx]} /></li> 
                                                 });
 
         const hasStreamers = (
@@ -56,7 +62,7 @@ class StreamerIndex extends React.Component {
                     </div>
                     <div className="list-of-streamers">
                         <ul>
-                            { streamz }
+                            { daStreamz }
                         </ul>
                     </div>
                 </div>

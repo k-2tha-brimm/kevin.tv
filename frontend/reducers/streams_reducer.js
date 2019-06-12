@@ -9,7 +9,7 @@ const streamsReducer = (state = {}, action ) => {
         case RECEIVE_GAME:
             let streams = action.streams;
             // return merge({}, streams)
-            return merge({}, state, streams )
+            return merge({}, streams)
         case RECEIVE_STREAMER:
             return merge({}, state, action.stream)
         default:
