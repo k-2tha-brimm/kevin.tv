@@ -20,16 +20,7 @@ class UserSettings extends React.Component {
         this.props.fetchOneUser(this.props.match.params.userId)
     }
 
-    // static getDerivedStateFromProps(nextProps, prevState) {
-    //     if(prevState.avatar !== nextProps.user.avatar) {
-    //         return { avatar: nextProps.user.avatar }
-    //     } else {
-    //         return null;
-    //     }
-    // }
-
     componentDidUpdate(prevProps, prevState) {
-        console.log(this.state.avatar);
         if(prevState.avatar !== this.props.user.avatar) {
             this.props.fetchOneUser(this.props.match.params.userId)
                 .then(() => this.setState({ avatar: this.props.user.avatar }))
@@ -67,7 +58,6 @@ class UserSettings extends React.Component {
           processData: false
         });
         this.setState({ avatar: this.state.imageUrl });
-        // .then(res => setState({avatar: res}));
       }
 
     render() {
@@ -129,8 +119,7 @@ class UserSettings extends React.Component {
 const mstp = (state, ownProps) => {
     const user = state.entities.users[ownProps.match.params.userId]
     return {
-        user,
-        updated: false
+        user
     };
 };
 
