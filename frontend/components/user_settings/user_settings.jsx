@@ -10,6 +10,7 @@ class UserSettings extends React.Component {
         this.state = {
             imageUrl: '',
             imageFile: null,
+            avatar: this.props.user.avatar
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFileSelect = this.handleFileSelect.bind(this);
@@ -19,12 +20,21 @@ class UserSettings extends React.Component {
         this.props.fetchOneUser(this.props.match.params.userId)
     }
 
-    // componentDidUpdate(prevProps) {
-    //     // debugger
-    //     if(this.state.user.avatar !== prevProps.user.avatar) {
-    //         this.props.fetchOneUser(this.props.match.params.userId)
+    // static getDerivedStateFromProps(nextProps, prevState) {
+    //     if(prevState.avatar !== nextProps.user.avatar) {
+    //         return { avatar: nextProps.user.avatar }
+    //     } else {
+    //         return null;
     //     }
     // }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log(this.state.avatar);
+        if(prevState.avatar !== this.props.user.avatar) {
+            this.props.fetchOneUser(this.props.match.params.userId)
+                .then(() => this.setState({ avatar: this.props.user.avatar }))
+        }
+    }
 
     handleFileSelect(e) {  
         const reader = new FileReader();
@@ -55,10 +65,13 @@ class UserSettings extends React.Component {
           data: formData,
           contentType: false,
           processData: false
-        }).then(res => setState({imageUrl: res}));
+        });
+        this.setState({ avatar: this.state.imageUrl });
+        // .then(res => setState({avatar: res}));
       }
 
     render() {
+
         return (
             <div className="settings-page-container">
                 <h1>Settings</h1>
@@ -67,7 +80,7 @@ class UserSettings extends React.Component {
                 <div className="profile-picture">Profile Picture</div>
 
                 <div className="profile-picture-box">
-                    <img src={this.props.user.avatar} alt="user avatar" height="96" width="96"/>
+                    <img src={this.state.avatar} alt="user avatar" height="96" width="96"/>
                     <input type="file" id="file" className="inputfile" onChange={this.handleFileSelect}/>
                     <label htmlFor="file" >Update Profile Picture</label>
                     <input type="submit" onClick={this.handleSubmit}/>
@@ -116,7 +129,8 @@ class UserSettings extends React.Component {
 const mstp = (state, ownProps) => {
     const user = state.entities.users[ownProps.match.params.userId]
     return {
-        user
+        user,
+        updated: false
     };
 };
 
