@@ -57,7 +57,7 @@ class StreamerIndex extends React.Component {
                     </div>
                     <div className="fake-ad-container">
                         <div className="fake-advertisement">
-                            <img src="/assets/totinos-pizza-rolls.jpg" alt=""/>       
+                            <img src={window.totinosUrl}></img>      
                         </div>
                     </div>
                     <div className="list-of-streamers">
@@ -84,7 +84,7 @@ class StreamerIndex extends React.Component {
                     </div>
                     <div className="fake-ad-container">
                         <div className="fake-advertisement">
-                            <img src="/assets/totinos-pizza-rolls.jpg" alt=""/>       
+                            <img src={window.totinosUrl}></img>      
                         </div>
                     </div>
                     <div className="sorry-message">

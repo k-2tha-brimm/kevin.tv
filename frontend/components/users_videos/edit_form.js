@@ -35,7 +35,7 @@ class EditForm extends React.Component {
 
             <div className="login-form-container">
 
-            <div className="modal-greeting"><img className="modal-logo" src="./assets/twitchlogopng.png" alt="kevinLogo" height="20" width="20"/>Set up your channel!</div>
+            <div className="modal-greeting"><img className="modal-logo" src={window.twitchUrl} alt="kevinLogo" height="20" width="20"/>Set up your channel!</div>
             <div className="line-break"></div>
             <br/>
                 <form>
@@ -59,7 +59,7 @@ class EditForm extends React.Component {
 
             <div className="login-form-container">
 
-            <div className="modal-greeting"><img className="modal-logo" src="./assets/twitchlogopng.png" alt="kevinLogo" height="20" width="20"/>Broadcast Options</div>
+            <div className="modal-greeting"><img className="modal-logo" src={window.twitchUrl} alt="kevinLogo" height="20" width="20"/>Broadcast Options</div>
             <div className="line-break"></div>
             <br/>
                 <form>

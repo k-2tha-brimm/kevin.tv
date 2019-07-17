@@ -70,7 +70,7 @@ class SessionForm extends React.Component {
       
       <div className="login-form-container">
 
-      <div className="modal-greeting"><img className="modal-logo" src="./assets/twitchlogopng.png" alt="kevinLogo" height="40" width="40"/>  {this.props.greeting}</div>
+      <div className="modal-greeting"><img className="modal-logo" src={window.twitchUrl} alt="kevinLogo" height="40" width="40"/>  {this.props.greeting}</div>
         
         <div className="modal-buttons-container">
           <div className="button-container-underline-left-signin"></div>
@@ -134,7 +134,7 @@ class SessionForm extends React.Component {
 
       <div className="login-form-container">
 
-        <div className="modal-greeting"><img className="modal-logo" src="./assets/twitchlogopng.png" alt="kevinLogo" height="40" width="40"/>  {this.props.greeting}</div>
+        <div className="modal-greeting"><img className="modal-logo" src={window.twitchUrl} alt="kevinLogo" height="40" width="40"/>  {this.props.greeting}</div>
           <br/>
 
         <div className="modal-buttons-container">

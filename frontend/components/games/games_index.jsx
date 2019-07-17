@@ -19,7 +19,7 @@ class GamesIndex extends React.Component {
             <div className="game-index-item-container">
                 <div className="fake-ad-container">
                     <div className="fake-advertisement">
-                        <img src="/assets/totinos-pizza-rolls.jpg" alt=""/>
+                        <img src={window.totinosUrl}></img>
                     </div>
                 </div>
 
