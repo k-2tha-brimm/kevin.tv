@@ -66,6 +66,11 @@
     /* border: 1px solid red; */
 }
 
+.this-is-a-div {
+    position: fixed;
+    width: 100%;
+}
+
 .channel-following {
     width: 100%;
     /* border: 1px solid red; */
