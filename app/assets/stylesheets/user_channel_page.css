@@ -246,7 +246,8 @@ body {
 .settings-page-container {
     top: 80px;
     left: 270px;
-    position: relative;
+    position: absolute;
+    width: 100%;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     z-index: -20;
 }
