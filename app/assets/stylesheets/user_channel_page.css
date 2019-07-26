@@ -7,12 +7,12 @@
     height: 50px;
     display: flex;
     justify-content: space-between;
-    z-index: -20;
 }
 
 .user-information-top-bar {
     width: 100%;
     background-color: white;
+    border: 0.8px solid grey;
 }
 
 .chat-box {
@@ -109,7 +109,6 @@
     font-size: 14px;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     color: #6441a4;
-    border: 0.25px solid gray;
 }
 
 .channel-description {
@@ -132,7 +131,6 @@ body {
     text-align: center;
     justify-content: space-between;
     font-size: 12px;
-    border: 0.25px solid gray;
     background-color: white;
 }
 
