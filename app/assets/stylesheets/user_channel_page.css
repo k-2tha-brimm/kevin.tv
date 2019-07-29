@@ -109,6 +109,7 @@
     font-size: 14px;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     color: #6441a4;
+    border-right: 1px solid rgb(221, 221, 221);
 }
 
 .channel-description {
